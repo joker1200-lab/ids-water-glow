@@ -12,6 +12,7 @@ const Header = () => {
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
     { name: "Services", path: "/services" },
+    { name: "Portfolio", path: "/portfolio" },
     { name: "Blog", path: "/blog" },
     { name: "FAQ", path: "/faq" },
     { name: "Contact", path: "/contact" },
@@ -27,21 +28,21 @@ const Header = () => {
           <Link to="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
             <img src={logo} alt="IDS Water Tech" className="h-10 w-auto water-droplet" />
             <div className="hidden sm:block">
-              <span className="text-xl font-bold text-primary">IDS Water Tech</span>
+              <span className="text-lg md:text-xl font-bold text-primary">IDS Water Tech</span>
               <div className="flex items-center space-x-1 text-xs text-muted-foreground">
                 <Droplets className="h-3 w-3" />
-                <span>Clean Water Solutions</span>
+                <span className="hidden md:inline">Clean Water Solutions</span>
               </div>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-1">
+          <div className="hidden xl:flex items-center space-x-1">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.path}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-normal hover:bg-primary/10 ${
+                className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-normal hover:bg-primary/10 ${
                   isActive(item.path)
                     ? "text-primary bg-primary/10"
                     : "text-foreground hover:text-primary"
@@ -53,7 +54,7 @@ const Header = () => {
           </div>
 
           {/* CTA Button */}
-          <div className="hidden lg:block">
+          <div className="hidden xl:block">
             <Button className="bg-gradient-primary hover:bg-primary-dark shadow-medium">
               Get Quote
             </Button>
@@ -62,7 +63,8 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-2 rounded-lg hover:bg-secondary transition-colors"
+            className="xl:hidden p-2 rounded-lg hover:bg-secondary transition-colors"
+            aria-label="Toggle mobile menu"
           >
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
@@ -70,7 +72,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden py-4 space-y-2 slide-in-up">
+          <div className="xl:hidden py-4 space-y-2 slide-in-up">
             {navItems.map((item) => (
               <Link
                 key={item.name}

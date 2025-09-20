@@ -2,7 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="theme-color" content="#2563eb" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <title>IDS Water Tech - Water Treatment Solutions in Tanzania</title>
     <meta name="description" content="Leading water treatment company in Tanzania providing advanced purification systems, industrial filtration, and maintenance services. Trusted by 500+ clients across East Africa." />
     <meta name="keywords" content="water treatment Tanzania, water purification Dar es Salaam, industrial water systems, reverse osmosis Tanzania, water filtration East Africa" />
@@ -28,30 +33,148 @@
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     
-    <!-- Structured Data -->
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Structured Data for Organization -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "IDS Water Tech",
+      "alternateName": "IDS Water Technology",
       "url": "https://idswatertech.com",
       "logo": "https://idswatertech.com/logo.png",
-      "description": "Leading water treatment company in Tanzania providing advanced purification systems, industrial filtration, and maintenance services.",
+      "description": "Leading water treatment company in Tanzania providing advanced purification systems, industrial filtration, reverse osmosis, and maintenance services. Trusted by 500+ clients across East Africa.",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Dar es Salaam",
-        "addressCountry": "Tanzania"
+        "addressRegion": "Dar es Salaam",
+        "addressCountry": "TZ"
       },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+255-123-456-789",
-        "contactType": "customer service",
-        "availableLanguage": ["English", "Swahili"]
-      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+255-123-456-789",
+          "contactType": "customer service",
+          "availableLanguage": ["English", "Swahili"],
+          "areaServed": "TZ"
+        },
+        {
+          "@type": "ContactPoint",
+          "email": "info@idswatertech.com",
+          "contactType": "customer service"
+        }
+      ],
       "sameAs": [
         "https://www.facebook.com/idswatertech",
-        "https://twitter.com/idswatertech"
-      ]
+        "https://twitter.com/idswatertech",
+        "https://www.linkedin.com/company/idswatertech",
+        "https://www.instagram.com/idswatertech"
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "IDS Water Tech Founder"
+      },
+      "foundingDate": "2013",
+      "numberOfEmployees": "25-50",
+      "slogan": "Clean Water Solutions for Tanzania",
+      "knowsAbout": [
+        "Water Treatment",
+        "Industrial Filtration", 
+        "Reverse Osmosis",
+        "Water Purification",
+        "System Maintenance"
+      ],
+      "serviceArea": {
+        "@type": "State",
+        "name": "Tanzania"
+      }
+    }
+    </script>
+
+    <!-- Structured Data for Local Business -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "IDS Water Tech",
+      "image": "https://idswatertech.com/logo.png",
+      "@id": "https://idswatertech.com",
+      "url": "https://idswatertech.com",
+      "telephone": "+255-123-456-789",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Industrial Area",
+        "addressLocality": "Dar es Salaam",
+        "addressRegion": "Dar es Salaam",
+        "postalCode": "11000",
+        "addressCountry": "TZ"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -6.7924,
+        "longitude": 39.2083
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday", 
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "08:00",
+        "closes": "18:00"
+      }
+    }
+    </script>
+
+    <!-- Structured Data for Service -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Water Treatment Services",
+      "description": "Comprehensive water treatment solutions including purification systems, industrial filtration, reverse osmosis, and maintenance services.",
+      "provider": {
+        "@type": "Organization",
+        "name": "IDS Water Tech"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Tanzania"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Water Treatment Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Water Purification Systems"
+            }
+          },
+          {
+            "@type": "Offer", 
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Industrial Water Treatment"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service", 
+              "name": "System Maintenance"
+            }
+          }
+        ]
+      }
     }
     </script>
   </head>

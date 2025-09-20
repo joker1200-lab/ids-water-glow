@@ -54,35 +54,36 @@ const Home = () => {
       <section className="relative min-h-screen flex items-center bg-gradient-hero overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="text-primary-foreground">
-              <h1 className="text-5xl lg:text-7xl font-bold mb-6 slide-in-left">
-                Clean Water
-                <span className="block text-accent">For Tanzania</span>
-              </h1>
-              <p className="text-xl lg:text-2xl mb-8 opacity-90 slide-in-left delay-200">
-                Leading water treatment solutions for industrial and commercial applications across East Africa
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 slide-in-left delay-300">
-                <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-strong">
-                  Get Free Quote
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-                <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                  View Our Work
-                </Button>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+              <div className="text-primary-foreground">
+                <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-4 lg:mb-6 slide-in-left">
+                  Clean Water
+                  <span className="block text-accent">For Tanzania</span>
+                </h1>
+                <p className="text-lg sm:text-xl lg:text-2xl mb-6 lg:mb-8 opacity-90 slide-in-left delay-200">
+                  Leading water treatment solutions for industrial and commercial applications across East Africa
+                </p>
+                <div className="flex flex-col sm:flex-row gap-3 lg:gap-4 slide-in-left delay-300">
+                  <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-strong text-sm sm:text-base">
+                    Get Free Quote
+                    <ArrowRight className="ml-2 h-4 w-4 lg:h-5 lg:w-5" />
+                  </Button>
+                  <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary text-sm sm:text-base">
+                    View Our Work
+                  </Button>
+                </div>
+              </div>
+              
+              <div className="relative slide-in-right delay-400 mt-8 lg:mt-0">
+                <div className="absolute -inset-2 lg:-inset-4 bg-gradient-primary rounded-2xl lg:rounded-3xl blur-xl lg:blur-2xl opacity-30 animate-pulse"></div>
+                <img
+                  src={ownerEquipment}
+                  alt="Professional water treatment equipment"
+                  className="relative rounded-2xl lg:rounded-3xl shadow-strong w-full h-auto object-cover"
+                  loading="eager"
+                />
               </div>
             </div>
-            
-            <div className="relative slide-in-right delay-400">
-              <div className="absolute -inset-4 bg-gradient-primary rounded-3xl blur-2xl opacity-30 animate-pulse"></div>
-              <img
-                src={ownerEquipment}
-                alt="Professional water treatment equipment"
-                className="relative rounded-3xl shadow-strong w-full h-auto object-cover"
-              />
-            </div>
-          </div>
         </div>
         
         {/* Floating elements */}
