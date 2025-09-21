@@ -3,6 +3,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Droplets, Shield, Wrench, Award, Users, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import Testimonials from "@/components/Testimonials";
+import ChatPopup from "@/components/ChatPopup";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Badge } from "@/components/ui/badge";
+import { Calendar, Clock, User } from "lucide-react";
 
 // Import images
 import equipment1 from "@/assets/equipment-1.jpg";
@@ -46,6 +50,55 @@ const Home = () => {
     "Custom Solution Design",
     "Eco-Friendly Processes",
     "Professional Installation"
+  ];
+
+  const faqItems = [
+    {
+      question: "What types of water treatment systems do you offer?",
+      answer: "We offer comprehensive water treatment solutions including reverse osmosis systems, industrial filtration units, UV sterilization systems, water softeners, and custom-designed solutions for specific industrial applications."
+    },
+    {
+      question: "How long does installation typically take?",
+      answer: "Installation time varies by system complexity. Small residential systems take 4-8 hours, commercial systems require 1-3 days, while large industrial systems may take 3-14 days depending on complexity and site preparation."
+    },
+    {
+      question: "Do you provide maintenance services?",
+      answer: "Yes, we offer comprehensive maintenance packages including scheduled preventive maintenance, emergency repairs, filter replacements, system optimization, and 24/7 technical support with performance guarantees."
+    },
+    {
+      question: "What areas do you serve in Tanzania?",
+      answer: "We serve all regions of Tanzania including Dar es Salaam, Arusha, Mwanza, Dodoma, and other major cities. We also provide services across East Africa including Kenya, Uganda, and Rwanda."
+    }
+  ];
+
+  const featuredBlogPosts = [
+    {
+      title: "The Future of Water Treatment in Tanzania",
+      excerpt: "Explore innovative technologies and sustainable practices shaping water treatment across East Africa, from smart monitoring to energy-efficient purification methods.",
+      image: ownerEquipment,
+      date: "March 15, 2024",
+      readTime: "12 min read",
+      category: "Industry Insights",
+      author: "Dr. James Mwenda"
+    },
+    {
+      title: "Industrial Water Treatment Best Practices",
+      excerpt: "A comprehensive guide to implementing world-class water treatment standards in manufacturing facilities across Tanzania with cost optimization strategies.",
+      image: equipment1,
+      date: "March 10, 2024",
+      readTime: "10 min read",
+      category: "Technical Guide",
+      author: "Eng. Sarah Moshi"
+    },
+    {
+      title: "Reverse Osmosis Technology Guide",
+      excerpt: "Understanding RO systems in Tanzania's unique water conditions. Technical guide covering membrane selection, pre-treatment, and maintenance schedules.",
+      image: equipment2,
+      date: "March 5, 2024",
+      readTime: "8 min read",
+      category: "Technology",
+      author: "Dr. Michael Temba"
+    }
   ];
 
   return (
@@ -202,6 +255,118 @@ const Home = () => {
       {/* Testimonials Section */}
       <Testimonials />
 
+      {/* FAQ Section */}
+      <section className="py-20 bg-gradient-to-b from-background to-secondary/20">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6 slide-in-up">
+              Frequently Asked <span className="text-primary">Questions</span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto slide-in-up delay-200">
+              Get answers to common questions about our water treatment solutions
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <Accordion type="single" collapsible className="space-y-4">
+              {faqItems.map((item, index) => (
+                <AccordionItem
+                  key={index}
+                  value={`item-${index}`}
+                  className={`bg-card rounded-lg shadow-medium hover:shadow-strong transition-shadow slide-in-up delay-${index * 100}`}
+                >
+                  <AccordionTrigger className="px-6 py-4 text-left hover:no-underline">
+                    <span className="text-lg font-semibold text-foreground">{item.question}</span>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-6 pb-4 text-muted-foreground">
+                    {item.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+
+            <div className="text-center mt-12">
+              <Link to="/faq">
+                <Button size="lg" variant="outline" className="group">
+                  View All FAQs
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Blog Section */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6 slide-in-up">
+              Latest <span className="text-primary">Insights</span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto slide-in-up delay-200">
+              Stay updated with the latest trends and technologies in water treatment
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {featuredBlogPosts.map((post, index) => (
+              <Card key={index} className={`group bg-gradient-card shadow-medium hover:shadow-strong transition-all duration-normal hover:-translate-y-2 slide-in-up delay-${(index + 1) * 200}`}>
+                <div className="relative overflow-hidden rounded-t-lg">
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-slow"
+                  />
+                  <div className="absolute top-4 left-4">
+                    <Badge className="bg-primary/90 backdrop-blur-sm text-primary-foreground">
+                      {post.category}
+                    </Badge>
+                  </div>
+                </div>
+                <CardContent className="p-6">
+                  <div className="flex items-center text-sm text-muted-foreground mb-3 space-x-4">
+                    <div className="flex items-center">
+                      <Calendar className="h-4 w-4 mr-1" />
+                      {post.date}
+                    </div>
+                    <div className="flex items-center">
+                      <Clock className="h-4 w-4 mr-1" />
+                      {post.readTime}
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors">
+                    {post.title}
+                  </h3>
+                  <p className="text-muted-foreground mb-4 line-clamp-3">
+                    {post.excerpt}
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center text-sm text-muted-foreground">
+                      <User className="h-4 w-4 mr-1" />
+                      {post.author}
+                    </div>
+                    <Button variant="ghost" size="sm" className="group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                      Read More
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <Link to="/blog">
+              <Button size="lg" className="bg-gradient-primary hover:bg-primary-dark shadow-medium">
+                View All Articles
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-hero text-primary-foreground">
         <div className="container mx-auto px-4 lg:px-8 text-center">
@@ -224,6 +389,9 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Chat Popup */}
+      <ChatPopup />
     </div>
   );
 };
