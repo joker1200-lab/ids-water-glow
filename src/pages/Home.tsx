@@ -13,6 +13,12 @@ import equipment1 from "@/assets/equipment-1.jpg";
 import equipment2 from "@/assets/equipment-2.jpg";
 import equipment3 from "@/assets/equipment-3.jpg";
 import ownerEquipment from "@/assets/owner-equipment.jpg";
+import portfolio1 from "@/assets/portfolio-1.jpg";
+import portfolio2 from "@/assets/portfolio-2.jpg";
+import portfolio3 from "@/assets/portfolio-3.jpg";
+import portfolio4 from "@/assets/portfolio-4.jpg";
+import portfolio5 from "@/assets/portfolio-5.jpg";
+import portfolio6 from "@/assets/portfolio-6.jpg";
 
 const Home = () => {
   const services = [
@@ -98,6 +104,63 @@ const Home = () => {
       readTime: "8 min read",
       category: "Technology",
       author: "Dr. Michael Temba"
+    }
+  ];
+
+  const portfolioProjects = [
+    {
+      title: "Serena Hotel Dar es Salaam",
+      category: "Hospitality",
+      location: "Dar es Salaam",
+      description: "Complete water treatment system for luxury hotel with 200+ rooms including reverse osmosis, UV sterilization, and water softening systems.",
+      image: portfolio1,
+      capacity: "5,000L/hr",
+      systems: ["Reverse Osmosis", "UV Sterilization", "Water Softening"]
+    },
+    {
+      title: "Dodoma Municipal Water Plant",
+      category: "Municipal",
+      location: "Dodoma",
+      description: "Large-scale water treatment facility serving 50,000+ residents with advanced filtration and purification systems.",
+      image: portfolio2,
+      capacity: "50,000L/hr",
+      systems: ["Multi-stage Filtration", "Chlorination", "Storage Systems"]
+    },
+    {
+      title: "Muhimbili Hospital Complex",
+      category: "Healthcare",
+      location: "Dar es Salaam",
+      description: "Medical-grade water treatment system ensuring sterile water supply for surgical procedures and patient care.",
+      image: portfolio3,
+      capacity: "8,000L/hr",
+      systems: ["Medical Grade RO", "Deionization", "Storage & Distribution"]
+    },
+    {
+      title: "Kilimanjaro Bottling Company",
+      category: "Industrial",
+      location: "Arusha",
+      description: "High-capacity industrial water treatment for beverage production with strict quality standards.",
+      image: portfolio4,
+      capacity: "15,000L/hr",
+      systems: ["Multi-stage RO", "Ozonation", "Quality Control"]
+    },
+    {
+      title: "Mikocheni Residential Estate",
+      category: "Residential",
+      location: "Dar es Salaam",
+      description: "Community water treatment system serving 500+ families with clean, safe drinking water.",
+      image: portfolio5,
+      capacity: "2,000L/hr",
+      systems: ["Community RO", "UV Treatment", "Distribution Network"]
+    },
+    {
+      title: "Mwanza Water Vendors Hub",
+      category: "Commercial",
+      location: "Mwanza",
+      description: "Centralized water treatment facility serving multiple water vendors and small businesses in the region.",
+      image: portfolio6,
+      capacity: "10,000L/hr",
+      systems: ["Advanced Filtration", "Quality Testing", "Bulk Distribution"]
     }
   ];
 
@@ -248,6 +311,87 @@ const Home = () => {
                 />
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Portfolio Section */}
+      <section className="py-20 bg-gradient-to-b from-secondary/20 to-background">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6 slide-in-up">
+              Our <span className="gradient-text">Portfolio</span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto slide-in-up delay-200">
+              Transforming water quality across Tanzania - from luxury hotels to family homes
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {portfolioProjects.map((project, index) => (
+              <Card key={index} className={`group bg-gradient-card shadow-medium hover:shadow-joy transition-all duration-normal hover:-translate-y-4 hover-rainbow slide-in-up delay-${(index + 1) * 100}`}>
+                <div className="relative overflow-hidden rounded-t-lg">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-slow"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  <div className="absolute top-4 left-4">
+                    <Badge className="bg-gradient-energy text-white border-0 pulse-glow">
+                      {project.category}
+                    </Badge>
+                  </div>
+                  <div className="absolute bottom-4 left-4 text-white">
+                    <div className="flex items-center text-sm">
+                      <div className="w-2 h-2 bg-joy-teal rounded-full mr-2 pulse-glow"></div>
+                      {project.location}
+                    </div>
+                  </div>
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
+                    {project.title}
+                  </h3>
+                  <p className="text-muted-foreground mb-4 line-clamp-3">
+                    {project.description}
+                  </p>
+                  
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between text-sm">
+                      <span className="text-muted-foreground">Capacity:</span>
+                      <span className="font-semibold text-primary">{project.capacity}</span>
+                    </div>
+                    
+                    <div className="flex flex-wrap gap-2">
+                      {project.systems.map((system, sysIndex) => (
+                        <Badge key={sysIndex} variant="outline" className="text-xs border-primary/30 text-primary">
+                          {system}
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  <Button 
+                    variant="ghost" 
+                    size="sm" 
+                    className="w-full mt-4 group-hover:bg-gradient-primary group-hover:text-white transition-all"
+                  >
+                    View Details
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <Link to="/portfolio">
+              <Button size="lg" className="bg-gradient-energy hover:bg-gradient-joy shadow-joy hover-rainbow">
+                View Full Portfolio
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
