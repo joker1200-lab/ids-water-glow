@@ -118,13 +118,22 @@ const Home = () => {
       systems: ["Reverse Osmosis", "UV Sterilization", "Water Softening"]
     },
     {
-      title: "TDL Company & BSs Insulators Ltd",
-      category: "Manufacturing Industry",
+      title: "TDL Company Water System",
+      category: "Manufacturing Industry", 
       location: "Dar es Salaam",
-      description: "Advanced water treatment systems for TDL Company and BSs Insulators Ltd, providing high-quality water for industrial processes and employee facilities.",
-      image: municipalityWaterPlant,
-      capacity: "25,000L/hr",
+      description: "Advanced industrial water treatment system for TDL Company, providing high-quality water for manufacturing processes and employee facilities.",
+      image: industrialWaterPlant,
+      capacity: "15,000L/hr",
       systems: ["Industrial RO", "Pre-treatment", "Quality Monitoring"]
+    },
+    {
+      title: "BSs Insulators Ltd Water Treatment",
+      category: "Manufacturing Industry",
+      location: "Dar es Salaam", 
+      description: "Specialized water treatment solution for BSs Insulators Ltd, ensuring pure water supply for insulator manufacturing and cooling systems.",
+      image: municipalityWaterPlant,
+      capacity: "12,000L/hr",
+      systems: ["Multi-stage Filtration", "Ion Exchange", "Water Recycling"]
     },
     {
       title: "Hospital Water System - Mwanza",
