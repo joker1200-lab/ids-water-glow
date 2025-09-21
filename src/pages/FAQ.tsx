@@ -228,7 +228,12 @@ const FAQ = () => {
                   size="lg" 
                   variant="outline" 
                   className="hover:bg-primary hover:text-primary-foreground"
-                  onClick={() => window.open("https://whatsapp.com/dl/", '_blank')}
+                  onClick={() => {
+                    const message = "Hi! I have a question about your water treatment services.";
+                    const phoneNumber = "255123456789";
+                    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                    window.open(url, '_blank');
+                  }}
                 >
                   <MessageCircle className="mr-2 h-5 w-5" />
                   Chat on WhatsApp
