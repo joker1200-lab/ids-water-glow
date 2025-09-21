@@ -13,12 +13,12 @@ import equipment1 from "@/assets/equipment-1.jpg";
 import equipment2 from "@/assets/equipment-2.jpg";
 import equipment3 from "@/assets/equipment-3.jpg";
 import ownerEquipment from "@/assets/owner-equipment.jpg";
-import portfolio1 from "@/assets/portfolio-1.jpg";
-import portfolio2 from "@/assets/portfolio-2.jpg";
-import portfolio3 from "@/assets/portfolio-3.jpg";
-import portfolio4 from "@/assets/portfolio-4.jpg";
-import portfolio5 from "@/assets/portfolio-5.jpg";
-import portfolio6 from "@/assets/portfolio-6.jpg";
+import hotelWaterSystem from "@/assets/hotel-water-system.jpg";
+import municipalityWaterPlant from "@/assets/municipality-water-plant.jpg";
+import hospitalWaterSystem from "@/assets/hospital-water-system.jpg";
+import industrialWaterPlant from "@/assets/industrial-water-plant.jpg";
+import residentialWaterSystem from "@/assets/residential-water-system.jpg";
+import waterVendorFacility from "@/assets/water-vendor-facility.jpg";
 
 const Home = () => {
   const services = [
@@ -109,56 +109,56 @@ const Home = () => {
 
   const portfolioProjects = [
     {
-      title: "Serena Hotel Dar es Salaam",
-      category: "Hospitality",
+      title: "Hotel Water Treatment - Dar es Salaam",
+      category: "Hospitality Industry",
       location: "Dar es Salaam",
-      description: "Complete water treatment system for luxury hotel with 200+ rooms including reverse osmosis, UV sterilization, and water softening systems.",
-      image: portfolio1,
+      description: "Complete water treatment system for luxury hospitality facility with 200+ rooms including reverse osmosis, UV sterilization, and water softening systems.",
+      image: hotelWaterSystem,
       capacity: "5,000L/hr",
       systems: ["Reverse Osmosis", "UV Sterilization", "Water Softening"]
     },
     {
-      title: "Dodoma Municipal Water Plant",
-      category: "Municipal",
+      title: "Municipal Water Plant - Dodoma",
+      category: "Municipality",
       location: "Dodoma",
-      description: "Large-scale water treatment facility serving 50,000+ residents with advanced filtration and purification systems.",
-      image: portfolio2,
+      description: "Large-scale water treatment facility serving 50,000+ residents with advanced filtration and purification systems for the capital city.",
+      image: municipalityWaterPlant,
       capacity: "50,000L/hr",
       systems: ["Multi-stage Filtration", "Chlorination", "Storage Systems"]
     },
     {
-      title: "Muhimbili Hospital Complex",
+      title: "Hospital Water System - Mwanza",
       category: "Healthcare",
-      location: "Dar es Salaam",
-      description: "Medical-grade water treatment system ensuring sterile water supply for surgical procedures and patient care.",
-      image: portfolio3,
+      location: "Mwanza",
+      description: "Medical-grade water treatment system ensuring sterile water supply for surgical procedures and patient care in regional hospital.",
+      image: hospitalWaterSystem,
       capacity: "8,000L/hr",
       systems: ["Medical Grade RO", "Deionization", "Storage & Distribution"]
     },
     {
-      title: "Kilimanjaro Bottling Company",
-      category: "Industrial",
+      title: "Industrial Water Plant - Arusha",
+      category: "Manufacturing Industry",
       location: "Arusha",
-      description: "High-capacity industrial water treatment for beverage production with strict quality standards.",
-      image: portfolio4,
+      description: "High-capacity industrial water treatment for manufacturing facility with strict quality standards and continuous operation requirements.",
+      image: industrialWaterPlant,
       capacity: "15,000L/hr",
       systems: ["Multi-stage RO", "Ozonation", "Quality Control"]
     },
     {
-      title: "Mikocheni Residential Estate",
-      category: "Residential",
-      location: "Dar es Salaam",
-      description: "Community water treatment system serving 500+ families with clean, safe drinking water.",
-      image: portfolio5,
+      title: "Residential Estate - Mbeya",
+      category: "Residential Complex",
+      location: "Mbeya",
+      description: "Community water treatment system serving 500+ families with clean, safe drinking water in residential development.",
+      image: residentialWaterSystem,
       capacity: "2,000L/hr",
       systems: ["Community RO", "UV Treatment", "Distribution Network"]
     },
     {
-      title: "Mwanza Water Vendors Hub",
-      category: "Commercial",
-      location: "Mwanza",
-      description: "Centralized water treatment facility serving multiple water vendors and small businesses in the region.",
-      image: portfolio6,
+      title: "Water Vendor Facility - Morogoro",
+      category: "Commercial Water Sales",
+      location: "Morogoro",
+      description: "Centralized water treatment facility serving multiple water vendors and small businesses providing clean drinking water to the community.",
+      image: waterVendorFacility,
       capacity: "10,000L/hr",
       systems: ["Advanced Filtration", "Quality Testing", "Bulk Distribution"]
     }
