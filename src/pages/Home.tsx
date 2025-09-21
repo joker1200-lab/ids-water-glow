@@ -110,29 +110,29 @@ const Home = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               <div className="text-primary-foreground">
                 <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-4 lg:mb-6 slide-in-left">
-                  Clean Water
-                  <span className="block text-accent">For Tanzania</span>
+                  <span className="gradient-text">Clean Water</span>
+                  <span className="block text-accent joy-bounce">For Tanzania</span>
                 </h1>
                 <p className="text-lg sm:text-xl lg:text-2xl mb-6 lg:mb-8 opacity-90 slide-in-left delay-200">
                   Leading water treatment solutions for industrial and commercial applications across East Africa
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 lg:gap-4 slide-in-left delay-300">
-                  <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-strong text-sm sm:text-base">
+                  <Button size="lg" className="bg-gradient-energy hover:bg-gradient-joy text-white shadow-joy hover-rainbow text-sm sm:text-base">
                     Get Free Quote
                     <ArrowRight className="ml-2 h-4 w-4 lg:h-5 lg:w-5" />
                   </Button>
-                  <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary text-sm sm:text-base">
+                  <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-gradient-primary hover:text-white hover:border-transparent text-sm sm:text-base">
                     View Our Work
                   </Button>
                 </div>
               </div>
               
               <div className="relative slide-in-right delay-400 mt-8 lg:mt-0">
-                <div className="absolute -inset-2 lg:-inset-4 bg-gradient-primary rounded-2xl lg:rounded-3xl blur-xl lg:blur-2xl opacity-30 animate-pulse"></div>
+                <div className="absolute -inset-2 lg:-inset-4 bg-gradient-joy rounded-2xl lg:rounded-3xl blur-xl lg:blur-2xl opacity-40 animate-pulse"></div>
                 <img
                   src={ownerEquipment}
                   alt="Professional water treatment equipment"
-                  className="relative rounded-2xl lg:rounded-3xl shadow-strong w-full h-auto object-cover"
+                  className="relative rounded-2xl lg:rounded-3xl shadow-joy w-full h-auto object-cover pulse-glow"
                   loading="eager"
                 />
               </div>
@@ -154,10 +154,10 @@ const Home = () => {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className={`text-center slide-in-up delay-${index * 100}`}>
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-primary rounded-full mb-4 shadow-glow">
-                  <stat.icon className="h-8 w-8 text-primary-foreground" />
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-energy rounded-full mb-4 shadow-joy pulse-glow">
+                  <stat.icon className="h-8 w-8 text-white" />
                 </div>
-                <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">{stat.number}</div>
+                <div className="text-3xl lg:text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-2">{stat.number}</div>
                 <div className="text-muted-foreground font-medium">{stat.label}</div>
               </div>
             ))}
@@ -169,8 +169,8 @@ const Home = () => {
       <section className="py-20 bg-gradient-to-b from-background to-secondary/30">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6 slide-in-up">
-              Our <span className="text-primary">Services</span>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6 slide-in-up">
+              Our <span className="gradient-text">Services</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto slide-in-up delay-200">
               Comprehensive water treatment solutions tailored for Tanzania's industrial needs
@@ -179,7 +179,7 @@ const Home = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className={`group bg-gradient-card shadow-medium hover:shadow-strong transition-all duration-normal hover:-translate-y-4 slide-in-up delay-${(index + 1) * 200}`}>
+              <Card key={index} className={`group bg-gradient-card shadow-medium hover:shadow-joy transition-all duration-normal hover:-translate-y-4 hover-rainbow slide-in-up delay-${(index + 1) * 200}`}>
                 <div className="relative overflow-hidden rounded-t-lg">
                   <img
                     src={service.image}
@@ -187,14 +187,14 @@ const Home = () => {
                     className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-slow"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                  <div className="absolute top-4 left-4 bg-primary/90 backdrop-blur-sm rounded-full p-3">
-                    <service.icon className="h-6 w-6 text-primary-foreground" />
+                  <div className="absolute top-4 left-4 bg-gradient-primary backdrop-blur-sm rounded-full p-3 pulse-glow">
+                    <service.icon className="h-6 w-6 text-white" />
                   </div>
                 </div>
                 <CardContent className="p-6">
                   <h3 className="text-xl font-semibold text-foreground mb-3">{service.title}</h3>
                   <p className="text-muted-foreground mb-4">{service.description}</p>
-                  <Button variant="outline" className="group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                  <Button variant="outline" className="group-hover:bg-gradient-energy group-hover:text-white group-hover:border-transparent transition-all">
                     Learn More
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
@@ -211,7 +211,7 @@ const Home = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="slide-in-left">
               <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-                Why Choose <span className="text-primary">IDS Water Tech?</span>
+                Why Choose <span className="gradient-text">IDS Water Tech?</span>
               </h2>
               <p className="text-xl text-muted-foreground mb-8">
                 We combine cutting-edge technology with local expertise to deliver water treatment solutions that meet international standards.
@@ -226,7 +226,7 @@ const Home = () => {
               </div>
               <div className="mt-8">
                 <Link to="/about">
-                  <Button size="lg" className="bg-gradient-primary hover:bg-primary-dark shadow-medium">
+                  <Button size="lg" className="bg-gradient-energy hover:bg-gradient-joy shadow-joy hover-rainbow">
                     Learn More About Us
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
@@ -259,8 +259,8 @@ const Home = () => {
       <section className="py-20 bg-gradient-to-b from-background to-secondary/20">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6 slide-in-up">
-              Frequently Asked <span className="text-primary">Questions</span>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6 slide-in-up">
+              Frequently Asked <span className="gradient-text">Questions</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto slide-in-up delay-200">
               Get answers to common questions about our water treatment solutions
@@ -301,8 +301,8 @@ const Home = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6 slide-in-up">
-              Latest <span className="text-primary">Insights</span>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6 slide-in-up">
+              Latest <span className="gradient-text">Insights</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto slide-in-up delay-200">
               Stay updated with the latest trends and technologies in water treatment
@@ -311,7 +311,7 @@ const Home = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {featuredBlogPosts.map((post, index) => (
-              <Card key={index} className={`group bg-gradient-card shadow-medium hover:shadow-strong transition-all duration-normal hover:-translate-y-2 slide-in-up delay-${(index + 1) * 200}`}>
+              <Card key={index} className={`group bg-gradient-card shadow-medium hover:shadow-joy transition-all duration-normal hover:-translate-y-2 hover-rainbow slide-in-up delay-${(index + 1) * 200}`}>
                 <div className="relative overflow-hidden rounded-t-lg">
                   <img
                     src={post.image}
@@ -319,7 +319,7 @@ const Home = () => {
                     className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-slow"
                   />
                   <div className="absolute top-4 left-4">
-                    <Badge className="bg-primary/90 backdrop-blur-sm text-primary-foreground">
+                    <Badge className="bg-gradient-primary backdrop-blur-sm text-white border-0 pulse-glow">
                       {post.category}
                     </Badge>
                   </div>
@@ -358,7 +358,7 @@ const Home = () => {
 
           <div className="text-center mt-12">
             <Link to="/blog">
-              <Button size="lg" className="bg-gradient-primary hover:bg-primary-dark shadow-medium">
+              <Button size="lg" className="bg-gradient-energy hover:bg-gradient-joy shadow-joy hover-rainbow">
                 View All Articles
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
@@ -378,12 +378,12 @@ const Home = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center slide-in-up delay-300">
             <Link to="/contact">
-              <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-strong">
+              <Button size="lg" className="bg-gradient-energy hover:bg-gradient-joy text-white shadow-joy hover-rainbow">
                 Get Free Consultation
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
-            <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+            <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-gradient-accent hover:text-white hover:border-transparent">
               Call +255 123 456 789
             </Button>
           </div>

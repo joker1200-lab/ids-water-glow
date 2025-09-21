@@ -2,128 +2,131 @@
 @tailwind components;
 @tailwind utilities;
 
-/* IDS Water Tech Design System - Modern Industrial Water Treatment Theme
-All colors MUST be HSL.
+/* IDS Water Tech Design System - Vibrant & Joyful Water Treatment Theme
+All colors MUST be HSL - Bright, energetic, and inspiring colors!
 */
 
 @layer base {
   :root {
-    /* Water & Technology Color Palette */
-    --background: 210 25% 98%;
-    --foreground: 210 15% 15%;
+    /* Vibrant Water & Technology Color Palette */
+    --background: 200 30% 98%;
+    --foreground: 210 20% 10%;
 
     --card: 0 0% 100%;
-    --card-foreground: 210 15% 15%;
+    --card-foreground: 210 20% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 210 15% 15%;
+    --popover-foreground: 210 20% 10%;
 
-    /* Primary: Deep Water Blue */
-    --primary: 210 85% 42%;
+    /* Primary: Vibrant Ocean Blue */
+    --primary: 200 90% 50%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 210 75% 55%;
-    --primary-dark: 210 90% 32%;
+    --primary-light: 190 85% 60%;
+    --primary-dark: 210 95% 40%;
 
-    /* Secondary: Clean Industrial Gray */
-    --secondary: 210 15% 96%;
-    --secondary-foreground: 210 15% 25%;
+    /* Secondary: Fresh Clean Blue */
+    --secondary: 190 40% 95%;
+    --secondary-foreground: 210 25% 20%;
 
-    --muted: 210 15% 94%;
-    --muted-foreground: 210 10% 45%;
+    --muted: 190 35% 96%;
+    --muted-foreground: 210 15% 40%;
 
-    /* Accent: Professional Orange (from worker uniforms) */
-    --accent: 25 85% 55%;
+    /* Accent: Energetic Coral Orange */
+    --accent: 15 90% 60%;
     --accent-foreground: 0 0% 100%;
 
-    /* Success: Clean Water Green */
-    --success: 155 65% 45%;
+    /* Success: Vibrant Green */
+    --success: 145 70% 50%;
     --success-foreground: 0 0% 100%;
 
-    --destructive: 0 75% 55%;
+    /* Additional Joy Colors */
+    --joy-yellow: 45 95% 60%;
+    --joy-purple: 280 85% 65%;
+    --joy-pink: 330 85% 70%;
+    --joy-teal: 175 85% 55%;
+
+    --destructive: 0 85% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 20% 90%;
-    --input: 210 20% 92%;
-    --ring: 210 85% 42%;
+    --border: 200 25% 88%;
+    --input: 200 25% 92%;
+    --ring: 200 90% 50%;
 
-    --radius: 0.75rem;
+    --radius: 1rem;
 
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(210 85% 42%) 0%, hsl(210 75% 55%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(210 85% 42%) 0%, hsl(210 90% 32%) 50%, hsl(210 85% 42%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(210 15% 98%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(25 85% 55%) 0%, hsl(25 75% 65%) 100%);
+    /* Vibrant Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(200 90% 50%) 0%, hsl(190 85% 60%) 50%, hsl(175 85% 55%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(200 90% 50%) 0%, hsl(280 85% 65%) 25%, hsl(15 90% 60%) 75%, hsl(45 95% 60%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(190 40% 98%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(15 90% 60%) 0%, hsl(45 95% 60%) 100%);
+    --gradient-joy: linear-gradient(135deg, hsl(330 85% 70%) 0%, hsl(280 85% 65%) 50%, hsl(200 90% 50%) 100%);
+    --gradient-energy: linear-gradient(90deg, hsl(45 95% 60%) 0%, hsl(15 90% 60%) 50%, hsl(330 85% 70%) 100%);
 
-    /* Shadows */
-    --shadow-soft: 0 2px 8px hsl(210 15% 15% / 0.08);
-    --shadow-medium: 0 4px 20px hsl(210 15% 15% / 0.12);
-    --shadow-strong: 0 8px 32px hsl(210 15% 15% / 0.15);
-    --shadow-glow: 0 0 20px hsl(210 85% 42% / 0.3);
+    /* Enhanced Shadows with Color */
+    --shadow-soft: 0 2px 8px hsl(200 50% 30% / 0.1);
+    --shadow-medium: 0 4px 20px hsl(200 60% 40% / 0.15);
+    --shadow-strong: 0 8px 32px hsl(200 70% 30% / 0.2);
+    --shadow-glow: 0 0 30px hsl(200 90% 50% / 0.4);
+    --shadow-joy: 0 0 40px hsl(330 85% 70% / 0.3);
 
     /* Animation Timings */
     --transition-fast: 0.15s ease-out;
     --transition-normal: 0.3s ease-out;
     --transition-slow: 0.5s ease-out;
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 190 40% 98%;
+    --sidebar-foreground: 210 20% 15%;
+    --sidebar-primary: 200 90% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 190 35% 96%;
+    --sidebar-accent-foreground: 210 20% 15%;
+    --sidebar-border: 200 25% 90%;
+    --sidebar-ring: 200 90% 50%;
   }
 
   .dark {
-    /* Dark mode for professional industrial look */
-    --background: 210 20% 8%;
-    --foreground: 210 15% 92%;
+    /* Dark mode with vibrant accents */
+    --background: 210 25% 8%;
+    --foreground: 190 20% 95%;
 
-    --card: 210 20% 10%;
-    --card-foreground: 210 15% 92%;
+    --card: 210 25% 10%;
+    --card-foreground: 190 20% 95%;
 
-    --popover: 210 20% 10%;
-    --popover-foreground: 210 15% 92%;
+    --popover: 210 25% 10%;
+    --popover-foreground: 190 20% 95%;
 
-    --primary: 210 75% 55%;
-    --primary-foreground: 210 20% 8%;
-    --primary-light: 210 65% 65%;
-    --primary-dark: 210 85% 45%;
+    --primary: 190 85% 60%;
+    --primary-foreground: 210 25% 8%;
+    --primary-light: 175 80% 70%;
+    --primary-dark: 200 90% 50%;
 
-    --secondary: 210 15% 15%;
-    --secondary-foreground: 210 15% 85%;
+    --secondary: 210 20% 15%;
+    --secondary-foreground: 190 20% 85%;
 
-    --muted: 210 15% 12%;
-    --muted-foreground: 210 10% 65%;
+    --muted: 210 20% 12%;
+    --muted-foreground: 210 15% 70%;
 
-    --accent: 25 75% 60%;
-    --accent-foreground: 210 20% 8%;
+    --accent: 15 85% 65%;
+    --accent-foreground: 210 25% 8%;
 
-    --success: 155 55% 50%;
-    --success-foreground: 210 20% 8%;
+    --success: 145 65% 55%;
+    --success-foreground: 210 25% 8%;
 
-    --destructive: 0 65% 60%;
-    --destructive-foreground: 210 20% 8%;
+    --destructive: 0 80% 65%;
+    --destructive-foreground: 210 25% 8%;
 
-    --border: 210 15% 18%;
-    --input: 210 15% 15%;
-    --ring: 210 75% 55%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 210 20% 18%;
+    --input: 210 20% 15%;
+    --ring: 190 85% 60%;
+    
+    --sidebar-background: 210 25% 10%;
+    --sidebar-foreground: 190 20% 90%;
+    --sidebar-primary: 190 85% 60%;
+    --sidebar-primary-foreground: 210 25% 8%;
+    --sidebar-accent: 210 20% 15%;
+    --sidebar-accent-foreground: 190 20% 90%;
+    --sidebar-border: 210 20% 18%;
+    --sidebar-ring: 190 85% 60%;
   }
 }
 
@@ -142,38 +145,44 @@ All colors MUST be HSL.
 }
 
 @layer components {
-  /* Animated Water Droplet */
+  /* Animated Water Droplet with Rainbow Effect */
   .water-droplet {
     @apply relative;
   }
   
   .water-droplet::before {
     content: '';
-    @apply absolute -inset-1 bg-gradient-to-r from-primary/20 to-primary-light/20 rounded-full blur-sm;
-    animation: droplet-glow 2s ease-in-out infinite alternate;
+    @apply absolute -inset-1 rounded-full blur-sm;
+    background: linear-gradient(135deg, hsl(var(--joy-teal) / 0.3), hsl(var(--primary) / 0.4), hsl(var(--joy-purple) / 0.3));
+    animation: rainbow-glow 3s ease-in-out infinite alternate;
   }
 
-  /* Floating Animation */
+  /* Enhanced Floating Animation */
   .float-animation {
-    animation: float 3s ease-in-out infinite;
+    animation: float-joy 4s ease-in-out infinite;
   }
 
-  /* Pulse Glow Effect */
+  /* Pulse Glow Effect with Colors */
   .pulse-glow {
-    animation: pulse-glow 2s ease-in-out infinite;
+    animation: pulse-rainbow 3s ease-in-out infinite;
+  }
+
+  /* Joy Bounce Animation */
+  .joy-bounce {
+    animation: joy-bounce 2s ease-in-out infinite;
   }
 
   /* Slide in animations */
   .slide-in-left {
-    animation: slide-in-left 0.6s ease-out;
+    animation: slide-in-left 0.8s ease-out;
   }
 
   .slide-in-right {
-    animation: slide-in-right 0.6s ease-out;
+    animation: slide-in-right 0.8s ease-out;
   }
 
   .slide-in-up {
-    animation: slide-in-up 0.6s ease-out;
+    animation: slide-in-up 0.8s ease-out;
   }
 
   /* Stagger animation delays */
@@ -183,46 +192,99 @@ All colors MUST be HSL.
   .delay-400 { animation-delay: 0.4s; }
   .delay-500 { animation-delay: 0.5s; }
 
-  /* WhatsApp Button */
+  /* WhatsApp Button with Glow */
   .whatsapp-float {
     @apply fixed bottom-6 right-6 z-50 w-14 h-14 bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300;
-    animation: bounce-subtle 2s ease-in-out infinite;
+    animation: bounce-glow 3s ease-in-out infinite;
+    box-shadow: 0 4px 20px rgba(34, 197, 94, 0.4);
+  }
+
+  /* Gradient Text */
+  .gradient-text {
+    background: var(--gradient-joy);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Colorful Hover Effects */
+  .hover-rainbow {
+    transition: all 0.3s ease;
+  }
+
+  .hover-rainbow:hover {
+    background: var(--gradient-energy);
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: var(--shadow-joy);
   }
 }
 
-@keyframes float {
+@keyframes float-joy {
   0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-10px) rotate(1deg); }
+  25% { transform: translateY(-8px) rotate(1deg); }
+  50% { transform: translateY(-12px) rotate(0deg); }
+  75% { transform: translateY(-6px) rotate(-1deg); }
 }
 
-@keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 20px hsl(var(--primary) / 0.3); }
-  50% { box-shadow: 0 0 30px hsl(var(--primary) / 0.5), 0 0 40px hsl(var(--primary) / 0.3); }
+@keyframes pulse-rainbow {
+  0%, 100% { 
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.4), 0 0 40px hsl(var(--joy-teal) / 0.2); 
+  }
+  33% { 
+    box-shadow: 0 0 30px hsl(var(--accent) / 0.5), 0 0 50px hsl(var(--joy-yellow) / 0.3); 
+  }
+  66% { 
+    box-shadow: 0 0 25px hsl(var(--joy-purple) / 0.4), 0 0 45px hsl(var(--joy-pink) / 0.2); 
+  }
 }
 
-@keyframes droplet-glow {
-  0% { opacity: 0.5; transform: scale(0.95); }
-  100% { opacity: 1; transform: scale(1.05); }
+@keyframes rainbow-glow {
+  0% { 
+    opacity: 0.6; 
+    transform: scale(0.95);
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+    filter: hue-rotate(60deg);
+  }
+  100% { 
+    opacity: 0.8; 
+    transform: scale(1);
+    filter: hue-rotate(120deg);
+  }
+}
+
+@keyframes joy-bounce {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-10px) scale(1.05); }
 }
 
 @keyframes slide-in-left {
-  from { opacity: 0; transform: translateX(-30px); }
-  to { opacity: 1; transform: translateX(0); }
+  from { opacity: 0; transform: translateX(-50px) scale(0.95); }
+  to { opacity: 1; transform: translateX(0) scale(1); }
 }
 
 @keyframes slide-in-right {
-  from { opacity: 0; transform: translateX(30px); }
-  to { opacity: 1; transform: translateX(0); }
+  from { opacity: 0; transform: translateX(50px) scale(0.95); }
+  to { opacity: 1; transform: translateX(0) scale(1); }
 }
 
 @keyframes slide-in-up {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(50px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
-@keyframes bounce-subtle {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
+@keyframes bounce-glow {
+  0%, 100% { 
+    transform: translateY(0) scale(1); 
+    box-shadow: 0 4px 20px rgba(34, 197, 94, 0.4);
+  }
+  50% { 
+    transform: translateY(-8px) scale(1.1); 
+    box-shadow: 0 8px 30px rgba(34, 197, 94, 0.6), 0 0 20px rgba(34, 197, 94, 0.3);
+  }
 }
 
 /* Lazy loading images */
