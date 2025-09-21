@@ -118,13 +118,13 @@ const Home = () => {
       systems: ["Reverse Osmosis", "UV Sterilization", "Water Softening"]
     },
     {
-      title: "Municipal Water Plant - Dodoma",
-      category: "Municipality",
-      location: "Dodoma",
-      description: "Large-scale water treatment facility serving 50,000+ residents with advanced filtration and purification systems for the capital city.",
+      title: "TDL Company & BSs Insulators Ltd",
+      category: "Manufacturing Industry",
+      location: "Dar es Salaam",
+      description: "Advanced water treatment systems for TDL Company and BSs Insulators Ltd, providing high-quality water for industrial processes and employee facilities.",
       image: municipalityWaterPlant,
-      capacity: "50,000L/hr",
-      systems: ["Multi-stage Filtration", "Chlorination", "Storage Systems"]
+      capacity: "25,000L/hr",
+      systems: ["Industrial RO", "Pre-treatment", "Quality Monitoring"]
     },
     {
       title: "Hospital Water System - Mwanza",

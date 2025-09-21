@@ -90,8 +90,7 @@ const Contact = () => {
 
   const whatsappNumber = "+255123456789";
   const openWhatsApp = () => {
-    const message = "Hello! I'm interested in your water treatment services and would like to discuss my requirements.";
-    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    const url = "https://whatsapp.com/dl/";
     window.open(url, '_blank');
   };
 

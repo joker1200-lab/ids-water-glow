@@ -224,7 +224,12 @@ const FAQ = () => {
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>
-                <Button size="lg" variant="outline" className="hover:bg-primary hover:text-primary-foreground">
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="hover:bg-primary hover:text-primary-foreground"
+                  onClick={() => window.open("https://whatsapp.com/dl/", '_blank')}
+                >
                   <MessageCircle className="mr-2 h-5 w-5" />
                   Chat on WhatsApp
                 </Button>

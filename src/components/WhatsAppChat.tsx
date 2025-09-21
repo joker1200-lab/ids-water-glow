@@ -16,8 +16,7 @@ const WhatsAppChat = () => {
   ];
 
   const openWhatsApp = (message?: string) => {
-    const text = message || "Hello! I'm interested in your water treatment services.";
-    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+    const url = "https://whatsapp.com/dl/";
     window.open(url, '_blank');
     setIsOpen(false);
   };

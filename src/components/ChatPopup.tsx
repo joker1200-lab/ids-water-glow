@@ -23,8 +23,7 @@ const ChatPopup = () => {
 
   const openWhatsApp = () => {
     const message = "Hi! I'm interested in your water treatment solutions. Can you help me?";
-    const phoneNumber = "255123456789";
-    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    const url = "https://whatsapp.com/dl/";
     window.open(url, '_blank');
     handleClose();
   };
