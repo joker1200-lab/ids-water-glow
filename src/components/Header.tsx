@@ -37,7 +37,7 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-1">
+          <div className="hidden md:flex items-center space-x-1">
             {navItems.map((item) => (
               <Link
                 key={item.name}
@@ -54,7 +54,7 @@ const Header = () => {
           </div>
 
           {/* CTA Button */}
-          <div className="hidden lg:block">
+          <div className="hidden md:block">
             <Button className="bg-gradient-primary hover:bg-primary-dark shadow-medium">
               Get Quote
             </Button>
@@ -63,7 +63,7 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-2 rounded-lg hover:bg-secondary transition-colors"
+            className="md:hidden p-2 rounded-lg hover:bg-secondary transition-colors"
             aria-label="Toggle mobile menu"
           >
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -72,7 +72,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden py-4 space-y-2 slide-in-up">
+          <div className="md:hidden py-4 space-y-2 slide-in-up">
             {navItems.map((item) => (
               <Link
                 key={item.name}

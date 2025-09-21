@@ -11,7 +11,7 @@ const ChatPopup = () => {
     const timer = setTimeout(() => {
       setIsVisible(true);
       setIsAnimating(true);
-    }, 5000);
+    }, 20000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -32,7 +32,7 @@ const ChatPopup = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/20 backdrop-blur-sm">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
       <Card className={`w-full max-w-md shadow-strong transition-all duration-300 ${
         isAnimating ? 'scale-100 opacity-100' : 'scale-95 opacity-0'
       }`}>
