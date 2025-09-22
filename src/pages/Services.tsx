@@ -21,41 +21,41 @@ const Services = () => {
     {
       icon: Droplets,
       title: "Water Purification Systems",
-      description: "Advanced reverse osmosis and filtration systems for pure drinking water",
+      description: "Advanced water purification systems for clean, safe drinking water",
       image: equipment1,
-      features: ["Reverse Osmosis Technology", "Multi-Stage Filtration", "UV Sterilization", "Mineral Retention"]
+      features: ["Reverse Osmosis Systems", "Multi-Stage Filtration", "UV Sterilization", "Custom Design Solutions"]
     },
     {
-      icon: Factory,
-      title: "Industrial Water Treatment",
-      description: "Heavy-duty solutions for manufacturing and industrial processes",
+      icon: Settings,
+      title: "Water Purification Plants Spareparts",
+      description: "Genuine spare parts and components for all water treatment equipment",
       image: equipment2,
-      features: ["Boiler Water Treatment", "Cooling Tower Systems", "Wastewater Treatment", "Chemical Dosing Systems"]
+      features: ["Original Equipment Parts", "Compatible Components", "Filter Cartridges", "Pump Parts & Accessories"]
     },
     {
-      icon: Wrench,
-      title: "System Maintenance",
-      description: "Professional maintenance and support services for optimal performance",
+      icon: Droplets,
+      title: "Water Softener Units",
+      description: "High-quality water softening systems for hard water treatment",
       image: equipment3,
-      features: ["24/7 Support", "Preventive Maintenance", "Emergency Repairs", "Performance Optimization"]
+      features: ["Ion Exchange Systems", "Salt-Based Softeners", "Automatic Regeneration", "Commercial & Residential"]
     }
   ];
 
   const additionalServices = [
     {
       icon: TestTube,
-      title: "Water Quality Testing",
-      description: "Comprehensive analysis and monitoring of water quality parameters"
+      title: "Different Type of Filters",
+      description: "Wide range of filtration solutions for various water treatment needs"
     },
     {
       icon: Settings,
-      title: "System Installation",
-      description: "Professional installation and commissioning of water treatment systems"
+      title: "Food Grade Industrial Pumps",
+      description: "Specialized pumps designed for food processing and industrial applications"
     },
     {
       icon: Shield,
-      title: "Consultation Services",
-      description: "Expert advice on water treatment solutions for your specific needs"
+      title: "Installation & Support",
+      description: "Professional installation and ongoing technical support services"
     }
   ];
 
