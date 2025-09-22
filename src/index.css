@@ -8,125 +8,105 @@ All colors MUST be HSL - Bright, energetic, and inspiring colors!
 
 @layer base {
   :root {
-    /* Vibrant Water & Technology Color Palette */
-    --background: 200 30% 98%;
-    --foreground: 210 20% 10%;
+    /* Simple Blue & Orange Color Palette */
+    --background: 0 0% 100%;
+    --foreground: 220 15% 20%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 210 20% 10%;
+    --card: 0 0% 98%;
+    --card-foreground: 220 15% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 210 20% 10%;
+    --popover-foreground: 220 15% 20%;
 
-    /* Primary: Deep Forest Green */
-    --primary: 140 60% 35%;
+    /* Primary: Blue */
+    --primary: 210 90% 45%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 150 50% 45%;
-    --primary-dark: 130 70% 25%;
 
-    /* Secondary: Light Forest */
-    --secondary: 150 30% 95%;
-    --secondary-foreground: 140 40% 20%;
+    /* Secondary: Light Blue */
+    --secondary: 210 20% 92%;
+    --secondary-foreground: 220 15% 20%;
 
-    --muted: 150 25% 96%;
-    --muted-foreground: 140 20% 40%;
+    --muted: 210 20% 92%;
+    --muted-foreground: 220 10% 45%;
 
-    /* Accent: Warm Gold */
-    --accent: 45 85% 55%;
-    --accent-foreground: 0 0% 100%;
+    /* Accent: Orange */
+    --accent: 30 95% 55%;
+    --accent-foreground: 220 15% 20%;
 
-    /* Success: Vibrant Green */
-    --success: 145 70% 50%;
+    /* Success: Green */
+    --success: 142 71% 45%;
     --success-foreground: 0 0% 100%;
 
-    /* Additional Joy Colors */
-    --joy-yellow: 45 85% 55%;
-    --joy-purple: 260 40% 45%;
-    --joy-pink: 15 70% 60%;
-    --joy-teal: 175 60% 40%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
 
-    --destructive: 0 85% 60%;
-    --destructive-foreground: 0 0% 100%;
+    --border: 210 20% 85%;
+    --input: 210 20% 85%;
+    --ring: 210 90% 45%;
 
-    --border: 200 25% 88%;
-    --input: 200 25% 92%;
-    --ring: 200 90% 50%;
+    --radius: 0.5rem;
 
-    --radius: 1rem;
+    /* Simple Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(220 15% 20% / 0.05);
+    --shadow-medium: 0 4px 6px -1px hsl(220 15% 20% / 0.1), 0 2px 4px -1px hsl(220 15% 20% / 0.06);
+    --shadow-strong: 0 10px 15px -3px hsl(220 15% 20% / 0.1), 0 4px 6px -2px hsl(220 15% 20% / 0.05);
 
-    /* Nature-Inspired Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(140 60% 35%) 0%, hsl(150 50% 45%) 50%, hsl(175 60% 40%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(140 60% 35%) 0%, hsl(260 40% 45%) 25%, hsl(45 85% 55%) 75%, hsl(15 70% 60%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(150 30% 98%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(45 85% 55%) 0%, hsl(15 70% 60%) 100%);
-    --gradient-joy: linear-gradient(135deg, hsl(15 70% 60%) 0%, hsl(260 40% 45%) 50%, hsl(140 60% 35%) 100%);
-    --gradient-energy: linear-gradient(90deg, hsl(45 85% 55%) 0%, hsl(15 70% 60%) 50%, hsl(140 60% 35%) 100%);
+    /* Transitions */
+    --transition-fast: 150ms ease-in-out;
+    --transition-normal: 250ms ease-in-out;
+    --transition-slow: 350ms ease-in-out;
 
-    /* Enhanced Shadows with Color */
-    --shadow-soft: 0 2px 8px hsl(200 50% 30% / 0.1);
-    --shadow-medium: 0 4px 20px hsl(200 60% 40% / 0.15);
-    --shadow-strong: 0 8px 32px hsl(200 70% 30% / 0.2);
-    --shadow-glow: 0 0 30px hsl(200 90% 50% / 0.4);
-    --shadow-joy: 0 0 40px hsl(330 85% 70% / 0.3);
-
-    /* Animation Timings */
-    --transition-fast: 0.15s ease-out;
-    --transition-normal: 0.3s ease-out;
-    --transition-slow: 0.5s ease-out;
-
-    --sidebar-background: 190 40% 98%;
-    --sidebar-foreground: 210 20% 15%;
-    --sidebar-primary: 200 90% 50%;
+    --sidebar-background: 210 20% 98%;
+    --sidebar-foreground: 220 15% 20%;
+    --sidebar-primary: 210 90% 45%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 190 35% 96%;
-    --sidebar-accent-foreground: 210 20% 15%;
-    --sidebar-border: 200 25% 90%;
-    --sidebar-ring: 200 90% 50%;
+    --sidebar-accent: 210 20% 95%;
+    --sidebar-accent-foreground: 220 15% 20%;
+    --sidebar-border: 210 20% 90%;
+    --sidebar-ring: 210 90% 45%;
   }
 
   .dark {
-    /* Dark mode with vibrant accents */
-    --background: 210 25% 8%;
-    --foreground: 190 20% 95%;
+    /* Dark mode with simple colors */
+    --background: 220 15% 10%;
+    --foreground: 0 0% 95%;
 
-    --card: 210 25% 10%;
-    --card-foreground: 190 20% 95%;
+    --card: 220 15% 12%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 210 25% 10%;
-    --popover-foreground: 190 20% 95%;
+    --popover: 220 15% 10%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 150 50% 45%;
-    --primary-foreground: 140 60% 10%;
-    --primary-light: 160 40% 55%;
-    --primary-dark: 140 60% 35%;
+    --primary: 210 80% 55%;
+    --primary-foreground: 220 15% 10%;
 
-    --secondary: 210 20% 15%;
-    --secondary-foreground: 190 20% 85%;
+    --secondary: 220 10% 18%;
+    --secondary-foreground: 0 0% 95%;
 
-    --muted: 210 20% 12%;
-    --muted-foreground: 210 15% 70%;
+    --muted: 220 10% 18%;
+    --muted-foreground: 0 0% 70%;
 
-    --accent: 45 80% 60%;
-    --accent-foreground: 140 60% 10%;
+    --accent: 30 90% 60%;
+    --accent-foreground: 220 15% 10%;
 
-    --success: 145 60% 50%;
-    --success-foreground: 140 60% 10%;
+    --success: 142 71% 45%;
+    --success-foreground: 220 15% 10%;
 
     --destructive: 0 80% 65%;
-    --destructive-foreground: 210 25% 8%;
+    --destructive-foreground: 220 15% 10%;
 
-    --border: 210 20% 18%;
-    --input: 210 20% 15%;
-    --ring: 150 50% 45%;
+    --border: 220 10% 25%;
+    --input: 220 10% 25%;
+    --ring: 210 80% 55%;
     
-    --sidebar-background: 210 25% 10%;
-    --sidebar-foreground: 190 20% 90%;
-    --sidebar-primary: 150 50% 45%;
-    --sidebar-primary-foreground: 140 60% 10%;
-    --sidebar-accent: 210 20% 15%;
-    --sidebar-accent-foreground: 190 20% 90%;
-    --sidebar-border: 210 20% 18%;
-    --sidebar-ring: 150 50% 45%;
+    --sidebar-background: 220 15% 12%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 210 80% 55%;
+    --sidebar-primary-foreground: 220 15% 10%;
+    --sidebar-accent: 220 10% 18%;
+    --sidebar-accent-foreground: 0 0% 90%;
+    --sidebar-border: 220 10% 25%;
+    --sidebar-ring: 210 80% 55%;
   }
 }
 
