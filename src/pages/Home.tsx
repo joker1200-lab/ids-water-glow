@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, Droplets, Shield, Wrench, Award, Users, CheckCircle } from "lucide-react";
+import { ArrowRight, Droplets, Shield, Wrench, Award, Users, CheckCircle, Settings, TestTube, Factory } from "lucide-react";
 import { Link } from "react-router-dom";
 import Testimonials from "@/components/Testimonials";
 import ChatPopup from "@/components/ChatPopup";
@@ -20,25 +20,58 @@ import industrialWaterPlant from "@/assets/industrial-water-plant.jpg";
 import residentialWaterSystem from "@/assets/residential-water-system.jpg";
 import waterVendorFacility from "@/assets/water-vendor-facility.jpg";
 
+// Import service images
+import waterPurificationSystem from "@/assets/water-purification-system.jpg";
+import spareParts from "@/assets/spare-parts.jpg";
+import waterSoftener from "@/assets/water-softener.jpg";
+import waterFilterSystem from "@/assets/water-filter-system.jpg";
+import industrialPumps from "@/assets/industrial-pumps.jpg";
+import waterTreatmentChemicals from "@/assets/water-treatment-chemicals.jpg";
+import laboratoryTesting from "@/assets/laboratory-testing.jpg";
+
 const Home = () => {
   const services = [
     {
       icon: Droplets,
-      title: "Water Purification",
-      description: "Advanced filtration systems for crystal clear, safe drinking water",
-      image: equipment1
+      title: "Water Purification Systems",
+      description: "Advanced water purification systems for clean, safe drinking water",
+      image: waterPurificationSystem
     },
     {
-      icon: Shield,
-      title: "Industrial Treatment",
-      description: "Heavy-duty water treatment for manufacturing and industrial processes",
-      image: equipment2
+      icon: Settings,
+      title: "Water Purification Plants Spareparts",
+      description: "Genuine spare parts and components for all water treatment equipment",
+      image: spareParts
+    },
+    {
+      icon: Droplets,
+      title: "Water Softener Units",
+      description: "High-quality water softening systems for hard water treatment",
+      image: waterSoftener
+    },
+    {
+      icon: TestTube,
+      title: "Different Type of Filters",
+      description: "Wide range of filtration solutions for various water treatment needs",
+      image: waterFilterSystem
+    },
+    {
+      icon: Settings,
+      title: "Food Grade Industrial Pumps",
+      description: "Specialized pumps designed for food processing and industrial applications",
+      image: industrialPumps
+    },
+    {
+      icon: Factory,
+      title: "Water Treatment Chemicals",
+      description: "High-quality chemicals for water treatment and purification processes",
+      image: waterTreatmentChemicals
     },
     {
       icon: Wrench,
-      title: "System Maintenance",
-      description: "Professional maintenance services to keep your systems running optimally",
-      image: equipment3
+      title: "Water Hardness Test Kits",
+      description: "Professional testing equipment for water quality analysis and monitoring",
+      image: laboratoryTesting
     }
   ];
 
@@ -219,10 +252,10 @@ const Home = () => {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className={`text-center slide-in-up delay-${index * 100}`}>
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-energy rounded-full mb-4 shadow-joy pulse-glow">
-                  <stat.icon className="h-8 w-8 text-white" />
-                </div>
-                <div className="text-3xl lg:text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-2">{stat.number}</div>
+        <div className="inline-flex items-center justify-center w-16 h-16 bg-primary rounded-full mb-4 shadow-lg">
+          <stat.icon className="h-8 w-8 text-primary-foreground" />
+        </div>
+        <div className="text-3xl lg:text-4xl font-bold text-primary mb-2">{stat.number}</div>
                 <div className="text-muted-foreground font-medium">{stat.label}</div>
               </div>
             ))}
@@ -231,41 +264,52 @@ const Home = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-gradient-to-b from-background to-secondary/30">
+      <section className="py-20 bg-secondary/30">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6 slide-in-up">
-              Our <span className="gradient-text">Services</span>
+              Our <span className="text-primary">Services</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto slide-in-up delay-200">
               Comprehensive water treatment solutions tailored for Tanzania's industrial needs
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {services.map((service, index) => (
-              <Card key={index} className={`group bg-gradient-card shadow-medium hover:shadow-joy transition-all duration-normal hover:-translate-y-4 hover-rainbow slide-in-up delay-${(index + 1) * 200}`}>
+              <Card key={index} className={`group bg-card shadow-medium hover:shadow-lg transition-all duration-300 hover:-translate-y-2 slide-in-up delay-${(index + 1) * 100}`}>
                 <div className="relative overflow-hidden rounded-t-lg">
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-slow"
+                    className="w-full h-40 object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                  <div className="absolute top-4 left-4 bg-gradient-primary backdrop-blur-sm rounded-full p-3 pulse-glow">
-                    <service.icon className="h-6 w-6 text-white" />
+                  <div className="absolute top-3 left-3 bg-primary rounded-full p-2">
+                    <service.icon className="h-4 w-4 text-primary-foreground" />
                   </div>
                 </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold text-foreground mb-3">{service.title}</h3>
-                  <p className="text-muted-foreground mb-4">{service.description}</p>
-                  <Button variant="outline" className="group-hover:bg-gradient-energy group-hover:text-white group-hover:border-transparent transition-all">
-                    Learn More
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
+                <CardContent className="p-5">
+                  <h3 className="text-lg font-semibold text-foreground mb-2 line-clamp-1">{service.title}</h3>
+                  <p className="text-muted-foreground mb-4 text-sm line-clamp-2">{service.description}</p>
+                  <Link to="/services">
+                    <Button size="sm" className="w-full bg-primary hover:bg-primary/90">
+                      Learn More
+                      <ArrowRight className="ml-2 h-3 w-3" />
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <Link to="/services">
+              <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg">
+                View All Services
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -276,7 +320,7 @@ const Home = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="slide-in-left">
               <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-                Why Choose <span className="gradient-text">IDS Water Tech?</span>
+                Why Choose <span className="text-primary">IDS Water Tech?</span>
               </h2>
               <p className="text-xl text-muted-foreground mb-8">
                 We combine cutting-edge technology with local expertise to deliver water treatment solutions that meet international standards.
@@ -291,7 +335,7 @@ const Home = () => {
               </div>
               <div className="mt-8">
                 <Link to="/about">
-                  <Button size="lg" className="bg-gradient-energy hover:bg-gradient-joy shadow-joy hover-rainbow">
+                  <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg">
                     Learn More About Us
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
