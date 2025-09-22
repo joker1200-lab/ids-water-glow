@@ -15,6 +15,8 @@ import equipment1 from "@/assets/equipment-1.jpg";
 import equipment2 from "@/assets/equipment-2.jpg";
 import equipment3 from "@/assets/equipment-3.jpg";
 import ownerEquipment from "@/assets/owner-equipment.jpg";
+import waterTreatmentChemicals from "@/assets/water-treatment-chemicals.jpg";
+import waterHardnessTestKit from "@/assets/water-hardness-test-kit.jpg";
 
 const Services = () => {
   const mainServices = [
@@ -51,6 +53,16 @@ const Services = () => {
       icon: Settings,
       title: "Food Grade Industrial Pumps",
       description: "Specialized pumps designed for food processing and industrial applications"
+    },
+    {
+      icon: Factory,
+      title: "Water Treatment Chemicals",
+      description: "High-quality chemicals for water treatment and purification processes"
+    },
+    {
+      icon: Wrench,
+      title: "Water Hardness Test Kits",
+      description: "Professional testing equipment for water quality analysis and monitoring"
     },
     {
       icon: Shield,
@@ -144,21 +156,39 @@ const Services = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {additionalServices.map((service, index) => (
-              <Card key={index} className={`bg-gradient-card shadow-medium hover:shadow-strong transition-all duration-normal hover:-translate-y-4 slide-in-up delay-${(index + 1) * 200}`}>
-                <CardContent className="p-6 text-center">
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-primary rounded-full mb-6 shadow-glow">
-                    <service.icon className="h-8 w-8 text-primary-foreground" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-foreground mb-4">{service.title}</h3>
-                  <p className="text-muted-foreground mb-6">{service.description}</p>
-                  <Button variant="outline" className="hover:bg-primary hover:text-primary-foreground">
-                    Get Details
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-5 gap-8">
+            {additionalServices.map((service, index) => {
+              let serviceImage = null;
+              if (service.title === "Water Treatment Chemicals") {
+                serviceImage = waterTreatmentChemicals;
+              } else if (service.title === "Water Hardness Test Kits") {
+                serviceImage = waterHardnessTestKit;
+              }
+              
+              return (
+                <Card key={index} className={`bg-gradient-card shadow-medium hover:shadow-strong transition-all duration-normal hover:-translate-y-4 slide-in-up delay-${(index + 1) * 200}`}>
+                  {serviceImage && (
+                    <div className="relative overflow-hidden rounded-t-lg">
+                      <img
+                        src={serviceImage}
+                        alt={service.title}
+                        className="w-full h-32 object-cover group-hover:scale-110 transition-transform duration-slow"
+                      />
+                    </div>
+                  )}
+                  <CardContent className="p-6 text-center">
+                    <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-primary rounded-full mb-6 shadow-glow">
+                      <service.icon className="h-8 w-8 text-primary-foreground" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-foreground mb-4">{service.title}</h3>
+                    <p className="text-muted-foreground mb-6">{service.description}</p>
+                    <Button variant="outline" className="hover:bg-primary hover:text-primary-foreground">
+                      Get Details
+                    </Button>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
         </div>
       </section>

@@ -18,21 +18,21 @@ All colors MUST be HSL - Bright, energetic, and inspiring colors!
     --popover: 0 0% 100%;
     --popover-foreground: 210 20% 10%;
 
-    /* Primary: Vibrant Ocean Blue */
-    --primary: 200 90% 50%;
+    /* Primary: Deep Forest Green */
+    --primary: 140 60% 35%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 190 85% 60%;
-    --primary-dark: 210 95% 40%;
+    --primary-light: 150 50% 45%;
+    --primary-dark: 130 70% 25%;
 
-    /* Secondary: Fresh Clean Blue */
-    --secondary: 190 40% 95%;
-    --secondary-foreground: 210 25% 20%;
+    /* Secondary: Light Forest */
+    --secondary: 150 30% 95%;
+    --secondary-foreground: 140 40% 20%;
 
-    --muted: 190 35% 96%;
-    --muted-foreground: 210 15% 40%;
+    --muted: 150 25% 96%;
+    --muted-foreground: 140 20% 40%;
 
-    /* Accent: Energetic Coral Orange */
-    --accent: 15 90% 60%;
+    /* Accent: Warm Gold */
+    --accent: 45 85% 55%;
     --accent-foreground: 0 0% 100%;
 
     /* Success: Vibrant Green */
@@ -40,10 +40,10 @@ All colors MUST be HSL - Bright, energetic, and inspiring colors!
     --success-foreground: 0 0% 100%;
 
     /* Additional Joy Colors */
-    --joy-yellow: 45 95% 60%;
-    --joy-purple: 280 85% 65%;
-    --joy-pink: 330 85% 70%;
-    --joy-teal: 175 85% 55%;
+    --joy-yellow: 45 85% 55%;
+    --joy-purple: 260 40% 45%;
+    --joy-pink: 15 70% 60%;
+    --joy-teal: 175 60% 40%;
 
     --destructive: 0 85% 60%;
     --destructive-foreground: 0 0% 100%;
@@ -54,13 +54,13 @@ All colors MUST be HSL - Bright, energetic, and inspiring colors!
 
     --radius: 1rem;
 
-    /* Vibrant Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(200 90% 50%) 0%, hsl(190 85% 60%) 50%, hsl(175 85% 55%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(200 90% 50%) 0%, hsl(280 85% 65%) 25%, hsl(15 90% 60%) 75%, hsl(45 95% 60%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(190 40% 98%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(15 90% 60%) 0%, hsl(45 95% 60%) 100%);
-    --gradient-joy: linear-gradient(135deg, hsl(330 85% 70%) 0%, hsl(280 85% 65%) 50%, hsl(200 90% 50%) 100%);
-    --gradient-energy: linear-gradient(90deg, hsl(45 95% 60%) 0%, hsl(15 90% 60%) 50%, hsl(330 85% 70%) 100%);
+    /* Nature-Inspired Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(140 60% 35%) 0%, hsl(150 50% 45%) 50%, hsl(175 60% 40%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(140 60% 35%) 0%, hsl(260 40% 45%) 25%, hsl(45 85% 55%) 75%, hsl(15 70% 60%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(150 30% 98%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(45 85% 55%) 0%, hsl(15 70% 60%) 100%);
+    --gradient-joy: linear-gradient(135deg, hsl(15 70% 60%) 0%, hsl(260 40% 45%) 50%, hsl(140 60% 35%) 100%);
+    --gradient-energy: linear-gradient(90deg, hsl(45 85% 55%) 0%, hsl(15 70% 60%) 50%, hsl(140 60% 35%) 100%);
 
     /* Enhanced Shadows with Color */
     --shadow-soft: 0 2px 8px hsl(200 50% 30% / 0.1);
@@ -95,10 +95,10 @@ All colors MUST be HSL - Bright, energetic, and inspiring colors!
     --popover: 210 25% 10%;
     --popover-foreground: 190 20% 95%;
 
-    --primary: 190 85% 60%;
-    --primary-foreground: 210 25% 8%;
-    --primary-light: 175 80% 70%;
-    --primary-dark: 200 90% 50%;
+    --primary: 150 50% 45%;
+    --primary-foreground: 140 60% 10%;
+    --primary-light: 160 40% 55%;
+    --primary-dark: 140 60% 35%;
 
     --secondary: 210 20% 15%;
     --secondary-foreground: 190 20% 85%;
@@ -106,27 +106,27 @@ All colors MUST be HSL - Bright, energetic, and inspiring colors!
     --muted: 210 20% 12%;
     --muted-foreground: 210 15% 70%;
 
-    --accent: 15 85% 65%;
-    --accent-foreground: 210 25% 8%;
+    --accent: 45 80% 60%;
+    --accent-foreground: 140 60% 10%;
 
-    --success: 145 65% 55%;
-    --success-foreground: 210 25% 8%;
+    --success: 145 60% 50%;
+    --success-foreground: 140 60% 10%;
 
     --destructive: 0 80% 65%;
     --destructive-foreground: 210 25% 8%;
 
     --border: 210 20% 18%;
     --input: 210 20% 15%;
-    --ring: 190 85% 60%;
+    --ring: 150 50% 45%;
     
     --sidebar-background: 210 25% 10%;
     --sidebar-foreground: 190 20% 90%;
-    --sidebar-primary: 190 85% 60%;
-    --sidebar-primary-foreground: 210 25% 8%;
+    --sidebar-primary: 150 50% 45%;
+    --sidebar-primary-foreground: 140 60% 10%;
     --sidebar-accent: 210 20% 15%;
     --sidebar-accent-foreground: 190 20% 90%;
     --sidebar-border: 210 20% 18%;
-    --sidebar-ring: 190 85% 60%;
+    --sidebar-ring: 150 50% 45%;
   }
 }
 

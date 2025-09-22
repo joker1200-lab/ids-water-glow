@@ -109,63 +109,56 @@ const Home = () => {
 
   const portfolioProjects = [
     {
-      title: "Hotel Water Treatment - Dar es Salaam",
+      title: "Luxury Hotel Water Treatment System",
       category: "Hospitality Industry",
-      location: "Dar es Salaam",
       description: "Complete water treatment system for luxury hospitality facility with 200+ rooms including reverse osmosis, UV sterilization, and water softening systems.",
       image: hotelWaterSystem,
       capacity: "5,000L/hr",
       systems: ["Reverse Osmosis", "UV Sterilization", "Water Softening"]
     },
     {
-      title: "TDL Company Water System",
+      title: "TDL Company Industrial System",
       category: "Manufacturing Industry", 
-      location: "Dar es Salaam",
       description: "Advanced industrial water treatment system for TDL Company, providing high-quality water for manufacturing processes and employee facilities.",
       image: industrialWaterPlant,
       capacity: "15,000L/hr",
       systems: ["Industrial RO", "Pre-treatment", "Quality Monitoring"]
     },
     {
-      title: "BSs Insulators Ltd Water Treatment",
+      title: "BSs Insulators Ltd Treatment Plant",
       category: "Manufacturing Industry",
-      location: "Dar es Salaam", 
       description: "Specialized water treatment solution for BSs Insulators Ltd, ensuring pure water supply for insulator manufacturing and cooling systems.",
       image: municipalityWaterPlant,
       capacity: "12,000L/hr",
       systems: ["Multi-stage Filtration", "Ion Exchange", "Water Recycling"]
     },
     {
-      title: "Hospital Water System - Mwanza",
+      title: "Regional Hospital Water System",
       category: "Healthcare",
-      location: "Mwanza",
       description: "Medical-grade water treatment system ensuring sterile water supply for surgical procedures and patient care in regional hospital.",
       image: hospitalWaterSystem,
       capacity: "8,000L/hr",
       systems: ["Medical Grade RO", "Deionization", "Storage & Distribution"]
     },
     {
-      title: "Industrial Water Plant - Arusha",
+      title: "Manufacturing Plant Water Treatment",
       category: "Manufacturing Industry",
-      location: "Arusha",
       description: "High-capacity industrial water treatment for manufacturing facility with strict quality standards and continuous operation requirements.",
       image: industrialWaterPlant,
       capacity: "15,000L/hr",
       systems: ["Multi-stage RO", "Ozonation", "Quality Control"]
     },
     {
-      title: "Residential Estate - Mbeya",
+      title: "Residential Estate Community System",
       category: "Residential Complex",
-      location: "Mbeya",
       description: "Community water treatment system serving 500+ families with clean, safe drinking water in residential development.",
       image: residentialWaterSystem,
       capacity: "2,000L/hr",
       systems: ["Community RO", "UV Treatment", "Distribution Network"]
     },
     {
-      title: "Water Vendor Facility - Morogoro",
+      title: "Commercial Water Vendor Facility",
       category: "Commercial Water Sales",
-      location: "Morogoro",
       description: "Centralized water treatment facility serving multiple water vendors and small businesses providing clean drinking water to the community.",
       image: waterVendorFacility,
       capacity: "10,000L/hr",
@@ -350,12 +343,6 @@ const Home = () => {
                     <Badge className="bg-gradient-energy text-white border-0 pulse-glow">
                       {project.category}
                     </Badge>
-                  </div>
-                  <div className="absolute bottom-4 left-4 text-white">
-                    <div className="flex items-center text-sm">
-                      <div className="w-2 h-2 bg-joy-teal rounded-full mr-2 pulse-glow"></div>
-                      {project.location}
-                    </div>
                   </div>
                 </div>
                 <CardContent className="p-6">
