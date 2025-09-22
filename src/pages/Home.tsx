@@ -142,22 +142,6 @@ const Home = () => {
 
   const portfolioProjects = [
     {
-      title: "Luxury Hotel Water Treatment System",
-      category: "Hospitality Industry",
-      description: "Complete water treatment system for luxury hospitality facility with 200+ rooms including reverse osmosis, UV sterilization, and water softening systems.",
-      image: hotelWaterSystem,
-      capacity: "5,000L/hr",
-      systems: ["Reverse Osmosis", "UV Sterilization", "Water Softening"]
-    },
-    {
-      title: "TDL Company Industrial System",
-      category: "Manufacturing Industry", 
-      description: "Advanced industrial water treatment system for TDL Company, providing high-quality water for manufacturing processes and employee facilities.",
-      image: industrialWaterPlant,
-      capacity: "15,000L/hr",
-      systems: ["Industrial RO", "Pre-treatment", "Quality Monitoring"]
-    },
-    {
       title: "BSs Insulators Ltd Treatment Plant",
       category: "Manufacturing Industry",
       description: "Specialized water treatment solution for BSs Insulators Ltd, ensuring pure water supply for insulator manufacturing and cooling systems.",
@@ -166,36 +150,20 @@ const Home = () => {
       systems: ["Multi-stage Filtration", "Ion Exchange", "Water Recycling"]
     },
     {
-      title: "Regional Hospital Water System",
-      category: "Healthcare",
-      description: "Medical-grade water treatment system ensuring sterile water supply for surgical procedures and patient care in regional hospital.",
-      image: hospitalWaterSystem,
-      capacity: "8,000L/hr",
-      systems: ["Medical Grade RO", "Deionization", "Storage & Distribution"]
-    },
-    {
-      title: "Manufacturing Plant Water Treatment",
-      category: "Manufacturing Industry",
-      description: "High-capacity industrial water treatment for manufacturing facility with strict quality standards and continuous operation requirements.",
-      image: industrialWaterPlant,
-      capacity: "15,000L/hr",
-      systems: ["Multi-stage RO", "Ozonation", "Quality Control"]
-    },
-    {
-      title: "Residential Estate Community System",
-      category: "Residential Complex",
-      description: "Community water treatment system serving 500+ families with clean, safe drinking water in residential development.",
+      title: "Benedictine Fathers Water System",
+      category: "Religious Institution",
+      description: "Community water treatment system for Benedictine Fathers facility, providing clean water for residential and community activities.",
       image: residentialWaterSystem,
-      capacity: "2,000L/hr",
-      systems: ["Community RO", "UV Treatment", "Distribution Network"]
+      capacity: "3,500L/hr",
+      systems: ["Reverse Osmosis", "UV Sterilization", "Storage System"]
     },
     {
-      title: "Commercial Water Vendor Facility",
-      category: "Commercial Water Sales",
-      description: "Centralized water treatment facility serving multiple water vendors and small businesses providing clean drinking water to the community.",
-      image: waterVendorFacility,
-      capacity: "10,000L/hr",
-      systems: ["Advanced Filtration", "Quality Testing", "Bulk Distribution"]
+      title: "Naira Cosmetics Production Water",
+      category: "Cosmetics Manufacturing",
+      description: "High-purity water treatment system for Naira Cosmetics production processes, meeting strict quality standards for cosmetic manufacturing.",
+      image: industrialWaterPlant,
+      capacity: "8,000L/hr",
+      systems: ["Deionization", "Multi-stage RO", "Quality Control"]
     }
   ];
 
@@ -366,16 +334,16 @@ const Home = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6 slide-in-up">
-              Our <span className="gradient-text">Portfolio</span>
+              Our <span className="text-primary">Portfolio</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto slide-in-up delay-200">
-              Transforming water quality across Tanzania - from luxury hotels to family homes
+              Transforming water quality for leading companies across Tanzania
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {portfolioProjects.map((project, index) => (
-              <Card key={index} className={`group bg-gradient-card shadow-medium hover:shadow-joy transition-all duration-normal hover:-translate-y-4 hover-rainbow slide-in-up delay-${(index + 1) * 100}`}>
+              <Card key={index} className={`group bg-card shadow-medium hover:shadow-lg transition-all duration-300 hover:-translate-y-2 slide-in-up delay-${(index + 1) * 100}`}>
                 <div className="relative overflow-hidden rounded-t-lg">
                   <img
                     src={project.image}
@@ -384,7 +352,7 @@ const Home = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                   <div className="absolute top-4 left-4">
-                    <Badge className="bg-gradient-energy text-white border-0 pulse-glow">
+                    <Badge className="bg-primary text-primary-foreground border-0">
                       {project.category}
                     </Badge>
                   </div>
@@ -415,7 +383,7 @@ const Home = () => {
                   <Button 
                     variant="ghost" 
                     size="sm" 
-                    className="w-full mt-4 group-hover:bg-gradient-primary group-hover:text-white transition-all"
+                    className="w-full mt-4 group-hover:bg-primary group-hover:text-primary-foreground transition-all"
                   >
                     View Details
                     <ArrowRight className="ml-2 h-4 w-4" />
@@ -427,7 +395,7 @@ const Home = () => {
 
           <div className="text-center mt-12">
             <Link to="/portfolio">
-              <Button size="lg" className="bg-gradient-energy hover:bg-gradient-joy shadow-joy hover-rainbow">
+              <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg">
                 View Full Portfolio
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
