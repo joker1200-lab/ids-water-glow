@@ -2,105 +2,105 @@
 @tailwind components;
 @tailwind utilities;
 
-/* IDS Water Tech Design System - Teal & White Theme */
+/* IDS Water Tech Design System - White, Dark Blue & Ocean Blue Theme */
 
 @layer base {
   /* Light mode colors */
   :root {
-    --background: 0 0% 100%;
-    --foreground: 180 20% 15%;
-    --card: 0 0% 99%;
-    --card-foreground: 180 20% 15%;
+    --background: 0 0% 100%;  /* Pure White */
+    --foreground: 220 50% 15%;  /* Dark Navy Text */
+    --card: 0 0% 100%;  /* White Cards */
+    --card-foreground: 220 50% 15%;
     --popover: 0 0% 100%;
-    --popover-foreground: 180 20% 15%;
-    --primary: 180 85% 35%;  /* Rich Teal */
-    --primary-foreground: 0 0% 100%;
-    --secondary: 180 25% 92%;  /* Light Teal */
-    --secondary-foreground: 180 20% 15%;
-    --muted: 180 15% 95%;
-    --muted-foreground: 180 15% 45%;
-    --accent: 175 100% 45%;  /* Bright Aqua */
-    --accent-foreground: 0 0% 100%;
+    --popover-foreground: 220 50% 15%;
+    --primary: 220 70% 25%;  /* Dark Blue */
+    --primary-foreground: 0 0% 100%;  /* White text on dark blue */
+    --secondary: 210 100% 95%;  /* Very Light Ocean Blue */
+    --secondary-foreground: 220 50% 15%;
+    --muted: 210 40% 96%;  /* Light Blue-tinted background */
+    --muted-foreground: 220 30% 40%;
+    --accent: 200 100% 50%;  /* Ocean Blue */
+    --accent-foreground: 0 0% 100%;  /* White text on ocean blue */
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
-    --border: 180 20% 88%;
-    --input: 180 20% 90%;
-    --ring: 180 85% 35%;
+    --border: 210 30% 88%;  /* Light blue-tinted borders */
+    --input: 210 30% 92%;
+    --ring: 200 100% 50%;  /* Ocean blue focus ring */
     --radius: 0.5rem;
-    --chart-1: 180 85% 45%;
-    --chart-2: 175 100% 50%;
-    --chart-3: 170 70% 55%;
-    --chart-4: 185 75% 60%;
-    --chart-5: 190 80% 65%;
+    --chart-1: 220 70% 35%;  /* Dark Blue */
+    --chart-2: 200 100% 50%;  /* Ocean Blue */
+    --chart-3: 210 80% 45%;  /* Medium Blue */
+    --chart-4: 190 90% 55%;  /* Light Ocean Blue */
+    --chart-5: 230 60% 65%;  /* Soft Blue */
     --success: 142 71% 45%;
     --success-foreground: 0 0% 100%;
     --warning: 38 92% 50%;
-    --info: 180 100% 50%;
+    --info: 200 100% 50%;  /* Ocean Blue for info */
     
-    /* Shadows */
-    --shadow-sm: 0 1px 2px 0 hsl(180 20% 15% / 0.08);
-    --shadow-medium: 0 4px 6px -1px hsl(180 20% 15% / 0.12), 0 2px 4px -1px hsl(180 20% 15% / 0.08);
-    --shadow-strong: 0 10px 15px -3px hsl(180 20% 15% / 0.15), 0 4px 6px -2px hsl(180 20% 15% / 0.08);
+    /* Shadows with subtle blue tint */
+    --shadow-sm: 0 1px 2px 0 hsl(220 50% 15% / 0.08);
+    --shadow-medium: 0 4px 6px -1px hsl(220 50% 15% / 0.12), 0 2px 4px -1px hsl(220 50% 15% / 0.08);
+    --shadow-strong: 0 10px 15px -3px hsl(220 50% 15% / 0.15), 0 4px 6px -2px hsl(220 50% 15% / 0.08);
     
     /* Transitions */
     --transition-fast: 150ms ease-in-out;
     --transition-normal: 250ms ease-in-out;
     --transition-slow: 350ms ease-in-out;
 
-    --sidebar-background: 180 15% 98%;
-    --sidebar-foreground: 180 20% 15%;
-    --sidebar-primary: 180 85% 35%;
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 220 50% 15%;
+    --sidebar-primary: 220 70% 25%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 180 25% 95%;
-    --sidebar-accent-foreground: 180 20% 15%;
-    --sidebar-border: 180 20% 88%;
-    --sidebar-ring: 180 85% 35%;
+    --sidebar-accent: 210 100% 97%;
+    --sidebar-accent-foreground: 220 50% 15%;
+    --sidebar-border: 210 30% 88%;
+    --sidebar-ring: 200 100% 50%;
   }
 
   /* Dark mode colors */
   .dark {
-    --background: 180 25% 8%;
-    --foreground: 180 15% 92%;
-    --card: 180 25% 10%;
-    --card-foreground: 180 15% 92%;
-    --popover: 180 25% 8%;
-    --popover-foreground: 180 15% 92%;
-    --primary: 175 100% 55%;  /* Bright Teal for dark mode */
-    --primary-foreground: 180 25% 8%;
-    --secondary: 180 20% 15%;
-    --secondary-foreground: 180 15% 92%;
-    --muted: 180 20% 12%;
-    --muted-foreground: 180 10% 70%;
-    --accent: 170 100% 60%;  /* Bright Aqua */
-    --accent-foreground: 180 25% 8%;
+    --background: 220 40% 8%;  /* Very Dark Blue */
+    --foreground: 0 0% 95%;  /* Almost White */
+    --card: 220 35% 10%;  /* Dark Blue Cards */
+    --card-foreground: 0 0% 95%;
+    --popover: 220 40% 8%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 200 100% 65%;  /* Bright Ocean Blue for dark mode */
+    --primary-foreground: 220 40% 8%;
+    --secondary: 220 30% 15%;  /* Dark Blue-gray */
+    --secondary-foreground: 0 0% 95%;
+    --muted: 220 30% 12%;
+    --muted-foreground: 210 20% 70%;
+    --accent: 190 100% 70%;  /* Bright Ocean Blue accent */
+    --accent-foreground: 220 40% 8%;
     --destructive: 0 80% 65%;
-    --destructive-foreground: 180 25% 8%;
-    --border: 180 20% 20%;
-    --input: 180 20% 18%;
-    --ring: 175 100% 55%;
-    --chart-1: 175 100% 65%;
-    --chart-2: 170 90% 60%;
-    --chart-3: 165 80% 55%;
-    --chart-4: 180 85% 60%;
-    --chart-5: 185 90% 65%;
+    --destructive-foreground: 220 40% 8%;
+    --border: 220 30% 20%;
+    --input: 220 30% 18%;
+    --ring: 200 100% 65%;
+    --chart-1: 200 100% 75%;  /* Bright Ocean Blue */
+    --chart-2: 180 90% 70%;  /* Aqua Blue */
+    --chart-3: 210 80% 65%;  /* Sky Blue */
+    --chart-4: 170 85% 60%;  /* Turquoise */
+    --chart-5: 220 70% 70%;  /* Light Navy */
     --success: 142 71% 45%;
-    --success-foreground: 180 25% 8%;
+    --success-foreground: 220 40% 8%;
     --warning: 38 92% 50%;
-    --info: 175 100% 55%;
+    --info: 200 100% 65%;
     
     /* Dark mode shadows */
-    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.3);
-    --shadow-medium: 0 4px 6px -1px hsl(0 0% 0% / 0.4), 0 2px 4px -1px hsl(0 0% 0% / 0.3);
-    --shadow-strong: 0 10px 15px -3px hsl(0 0% 0% / 0.5), 0 4px 6px -2px hsl(0 0% 0% / 0.4);
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.4);
+    --shadow-medium: 0 4px 6px -1px hsl(0 0% 0% / 0.5), 0 2px 4px -1px hsl(0 0% 0% / 0.4);
+    --shadow-strong: 0 10px 15px -3px hsl(0 0% 0% / 0.6), 0 4px 6px -2px hsl(0 0% 0% / 0.5);
     
-    --sidebar-background: 180 25% 10%;
-    --sidebar-foreground: 180 15% 88%;
-    --sidebar-primary: 175 100% 55%;
-    --sidebar-primary-foreground: 180 25% 8%;
-    --sidebar-accent: 180 20% 15%;
-    --sidebar-accent-foreground: 180 15% 88%;
-    --sidebar-border: 180 20% 20%;
-    --sidebar-ring: 175 100% 55%;
+    --sidebar-background: 220 35% 10%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 200 100% 65%;
+    --sidebar-primary-foreground: 220 40% 8%;
+    --sidebar-accent: 220 30% 15%;
+    --sidebar-accent-foreground: 0 0% 90%;
+    --sidebar-border: 220 30% 20%;
+    --sidebar-ring: 200 100% 65%;
   }
 }
 
