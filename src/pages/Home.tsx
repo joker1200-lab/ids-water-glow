@@ -170,47 +170,108 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center bg-gradient-hero overflow-hidden">
-        <div className="absolute inset-0 bg-black/20"></div>
+      <section className="relative min-h-screen bg-primary overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-accent rounded-full blur-3xl"></div>
+          <div className="absolute bottom-1/3 right-1/3 w-96 h-96 bg-secondary rounded-full blur-3xl"></div>
+        </div>
+        
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-              <div className="text-primary-foreground">
-                <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-4 lg:mb-6 slide-in-left">
-                  <span className="gradient-text">Clean Water</span>
-                  <span className="block text-accent joy-bounce">For Tanzania</span>
-                </h1>
-                <p className="text-lg sm:text-xl lg:text-2xl mb-6 lg:mb-8 opacity-90 slide-in-left delay-200">
-                  Leading water treatment solutions for industrial and commercial applications across East Africa
-                </p>
-                <div className="flex flex-col sm:flex-row gap-3 lg:gap-4 slide-in-left delay-300">
-                  <Button size="lg" className="bg-gradient-energy hover:bg-gradient-joy text-white shadow-joy hover-rainbow text-sm sm:text-base">
-                    Get Free Quote
-                    <ArrowRight className="ml-2 h-4 w-4 lg:h-5 lg:w-5" />
-                  </Button>
-                  <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-gradient-primary hover:text-white hover:border-transparent text-sm sm:text-base">
-                    View Our Work
-                  </Button>
+          <div className="min-h-screen flex items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center w-full">
+              
+              {/* Left Content - Takes 7 columns */}
+              <div className="lg:col-span-7 text-primary-foreground py-20">
+                <div className="max-w-2xl">
+                  {/* Badge */}
+                  <div className="inline-flex items-center px-4 py-2 bg-accent/20 backdrop-blur-sm rounded-full border border-accent/30 mb-6 slide-in-up">
+                    <Droplets className="h-4 w-4 mr-2 text-accent" />
+                    <span className="text-sm font-medium text-accent">Leading Water Treatment in Tanzania</span>
+                  </div>
+                  
+                  {/* Main Heading */}
+                  <h1 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight slide-in-up delay-100">
+                    Pure Water
+                    <span className="block text-accent">Solutions for</span>
+                    <span className="block">East Africa</span>
+                  </h1>
+                  
+                  {/* Description */}
+                  <p className="text-xl lg:text-2xl mb-8 text-primary-foreground/90 leading-relaxed slide-in-up delay-200">
+                    Advanced water treatment technology meeting international standards for industrial, commercial, and residential applications.
+                  </p>
+                  
+                  {/* CTA Buttons */}
+                  <div className="flex flex-col sm:flex-row gap-4 slide-in-up delay-300">
+                    <Link to="/contact">
+                      <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg text-lg px-8 py-4">
+                        Start Your Project
+                        <ArrowRight className="ml-2 h-5 w-5" />
+                      </Button>
+                    </Link>
+                    <Link to="/services">
+                      <Button size="lg" variant="outline" className="border-2 border-primary-foreground/30 text-primary-foreground hover:bg-accent hover:text-accent-foreground hover:border-accent text-lg px-8 py-4">
+                        Our Services
+                      </Button>
+                    </Link>
+                  </div>
+                  
+                  {/* Quick Stats */}
+                  <div className="grid grid-cols-3 gap-6 mt-12 slide-in-up delay-400">
+                    <div className="text-center lg:text-left">
+                      <div className="text-3xl font-bold text-accent">500+</div>
+                      <div className="text-sm text-primary-foreground/70">Projects</div>
+                    </div>
+                    <div className="text-center lg:text-left">
+                      <div className="text-3xl font-bold text-accent">10+</div>
+                      <div className="text-sm text-primary-foreground/70">Years</div>
+                    </div>
+                    <div className="text-center lg:text-left">
+                      <div className="text-3xl font-bold text-accent">99.9%</div>
+                      <div className="text-sm text-primary-foreground/70">Purity</div>
+                    </div>
+                  </div>
                 </div>
               </div>
               
-              <div className="relative slide-in-right delay-400 mt-8 lg:mt-0">
-                <div className="absolute -inset-2 lg:-inset-4 bg-gradient-joy rounded-2xl lg:rounded-3xl blur-xl lg:blur-2xl opacity-40 animate-pulse"></div>
-                <img
-                  src={ownerEquipment}
-                  alt="Professional water treatment equipment"
-                  className="relative rounded-2xl lg:rounded-3xl shadow-joy w-full h-auto object-cover pulse-glow"
-                  loading="eager"
-                />
+              {/* Right Image - Takes 5 columns */}
+              <div className="lg:col-span-5 relative slide-in-right delay-500">
+                {/* Image Container with Modern Styling */}
+                <div className="relative">
+                  {/* Decorative Elements */}
+                  <div className="absolute -top-6 -left-6 w-24 h-24 bg-accent/20 rounded-2xl backdrop-blur-sm"></div>
+                  <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-secondary/30 rounded-3xl backdrop-blur-sm"></div>
+                  
+                  {/* Main Image */}
+                  <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                    <img
+                      src={ownerEquipment}
+                      alt="Professional water treatment equipment"
+                      className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
+                      loading="eager"
+                    />
+                    {/* Image Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
+                  </div>
+                  
+                  {/* Floating Card */}
+                  <div className="absolute -bottom-4 -left-4 bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-xl slide-in-up delay-700">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 bg-accent rounded-full flex items-center justify-center">
+                        <CheckCircle className="h-5 w-5 text-white" />
+                      </div>
+                      <div>
+                        <div className="font-semibold text-primary text-sm">ISO Certified</div>
+                        <div className="text-xs text-muted-foreground">Quality Guaranteed</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
+              
             </div>
-        </div>
-        
-        {/* Floating elements */}
-        <div className="absolute top-20 left-10 text-primary-foreground/30">
-          <Droplets className="h-16 w-16 float-animation" />
-        </div>
-        <div className="absolute bottom-20 right-10 text-primary-foreground/20">
-          <Droplets className="h-12 w-12 float-animation delay-500" />
+          </div>
         </div>
       </section>
 
