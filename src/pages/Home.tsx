@@ -262,7 +262,7 @@ const Home = () => {
                         <CheckCircle className="h-5 w-5 text-white" />
                       </div>
                       <div>
-                        <div className="font-semibold text-primary text-sm">ISO Certified</div>
+                        <div className="font-semibold text-primary text-sm">International Quality Standards</div>
                         <div className="text-xs text-muted-foreground">Quality Guaranteed</div>
                       </div>
                     </div>
