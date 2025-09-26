@@ -31,7 +31,7 @@ const FAQ = () => {
         },
         {
           question: "What certifications and standards do you follow?",
-          answer: "All our systems comply with WHO (World Health Organization) water quality guidelines, Tanzania Bureau of Standards (TBS) requirements, ISO 9001:2015 quality management standards, and NSF/ANSI standards for water treatment equipment. Our technicians are certified in water treatment technology, and we maintain partnerships with internationally recognized equipment manufacturers."
+          answer: "All our systems comply with WHO (World Health Organization) water quality guidelines, Tanzania Bureau of Standards (TBS) requirements, international quality standards, and NSF/ANSI standards for water treatment equipment. Our technicians are certified in water treatment technology, and we maintain partnerships with internationally recognized equipment manufacturers."
         },
         {
           question: "Do you offer training for our staff?",
