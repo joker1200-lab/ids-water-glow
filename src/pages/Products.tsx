@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Filter, Package, Wrench, ShoppingCart, Eye, CheckCircle, Droplets, Waves, Cylinder } from "lucide-react";
+import { Filter, Package, Wrench, ShoppingCart, Eye, CheckCircle, Droplets, Waves, Cylinder, CircuitBoard } from "lucide-react";
 import LazyImage from "@/components/LazyImage";
 
 // Import product images
@@ -49,6 +49,12 @@ import filterCartridge9 from "@/assets/filter-cartridge-9.jpg";
 import filterCartridge10 from "@/assets/filter-cartridge-10.jpg";
 import filterCartridge11 from "@/assets/filter-cartridge-11.jpg";
 import filterCartridge12 from "@/assets/filter-cartridge-12.jpg";
+import specialtyCartridge1 from "@/assets/specialty-cartridge-1.jpg";
+import specialtyCartridge2 from "@/assets/specialty-cartridge-2.jpg";
+import specialtyCartridge3 from "@/assets/specialty-cartridge-3.jpg";
+import specialtyCartridge4 from "@/assets/specialty-cartridge-4.jpg";
+import specialtyCartridge5 from "@/assets/specialty-cartridge-5.jpg";
+import specialtyCartridge6 from "@/assets/specialty-cartridge-6.jpg";
 
 const Products = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -348,6 +354,68 @@ const Products = () => {
       ]
     },
     {
+      id: "specialty-cartridges",
+      name: "Specialty Filter Cartridges",
+      icon: CircuitBoard,
+      description: "Advanced specialty membrane filter cartridges for critical filtration applications",
+      products: [
+        {
+          id: "sc-nylon-specialty",
+          name: "Specialty N66 Nylon Cartridges",
+          price: "$158.00",
+          image: specialtyCartridge1,
+          description: "Specialty N66 nylon membrane cartridges designed for critical applications",
+          features: ["Specialty N66 membrane", "Critical applications", "High purity", "Advanced design"],
+          specifications: ["Material: Specialty N66", "10\" length", "0.1-0.2μm", "Critical grade"]
+        },
+        {
+          id: "sc-flat-mouth-advanced",
+          name: "Advanced Flat Mouth Cartridges",
+          price: "$225.00",
+          image: specialtyCartridge2,
+          description: "Advanced flat mouth pleated cartridges for specialized mounting systems",
+          features: ["Advanced flat mouth", "Specialized mounting", "High efficiency", "Custom design"],
+          specifications: ["Flat mouth design", "Advanced pleating", "Custom mounting", "High efficiency"]
+        },
+        {
+          id: "sc-microporous-insert",
+          name: "Microporous Insert Cartridges",
+          price: "$285.00",
+          image: specialtyCartridge3,
+          description: "Microporous pleated cartridges with insert-style design for precise filtration",
+          features: ["Microporous membrane", "Insert design", "Precise filtration", "Multiple sizes"],
+          specifications: ["Insert-style design", "Microporous structure", "Various lengths", "Precision filtration"]
+        },
+        {
+          id: "sc-microporous-single",
+          name: "Single Microporous Cartridge",
+          price: "$75.00",
+          image: specialtyCartridge4,
+          description: "Individual microporous pleated cartridge for specialized applications",
+          features: ["Individual unit", "Microporous design", "Specialized use", "High precision"],
+          specifications: ["Single cartridge", "Microporous membrane", "10\" standard", "Precision applications"]
+        },
+        {
+          id: "sc-mce-premium",
+          name: "Premium MCE Cartridges",
+          price: "$95.00",
+          image: specialtyCartridge5,
+          description: "Premium mixed cellulose ester cartridges for high-end applications",
+          features: ["Premium MCE", "High-end applications", "Superior performance", "Quality assured"],
+          specifications: ["Premium MCE membrane", "High-end grade", "Superior quality", "Assured performance"]
+        },
+        {
+          id: "sc-ptfe-advanced",
+          name: "Advanced PTFE Filter Set",
+          price: "$295.00",
+          image: specialtyCartridge6,
+          description: "Advanced PTFE membrane cartridge set for extreme chemical resistance",
+          features: ["Advanced PTFE", "Extreme resistance", "Chemical compatibility", "Professional set"],
+          specifications: ["Advanced PTFE membrane", "Chemical resistant", "Multiple configurations", "Professional grade"]
+        }
+      ]
+    },
+    {
       id: "filter-cartridges",
       name: "Filter Cartridges",
       icon: Cylinder,
@@ -550,13 +618,14 @@ const Products = () => {
       <section className="py-16">
         <div className="container mx-auto px-4 lg:px-8">
           <Tabs value={selectedCategory} onValueChange={setSelectedCategory} className="w-full">
-            <TabsList className="grid w-full grid-cols-7 mb-12">
+            <TabsList className="grid w-full grid-cols-8 mb-12">
               <TabsTrigger value="all" className="text-sm">All Products</TabsTrigger>
               <TabsTrigger value="filter-housings" className="text-sm">Filter Housings</TabsTrigger>
               <TabsTrigger value="membrane-vessels" className="text-sm">RO Vessels</TabsTrigger>
               <TabsTrigger value="ro-membranes" className="text-sm">RO Membranes</TabsTrigger>
               <TabsTrigger value="filter-systems" className="text-sm">Filter Systems</TabsTrigger>
               <TabsTrigger value="filter-cartridges" className="text-sm">Filter Cartridges</TabsTrigger>
+              <TabsTrigger value="specialty-cartridges" className="text-sm">Specialty Cartridges</TabsTrigger>
               <TabsTrigger value="accessories" className="text-sm">Accessories</TabsTrigger>
             </TabsList>
 
