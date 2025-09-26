@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Filter, Package, Wrench, ShoppingCart, Eye, CheckCircle, Droplets, Waves, Cylinder, CircuitBoard } from "lucide-react";
+import { Filter, Package, Wrench, ShoppingCart, Eye, CheckCircle, Droplets, Waves, Cylinder, CircuitBoard, Zap } from "lucide-react";
 import LazyImage from "@/components/LazyImage";
 
 // Import product images
@@ -55,6 +55,14 @@ import specialtyCartridge3 from "@/assets/specialty-cartridge-3.jpg";
 import specialtyCartridge4 from "@/assets/specialty-cartridge-4.jpg";
 import specialtyCartridge5 from "@/assets/specialty-cartridge-5.jpg";
 import specialtyCartridge6 from "@/assets/specialty-cartridge-6.jpg";
+import dosingPump1 from "@/assets/dosing-pump-1.jpg";
+import dosingPump2 from "@/assets/dosing-pump-2.jpg";
+import dosingPump3 from "@/assets/dosing-pump-3.jpg";
+import dosingPump4 from "@/assets/dosing-pump-4.jpg";
+import dosingPump5 from "@/assets/dosing-pump-5.jpg";
+import dosingPump6 from "@/assets/dosing-pump-6.jpg";
+import dosingPump7 from "@/assets/dosing-pump-7.jpg";
+import dosingPump8 from "@/assets/dosing-pump-8.jpg";
 
 const Products = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -416,6 +424,86 @@ const Products = () => {
       ]
     },
     {
+      id: "dosing-pumps",
+      name: "Dosing Pumps",
+      icon: Zap,
+      description: "Precision chemical dosing pumps for water treatment and chemical injection systems",
+      products: [
+        {
+          id: "dp-basic-green",
+          name: "Basic Green Dosing Pump",
+          price: "$285.00",
+          image: dosingPump1,
+          description: "Reliable basic dosing pump with cable connection for chemical injection",
+          features: ["Basic operation", "Cable connection", "Reliable performance", "Chemical resistant"],
+          specifications: ["Flow rate: 0.5-10 L/h", "Pressure: 7 bar", "Power: 230V", "Chemical resistant head"]
+        },
+        {
+          id: "dp-digital-display",
+          name: "Digital Display Dosing Pump",
+          price: "$385.00",
+          image: dosingPump2,
+          description: "Advanced dosing pump with digital display and precise control functions",
+          features: ["Digital display", "Precise control", "Multiple functions", "User friendly"],
+          specifications: ["Digital controls", "Flow adjustment", "Timer functions", "Alarm system"]
+        },
+        {
+          id: "dp-pump-head",
+          name: "Dosing Pump Head Unit",
+          price: "$195.00",
+          image: dosingPump3,
+          description: "Replacement pump head unit showing internal mechanism and connections",
+          features: ["Pump head unit", "Internal mechanism", "Easy replacement", "Quality construction"],
+          specifications: ["Pump head only", "Standard connections", "Chemical compatible", "Service part"]
+        },
+        {
+          id: "dp-compact-digital",
+          name: "Compact Digital Pump",
+          price: "$325.00",
+          image: dosingPump4,
+          description: "Compact dosing pump with digital interface and space-saving design",
+          features: ["Compact design", "Digital interface", "Space saving", "Efficient operation"],
+          specifications: ["Compact size", "Digital controls", "230V operation", "Wall mountable"]
+        },
+        {
+          id: "dp-advanced-control",
+          name: "Advanced Control Pump",
+          price: "$445.00",
+          image: dosingPump5,
+          description: "Advanced dosing pump with comprehensive control panel and monitoring",
+          features: ["Advanced controls", "Monitoring system", "Professional grade", "Comprehensive interface"],
+          specifications: ["Advanced controls", "Flow monitoring", "Alarm functions", "Data logging"]
+        },
+        {
+          id: "dp-accessory-kit",
+          name: "Dosing Pump with Accessories",
+          price: "$365.00",
+          image: dosingPump6,
+          description: "Complete dosing pump kit with accessories and connection fittings",
+          features: ["Complete kit", "Accessories included", "Connection fittings", "Ready to install"],
+          specifications: ["Pump + accessories", "Installation kit", "Various fittings", "Complete system"]
+        },
+        {
+          id: "dp-professional-grade",
+          name: "Professional Grade Pump",
+          price: "$485.00",
+          image: dosingPump7,
+          description: "Professional-grade dosing pump with advanced control and monitoring features",
+          features: ["Professional grade", "Advanced monitoring", "High precision", "Industrial use"],
+          specifications: ["Professional quality", "High precision", "Advanced features", "Industrial grade"]
+        },
+        {
+          id: "dp-erotec-blue",
+          name: "EROTEC Blue Dosing Pump",
+          price: "$425.00",
+          image: dosingPump8,
+          description: "EROTEC branded blue dosing pump with professional control system",
+          features: ["EROTEC brand", "Professional controls", "Blue design", "Quality assurance"],
+          specifications: ["EROTEC quality", "Professional grade", "Advanced controls", "Brand warranty"]
+        }
+      ]
+    },
+    {
       id: "filter-cartridges",
       name: "Filter Cartridges",
       icon: Cylinder,
@@ -618,7 +706,7 @@ const Products = () => {
       <section className="py-16">
         <div className="container mx-auto px-4 lg:px-8">
           <Tabs value={selectedCategory} onValueChange={setSelectedCategory} className="w-full">
-            <TabsList className="grid w-full grid-cols-8 mb-12">
+            <TabsList className="grid w-full grid-cols-9 mb-12">
               <TabsTrigger value="all" className="text-sm">All Products</TabsTrigger>
               <TabsTrigger value="filter-housings" className="text-sm">Filter Housings</TabsTrigger>
               <TabsTrigger value="membrane-vessels" className="text-sm">RO Vessels</TabsTrigger>
@@ -626,6 +714,7 @@ const Products = () => {
               <TabsTrigger value="filter-systems" className="text-sm">Filter Systems</TabsTrigger>
               <TabsTrigger value="filter-cartridges" className="text-sm">Filter Cartridges</TabsTrigger>
               <TabsTrigger value="specialty-cartridges" className="text-sm">Specialty Cartridges</TabsTrigger>
+              <TabsTrigger value="dosing-pumps" className="text-sm">Dosing Pumps</TabsTrigger>
               <TabsTrigger value="accessories" className="text-sm">Accessories</TabsTrigger>
             </TabsList>
 
