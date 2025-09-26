@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Filter, Package, Wrench, ShoppingCart, Eye, CheckCircle, Droplets, Waves } from "lucide-react";
+import { Filter, Package, Wrench, ShoppingCart, Eye, CheckCircle, Droplets, Waves, Cylinder } from "lucide-react";
 import LazyImage from "@/components/LazyImage";
 
 // Import product images
@@ -37,6 +37,12 @@ import filterSystem9 from "@/assets/filter-system-9.jpg";
 import filterSystem10 from "@/assets/filter-system-10.jpg";
 import filterSystem11 from "@/assets/filter-system-11.jpg";
 import filterSystem12 from "@/assets/filter-system-12.jpg";
+import filterCartridge1 from "@/assets/filter-cartridge-1.jpg";
+import filterCartridge2 from "@/assets/filter-cartridge-2.jpg";
+import filterCartridge3 from "@/assets/filter-cartridge-3.jpg";
+import filterCartridge4 from "@/assets/filter-cartridge-4.jpg";
+import filterCartridge5 from "@/assets/filter-cartridge-5.jpg";
+import filterCartridge6 from "@/assets/filter-cartridge-6.jpg";
 
 const Products = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -336,6 +342,68 @@ const Products = () => {
       ]
     },
     {
+      id: "filter-cartridges",
+      name: "Filter Cartridges",
+      icon: Cylinder,
+      description: "High-performance membrane filter cartridges for precise filtration applications",
+      products: [
+        {
+          id: "fc-mce-pleated",
+          name: "MCE Pleated Filter Cartridge",
+          price: "$28.00",
+          image: filterCartridge1,
+          description: "10-inch mixed cellulose ester (MCE) pleated filter cartridge for fine filtration",
+          features: ["MCE membrane", "Pleated design", "High surface area", "Excellent flow rate"],
+          specifications: ["Material: Mixed Cellulose Ester", "Size: 10 inches", "Pore size: 0.22-0.45μm", "Temperature: 80°C max"]
+        },
+        {
+          id: "fc-ptfe-assorted",
+          name: "PTFE Filter Cartridge Set",
+          price: "$185.00",
+          image: filterCartridge2,
+          description: "Assorted PTFE (polytetrafluoroethylene) filter cartridges for chemical resistance",
+          features: ["PTFE membrane", "Chemical resistant", "Multiple sizes", "Professional grade"],
+          specifications: ["Material: PTFE", "Various sizes", "Chemical resistant", "High temperature rated"]
+        },
+        {
+          id: "fc-ptfe-collection",
+          name: "PTFE Cartridge Collection",
+          price: "$465.00",
+          image: filterCartridge3,
+          description: "Complete collection of PTFE filter cartridges in various sizes for industrial use",
+          features: ["Complete collection", "Multiple lengths", "PTFE construction", "Industrial applications"],
+          specifications: ["10\"-40\" lengths", "PTFE membrane", "Industrial grade", "High capacity"]
+        },
+        {
+          id: "fc-pes-standard",
+          name: "PES Standard Filter Cartridges",
+          price: "$95.00",
+          image: filterCartridge4,
+          description: "Polyethersulfone (PES) membrane filter cartridges for reliable filtration",
+          features: ["PES membrane", "Standard size", "Reliable performance", "Low protein binding"],
+          specifications: ["Material: Polyethersulfone", "10\" standard", "0.1-0.45μm options", "Autoclavable"]
+        },
+        {
+          id: "fc-pes-assorted",
+          name: "PES Assorted Filter Set",
+          price: "$285.00",
+          image: filterCartridge5,
+          description: "Assorted PES membrane filter cartridges in various sizes for different applications",
+          features: ["Multiple sizes", "PES membrane", "Versatile applications", "Professional set"],
+          specifications: ["Various lengths", "PES construction", "Multiple pore sizes", "Pharmaceutical grade"]
+        },
+        {
+          id: "fc-wound-string",
+          name: "Wound String Filter Cartridge",
+          price: "$15.00",
+          image: filterCartridge6,
+          description: "Traditional wound string filter cartridge for sediment and particle removal",
+          features: ["Wound string design", "Sediment filtration", "Cost effective", "Easy replacement"],
+          specifications: ["String wound", "10\" standard", "5-50μm options", "Polypropylene core"]
+        }
+      ]
+    },
+    {
       id: "accessories",
       name: "Components & Accessories",
       icon: Wrench,
@@ -422,12 +490,13 @@ const Products = () => {
       <section className="py-16">
         <div className="container mx-auto px-4 lg:px-8">
           <Tabs value={selectedCategory} onValueChange={setSelectedCategory} className="w-full">
-            <TabsList className="grid w-full grid-cols-6 mb-12">
+            <TabsList className="grid w-full grid-cols-7 mb-12">
               <TabsTrigger value="all" className="text-sm">All Products</TabsTrigger>
               <TabsTrigger value="filter-housings" className="text-sm">Filter Housings</TabsTrigger>
               <TabsTrigger value="membrane-vessels" className="text-sm">RO Vessels</TabsTrigger>
               <TabsTrigger value="ro-membranes" className="text-sm">RO Membranes</TabsTrigger>
               <TabsTrigger value="filter-systems" className="text-sm">Filter Systems</TabsTrigger>
+              <TabsTrigger value="filter-cartridges" className="text-sm">Filter Cartridges</TabsTrigger>
               <TabsTrigger value="accessories" className="text-sm">Accessories</TabsTrigger>
             </TabsList>
 
