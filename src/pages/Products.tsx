@@ -19,6 +19,12 @@ import roMembrane3 from "@/assets/ro-membrane-3.jpg";
 import roMembrane4 from "@/assets/ro-membrane-4.jpg";
 import roMembrane5 from "@/assets/ro-membrane-5.jpg";
 import roMembrane6 from "@/assets/ro-membrane-6.jpg";
+import roMembrane7 from "@/assets/ro-membrane-7.jpg";
+import roMembrane8 from "@/assets/ro-membrane-8.jpg";
+import roMembrane9 from "@/assets/ro-membrane-9.jpg";
+import roMembrane10 from "@/assets/ro-membrane-10.jpg";
+import roMembrane11 from "@/assets/ro-membrane-11.jpg";
+import membraneAccessories1 from "@/assets/membrane-accessories-1.jpg";
 
 const Products = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -153,6 +159,51 @@ const Products = () => {
           description: "Standard EROTEC RO membrane for residential and light commercial use",
           features: ["Standard configuration", "Reliable performance", "Cost effective", "Easy replacement"],
           specifications: ["Standard dimensions", "Residential/light commercial", "Easy installation", "1-year warranty"]
+        },
+        {
+          id: "ro-erotec-bulk-stack",
+          name: "EROTEC Bulk Stack (5-Pack)",
+          price: "$825.00",
+          image: roMembrane7,
+          description: "Bulk stack of 5 EROTEC membranes for high-capacity installations",
+          features: ["5-membrane stack", "Bulk pricing", "High capacity", "Industrial applications"],
+          specifications: ["5 membranes included", "Consistent performance", "Volume discount", "Commercial grade"]
+        },
+        {
+          id: "ro-erotec-premium-boxed",
+          name: "EROTEC Premium Boxed Membrane",
+          price: "$225.00",
+          image: roMembrane8,
+          description: "Premium EROTEC membrane with enhanced packaging and certification",
+          features: ["Premium grade", "Enhanced packaging", "Quality certificate", "Extended warranty"],
+          specifications: ["Premium grade material", "Enhanced specifications", "Quality documentation", "2-year warranty"]
+        },
+        {
+          id: "ro-membrane-end-caps",
+          name: "RO Membrane End Caps Set",
+          price: "$45.00",
+          image: roMembrane9,
+          description: "Professional end caps showing membrane internal structure and flow paths",
+          features: ["Internal structure visible", "Educational value", "Professional grade", "Quality construction"],
+          specifications: ["End cap assembly", "Flow path design", "Professional quality", "Demonstration model"]
+        },
+        {
+          id: "ro-residential-pack",
+          name: "Residential RO Membrane 3-Pack",
+          price: "$285.00",
+          image: roMembrane10,
+          description: "Three residential RO membranes in protective packaging for home systems",
+          features: ["3-pack value", "Residential grade", "Protective packaging", "Home systems"],
+          specifications: ["75/100/150 GPD options", "Residential applications", "1-year warranty", "Easy installation"]
+        },
+        {
+          id: "ro-residential-single",
+          name: "Residential RO Membrane (Single)",
+          price: "$95.00",
+          image: roMembrane11,
+          description: "Single residential RO membrane in protective packaging for home use",
+          features: ["Single unit", "Residential grade", "Protective packaging", "Home compatible"],
+          specifications: ["75 GPD standard", "Home systems", "6-month warranty", "Quick installation"]
         }
       ]
     },
@@ -188,6 +239,15 @@ const Products = () => {
           description: "Heavy-duty mounting brackets for secure vessel installation",
           features: ["Heavy-duty construction", "Secure mounting", "Adjustable design", "Corrosion resistant"],
           specifications: ["Material: Galvanized steel", "Adjustable width", "Wall/floor mount", "Hardware included"]
+        },
+        {
+          id: "acc-membrane-assembly-kit",
+          name: "Complete Membrane Assembly Kit",
+          price: "$125.00",
+          image: membraneAccessories1,
+          description: "Complete EROTEC membrane vessel assembly kit with all components",
+          features: ["Complete assembly kit", "All components included", "Professional installation", "Quality hardware"],
+          specifications: ["EROTEC vessel included", "End caps and seals", "Mounting hardware", "Installation manual"]
         }
       ]
     }
