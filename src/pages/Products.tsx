@@ -43,6 +43,12 @@ import filterCartridge3 from "@/assets/filter-cartridge-3.jpg";
 import filterCartridge4 from "@/assets/filter-cartridge-4.jpg";
 import filterCartridge5 from "@/assets/filter-cartridge-5.jpg";
 import filterCartridge6 from "@/assets/filter-cartridge-6.jpg";
+import filterCartridge7 from "@/assets/filter-cartridge-7.jpg";
+import filterCartridge8 from "@/assets/filter-cartridge-8.jpg";
+import filterCartridge9 from "@/assets/filter-cartridge-9.jpg";
+import filterCartridge10 from "@/assets/filter-cartridge-10.jpg";
+import filterCartridge11 from "@/assets/filter-cartridge-11.jpg";
+import filterCartridge12 from "@/assets/filter-cartridge-12.jpg";
 
 const Products = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -400,6 +406,60 @@ const Products = () => {
           description: "Traditional wound string filter cartridge for sediment and particle removal",
           features: ["Wound string design", "Sediment filtration", "Cost effective", "Easy replacement"],
           specifications: ["String wound", "10\" standard", "5-50μm options", "Polypropylene core"]
+        },
+        {
+          id: "fc-nylon-n66",
+          name: "N66 Nylon Membrane Cartridges",
+          price: "$125.00",
+          image: filterCartridge7,
+          description: "High-performance N66 nylon membrane filter cartridges for demanding applications",
+          features: ["N66 nylon membrane", "High performance", "Chemical resistance", "Multiple sizes"],
+          specifications: ["Material: Nylon 66", "10\" standard", "0.1-0.45μm", "Chemical resistant"]
+        },
+        {
+          id: "fc-nylon-compact",
+          name: "Compact Nylon Filter Set",
+          price: "$78.00",
+          image: filterCartridge8,
+          description: "Compact set of nylon membrane filter cartridges for space-efficient installations",
+          features: ["Compact design", "Nylon membrane", "Space efficient", "Easy installation"],
+          specifications: ["Compact size", "Nylon construction", "Standard connections", "Set of 3"]
+        },
+        {
+          id: "fc-flat-mouth",
+          name: "Flat Mouth Pleated Cartridges",
+          price: "$185.00",
+          image: filterCartridge9,
+          description: "Flat mouth pleated filter cartridges for specialized mounting applications",
+          features: ["Flat mouth design", "Pleated construction", "Specialized mounting", "High surface area"],
+          specifications: ["Flat mouth fitting", "Pleated membrane", "10\" length", "Specialized applications"]
+        },
+        {
+          id: "fc-acf-packaged",
+          name: "ACF Packaged Filter Cartridge",
+          price: "$45.00",
+          image: filterCartridge10,
+          description: "Activated carbon fiber (ACF) filter cartridge in protective packaging",
+          features: ["Activated carbon fiber", "Protective packaging", "Odor removal", "Chemical adsorption"],
+          specifications: ["ACF membrane", "Vacuum sealed", "10\" standard", "High adsorption capacity"]
+        },
+        {
+          id: "fc-acf-multi-set",
+          name: "ACF Multi-Size Filter Set",
+          price: "$195.00",
+          image: filterCartridge11,
+          description: "Multiple activated carbon fiber filter cartridges in various sizes",
+          features: ["Multiple sizes", "ACF technology", "Odor control", "Chemical removal"],
+          specifications: ["Various lengths", "ACF construction", "High capacity", "Professional set"]
+        },
+        {
+          id: "fc-acf-professional",
+          name: "Professional ACF Filter",
+          price: "$65.00",
+          image: filterCartridge12,
+          description: "Professional-grade activated carbon fiber filter in protective packaging",
+          features: ["Professional grade", "Factory sealed", "High capacity", "Premium quality"],
+          specifications: ["Professional ACF", "Factory packaging", "20\" length", "Industrial grade"]
         }
       ]
     },
