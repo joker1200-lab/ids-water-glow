@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Filter, Package, Wrench, ShoppingCart, Eye, CheckCircle, Droplets } from "lucide-react";
+import { Filter, Package, Wrench, ShoppingCart, Eye, CheckCircle, Droplets, Waves } from "lucide-react";
 import LazyImage from "@/components/LazyImage";
 
 // Import product images
@@ -25,6 +25,12 @@ import roMembrane9 from "@/assets/ro-membrane-9.jpg";
 import roMembrane10 from "@/assets/ro-membrane-10.jpg";
 import roMembrane11 from "@/assets/ro-membrane-11.jpg";
 import membraneAccessories1 from "@/assets/membrane-accessories-1.jpg";
+import filterSystem1 from "@/assets/filter-system-1.jpg";
+import filterSystem2 from "@/assets/filter-system-2.jpg";
+import filterSystem3 from "@/assets/filter-system-3.jpg";
+import filterSystem4 from "@/assets/filter-system-4.jpg";
+import filterSystem5 from "@/assets/filter-system-5.jpg";
+import filterSystem6 from "@/assets/filter-system-6.jpg";
 
 const Products = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -208,6 +214,68 @@ const Products = () => {
       ]
     },
     {
+      id: "filter-systems",
+      name: "Water Filter Systems",
+      icon: Waves,
+      description: "Complete EROTEC water filter systems for residential, commercial, and industrial applications",
+      products: [
+        {
+          id: "fs-single-stage",
+          name: "Single Stage Filter System",
+          price: "$89.00",
+          image: filterSystem1,
+          description: "Complete single-stage blue water filter system for basic filtration needs",
+          features: ["Single stage filtration", "Blue housing design", "Easy installation", "Pressure relief valve"],
+          specifications: ["Flow rate: 5 GPM", "Max pressure: 125 PSI", "Filter size: 10\"", "1\" inlet/outlet"]
+        },
+        {
+          id: "fs-single-bracket",
+          name: "Single Stage with Bracket",
+          price: "$95.00",
+          image: filterSystem2,
+          description: "Single-stage filter system with mounting bracket for secure installation",
+          features: ["Mounting bracket included", "Secure installation", "Easy maintenance", "Durable construction"],
+          specifications: ["Includes mounting bracket", "Wall mount compatible", "10\" filter capacity", "Standard connections"]
+        },
+        {
+          id: "fs-multi-size",
+          name: "Multi-Size Filter Collection",
+          price: "$485.00",
+          image: filterSystem3,
+          description: "Complete collection of different sized EROTEC filter systems for various applications",
+          features: ["Multiple sizes included", "Versatile applications", "Professional grade", "Complete kit"],
+          specifications: ["6 different sizes", "10\"-20\" capacities", "Various flow rates", "Professional installation"]
+        },
+        {
+          id: "fs-triple-stage",
+          name: "Triple Stage Filter System",
+          price: "$285.00",
+          image: filterSystem4,
+          description: "Advanced triple-stage filtration system for comprehensive water treatment",
+          features: ["3-stage filtration", "Progressive filtering", "High capacity", "Professional grade"],
+          specifications: ["3 filter stages", "15 GPM flow rate", "Multi-stage processing", "Commercial applications"]
+        },
+        {
+          id: "fs-clear-blue-combo",
+          name: "Clear & Blue Filter Combo",
+          price: "$145.00",
+          image: filterSystem5,
+          description: "Combination of clear and blue filter housings for specialized filtration",
+          features: ["Clear housing visibility", "Blue housing durability", "Dual configuration", "Versatile setup"],
+          specifications: ["Clear + blue housings", "Visual monitoring", "10\" standard size", "Flexible installation"]
+        },
+        {
+          id: "fs-heavy-duty-pair",
+          name: "Heavy Duty Filter Pair",
+          price: "$195.00",
+          image: filterSystem6,
+          description: "Pair of heavy-duty blue filter systems for high-demand applications",
+          features: ["Heavy-duty construction", "Dual system setup", "High flow capacity", "Industrial grade"],
+          specifications: ["2 filter systems", "Heavy-duty design", "High pressure rated", "Industrial applications"]
+        }
+      ]
+    },
+    {
       id: "accessories",
       name: "Components & Accessories",
       icon: Wrench,
@@ -294,11 +362,12 @@ const Products = () => {
       <section className="py-16">
         <div className="container mx-auto px-4 lg:px-8">
           <Tabs value={selectedCategory} onValueChange={setSelectedCategory} className="w-full">
-            <TabsList className="grid w-full grid-cols-5 mb-12">
+            <TabsList className="grid w-full grid-cols-6 mb-12">
               <TabsTrigger value="all" className="text-sm">All Products</TabsTrigger>
               <TabsTrigger value="filter-housings" className="text-sm">Filter Housings</TabsTrigger>
               <TabsTrigger value="membrane-vessels" className="text-sm">RO Vessels</TabsTrigger>
               <TabsTrigger value="ro-membranes" className="text-sm">RO Membranes</TabsTrigger>
+              <TabsTrigger value="filter-systems" className="text-sm">Filter Systems</TabsTrigger>
               <TabsTrigger value="accessories" className="text-sm">Accessories</TabsTrigger>
             </TabsList>
 
