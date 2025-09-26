@@ -63,6 +63,14 @@ import dosingPump5 from "@/assets/dosing-pump-5.jpg";
 import dosingPump6 from "@/assets/dosing-pump-6.jpg";
 import dosingPump7 from "@/assets/dosing-pump-7.jpg";
 import dosingPump8 from "@/assets/dosing-pump-8.jpg";
+import dosingPump9 from "@/assets/dosing-pump-9.jpg";
+import dosingPump10 from "@/assets/dosing-pump-10.jpg";
+import dosingPump11 from "@/assets/dosing-pump-11.jpg";
+import dosingPump12 from "@/assets/dosing-pump-12.jpg";
+import dosingPump13 from "@/assets/dosing-pump-13.jpg";
+import dosingPump14 from "@/assets/dosing-pump-14.jpg";
+import dosingPump15 from "@/assets/dosing-pump-15.jpg";
+import dosingPump16 from "@/assets/dosing-pump-16.jpg";
 
 const Products = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -500,6 +508,78 @@ const Products = () => {
           description: "EROTEC branded blue dosing pump with professional control system",
           features: ["EROTEC brand", "Professional controls", "Blue design", "Quality assurance"],
           specifications: ["EROTEC quality", "Professional grade", "Advanced controls", "Brand warranty"]
+        },
+        {
+          id: "dp-erotec-compact-blue",
+          name: "EROTEC Compact Blue Pump",
+          price: "$315.00",
+          image: dosingPump9,
+          description: "Compact EROTEC blue dosing pump with white pump head and manual control",
+          features: ["Compact EROTEC design", "White pump head", "Manual control dial", "Reliable operation"],
+          specifications: ["Compact design", "Manual controls", "Chemical resistant head", "EROTEC brand"]
+        },
+        {
+          id: "dp-erotec-analog-control",
+          name: "EROTEC Analog Control Pump",
+          price: "$365.00",
+          image: dosingPump10,
+          description: "EROTEC dosing pump with analog control dial and professional pump head",
+          features: ["Analog control dial", "Professional head", "EROTEC quality", "Precise adjustment"],
+          specifications: ["Analog controls", "Professional grade", "Precise flow control", "EROTEC warranty"]
+        },
+        {
+          id: "dp-erotec-protective-cover",
+          name: "EROTEC Pump with Protective Cover",
+          price: "$395.00",
+          image: dosingPump11,
+          description: "EROTEC dosing pump with transparent protective cover for enhanced safety",
+          features: ["Protective cover", "Enhanced safety", "Transparent design", "Professional grade"],
+          specifications: ["Safety cover", "Transparent protection", "Professional controls", "Enhanced safety"]
+        },
+        {
+          id: "dp-erotec-side-mount",
+          name: "EROTEC Side Mount Pump",
+          price: "$385.00",
+          image: dosingPump12,
+          description: "EROTEC dosing pump with side-mounted pump head for versatile installation",
+          features: ["Side mount design", "Versatile installation", "EROTEC quality", "Professional grade"],
+          specifications: ["Side mount head", "Versatile mounting", "Professional controls", "EROTEC brand"]
+        },
+        {
+          id: "dp-erotec-standard-mount",
+          name: "EROTEC Standard Mount Pump",
+          price: "$405.00",
+          image: dosingPump13,
+          description: "EROTEC standard mount dosing pump with reliable control system",
+          features: ["Standard mounting", "Reliable controls", "EROTEC quality", "Professional design"],
+          specifications: ["Standard mount", "Reliable operation", "Professional controls", "EROTEC warranty"]
+        },
+        {
+          id: "dp-erotec-lcd-display",
+          name: "EROTEC LCD Display Pump",
+          price: "$485.00",
+          image: dosingPump14,
+          description: "Advanced EROTEC dosing pump with LCD display and digital controls",
+          features: ["LCD display", "Digital controls", "Advanced features", "EROTEC quality"],
+          specifications: ["LCD display", "Digital interface", "Advanced programming", "EROTEC professional"]
+        },
+        {
+          id: "dp-erotec-wall-mount",
+          name: "EROTEC Wall Mount Pump",
+          price: "$345.00",
+          image: dosingPump15,
+          description: "EROTEC wall-mounted dosing pump with side pump head configuration",
+          features: ["Wall mount design", "Side pump head", "Space efficient", "EROTEC quality"],
+          specifications: ["Wall mounting", "Side configuration", "Space saving", "EROTEC brand"]
+        },
+        {
+          id: "dp-erotec-digital-premium",
+          name: "EROTEC Digital Premium Pump",
+          price: "$525.00",
+          image: dosingPump16,
+          description: "Premium EROTEC dosing pump with digital display and advanced control features",
+          features: ["Premium digital", "Advanced controls", "LED indicators", "Top-tier quality"],
+          specifications: ["Digital display", "Premium features", "LED indicators", "EROTEC premium"]
         }
       ]
     },
