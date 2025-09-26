@@ -13,7 +13,7 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
-import Frotec from "./pages/Frotec";
+import Erotec from "./pages/Erotec";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -35,7 +35,7 @@ const App = () => (
             <Route path="blog/:slug" element={<BlogPost />} />
             <Route path="faq" element={<FAQ />} />
             <Route path="contact" element={<Contact />} />
-            <Route path="frotec" element={<Frotec />} />
+            <Route path="erotec" element={<Erotec />} />
           </Route>
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

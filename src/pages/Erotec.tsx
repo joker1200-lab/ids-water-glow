@@ -10,7 +10,7 @@ import waterPurificationSystem from "@/assets/water-purification-system.jpg";
 import industrialWaterPlant from "@/assets/industrial-water-plant.jpg";
 import municipalityWaterPlant from "@/assets/municipality-water-plant.jpg";
 
-const Frotec = () => {
+const Erotec = () => {
   const productCategories = [
     { id: "01", name: "RO MEMBRANE", description: "High-performance reverse osmosis membranes" },
     { id: "02", name: "UF MODULES AND MBR", description: "Ultrafiltration modules and membrane bioreactor systems" },
@@ -72,8 +72,8 @@ const Frotec = () => {
   return (
     <div className="min-h-screen">
       {/* SEO Meta Tags */}
-      <title>FROTEC - Water Treatment Solutions | Premium Industrial Equipment</title>
-      <meta name="description" content="FROTEC offers innovative water treatment solutions including RO membranes, filtration systems, and industrial equipment. Premium quality water treatment technology from Guangzhou." />
+      <title>EROTEC - Water Treatment Solutions | Premium Industrial Equipment</title>
+      <meta name="description" content="EROTEC offers innovative water treatment solutions including RO membranes, filtration systems, and industrial equipment. Premium quality water treatment technology from Guangzhou." />
       
       {/* Hero Section */}
       <section className="relative py-20 bg-primary overflow-hidden">
@@ -87,11 +87,11 @@ const Frotec = () => {
             <div className="text-primary-foreground">
               <div className="inline-flex items-center px-4 py-2 bg-accent/20 backdrop-blur-sm rounded-full border border-accent/30 mb-6">
                 <Droplets className="h-4 w-4 mr-2 text-accent" />
-                <span className="text-sm font-medium text-accent">Guangzhou FROTEC Water Treatment</span>
+                <span className="text-sm font-medium text-accent">Guangzhou EROTEC Water Treatment</span>
               </div>
               
               <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-4 lg:mb-6 leading-tight">
-                FROTEC
+                EROTEC
                 <span className="block text-accent">Water Treatment</span>
                 <span className="block">Solutions</span>
               </h1>
@@ -119,7 +119,7 @@ const Frotec = () => {
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                 <img
                   src={ownerEquipment}
-                  alt="FROTEC water treatment equipment and solutions"
+                  alt="EROTEC water treatment equipment and solutions"
                   className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
@@ -134,11 +134,11 @@ const Frotec = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              About <span className="text-primary">FROTEC</span>
+              About <span className="text-primary">EROTEC</span>
             </h2>
             <div className="max-w-4xl mx-auto">
               <p className="text-xl text-muted-foreground mb-8">
-                At FROTEC, we strive to develop innovative water filtration solutions that can solve the water challenges. We provide top ranking water treatment products and solutions ranging from basic water filters, softeners, reverse osmosis equipment and waste water solutions to customized and sophisticated water treatment plants.
+                At EROTEC, we strive to develop innovative water filtration solutions that can solve the water challenges. We provide top ranking water treatment products and solutions ranging from basic water filters, softeners, reverse osmosis equipment and waste water solutions to customized and sophisticated water treatment plants.
               </p>
               <p className="text-lg text-muted-foreground">
                 With extensive experience in the water treatment industry and an experienced team, we bring high quality water treatment products and solutions as well as service to partners worldwide. We support our partners with high quality products, competitive rates, technical support and service by delivering worldwide all water treatment components, spare parts and technically advanced systems.
@@ -173,10 +173,10 @@ const Frotec = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              Why Choose <span className="text-primary">FROTEC?</span>
+              Why Choose <span className="text-primary">EROTEC?</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Five key advantages that set FROTEC apart in the water treatment industry
+              Five key advantages that set EROTEC apart in the water treatment industry
             </p>
           </div>
 
@@ -243,7 +243,7 @@ const Frotec = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold mb-6">
-                <span className="text-accent">GUANGZHOU FROTEC</span>
+                <span className="text-accent">GUANGZHOU EROTEC</span>
                 <br />WATER TREATMENT CO LTD
               </h2>
               <div className="space-y-4 text-lg">
@@ -251,13 +251,13 @@ const Frotec = () => {
                   <strong>Address:</strong> 101 Building, Changsha Road No.32, Dalong Street, Panyu District, Guangzhou
                 </p>
                 <p>
-                  <strong>Website:</strong> <a href="https://www.frotecfilter.com" className="text-accent hover:underline" target="_blank" rel="noopener noreferrer">www.frotecfilter.com</a>
+                  <strong>Website:</strong> <a href="https://www.erotecfilter.com" className="text-accent hover:underline" target="_blank" rel="noopener noreferrer">www.erotecfilter.com</a>
                 </p>
               </div>
               <div className="mt-8">
                 <Link to="/contact">
                   <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg">
-                    Contact FROTEC
+                    Contact EROTEC
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>
@@ -267,7 +267,7 @@ const Frotec = () => {
             <div className="relative">
               <img
                 src={industrialWaterPlant}
-                alt="FROTEC industrial water treatment plant"
+                alt="EROTEC industrial water treatment plant"
                 className="w-full h-auto object-cover rounded-2xl shadow-2xl"
               />
             </div>
@@ -278,4 +278,4 @@ const Frotec = () => {
   );
 };
 
-export default Frotec;
+export default Erotec;
