@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Filter, Package, Wrench, ShoppingCart, Eye, CheckCircle } from "lucide-react";
+import { Filter, Package, Wrench, ShoppingCart, Eye, CheckCircle, Droplets } from "lucide-react";
 import LazyImage from "@/components/LazyImage";
 
 // Import product images
@@ -13,6 +13,12 @@ import filterHousing3 from "@/assets/filter-housing-3.jpg";
 import membraneVessel1 from "@/assets/membrane-vessel-1.jpg";
 import membraneVessel2 from "@/assets/membrane-vessel-2.jpg";
 import membraneVessel3 from "@/assets/membrane-vessel-3.jpg";
+import roMembrane1 from "@/assets/ro-membrane-1.jpg";
+import roMembrane2 from "@/assets/ro-membrane-2.jpg";
+import roMembrane3 from "@/assets/ro-membrane-3.jpg";
+import roMembrane4 from "@/assets/ro-membrane-4.jpg";
+import roMembrane5 from "@/assets/ro-membrane-5.jpg";
+import roMembrane6 from "@/assets/ro-membrane-6.jpg";
 
 const Products = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -85,6 +91,68 @@ const Products = () => {
           description: "Complete membrane vessel kit with all accessories and components",
           features: ["All accessories included", "Installation hardware", "O-rings and seals", "Comprehensive kit"],
           specifications: ["Vessel + Components", "Multiple O-ring sizes", "Installation guide", "1-year warranty"]
+        }
+      ]
+    },
+    {
+      id: "ro-membranes",
+      name: "RO Membranes",
+      icon: Droplets,
+      description: "High-performance EROTEC reverse osmosis membranes for superior water purification",
+      products: [
+        {
+          id: "ro-erotec-4040",
+          name: "EROTEC 4040 RO Membrane",
+          price: "$185.00",
+          image: roMembrane1,
+          description: "Premium EROTEC 4040 reverse osmosis membrane with excellent salt rejection",
+          features: ["99.5% salt rejection", "High flow rate", "Low pressure drop", "Extended lifespan"],
+          specifications: ["Size: 40\" x 4\"", "Max Pressure: 600 PSI", "Max Temperature: 113°F", "pH Range: 2-11"]
+        },
+        {
+          id: "ro-erotec-bundle",
+          name: "EROTEC Membrane Bundle",
+          price: "$750.00",
+          image: roMembrane2,
+          description: "Complete bundle of EROTEC RO membranes for industrial applications",
+          features: ["Bulk packaging", "Consistent quality", "Cost-effective", "Industrial grade"],
+          specifications: ["Multiple sizes available", "Factory sealed", "2-year shelf life", "NSF certified"]
+        },
+        {
+          id: "ro-erotec-cross-section",
+          name: "EROTEC Spiral Wound Membrane",
+          price: "$165.00",
+          image: roMembrane3,
+          description: "Advanced spiral wound design for maximum surface area and efficiency",
+          features: ["Spiral wound technology", "Maximum surface area", "Superior performance", "Easy installation"],
+          specifications: ["Spiral wound design", "Polyamide thin film", "High permeate flow", "Low energy consumption"]
+        },
+        {
+          id: "ro-erotec-multi-pack",
+          name: "EROTEC Multi-Pack Set",
+          price: "$425.00",
+          image: roMembrane4,
+          description: "Professional multi-pack set for commercial water treatment systems",
+          features: ["Multiple membranes", "Professional grade", "Optimized spacing", "Complete system"],
+          specifications: ["4-membrane configuration", "Uniform flow distribution", "Commercial grade", "Installation guide"]
+        },
+        {
+          id: "ro-erotec-boxed",
+          name: "EROTEC Boxed Membrane",
+          price: "$195.00",
+          image: roMembrane5,
+          description: "Factory-sealed EROTEC membrane with original packaging and documentation",
+          features: ["Factory sealed", "Original packaging", "Quality certificate", "Warranty included"],
+          specifications: ["Original EROTEC box", "Documentation included", "Serial numbered", "Quality guaranteed"]
+        },
+        {
+          id: "ro-erotec-standard",
+          name: "EROTEC Standard Membrane",
+          price: "$155.00",
+          image: roMembrane6,
+          description: "Standard EROTEC RO membrane for residential and light commercial use",
+          features: ["Standard configuration", "Reliable performance", "Cost effective", "Easy replacement"],
+          specifications: ["Standard dimensions", "Residential/light commercial", "Easy installation", "1-year warranty"]
         }
       ]
     },
@@ -166,10 +234,11 @@ const Products = () => {
       <section className="py-16">
         <div className="container mx-auto px-4 lg:px-8">
           <Tabs value={selectedCategory} onValueChange={setSelectedCategory} className="w-full">
-            <TabsList className="grid w-full grid-cols-4 mb-12">
+            <TabsList className="grid w-full grid-cols-5 mb-12">
               <TabsTrigger value="all" className="text-sm">All Products</TabsTrigger>
               <TabsTrigger value="filter-housings" className="text-sm">Filter Housings</TabsTrigger>
               <TabsTrigger value="membrane-vessels" className="text-sm">RO Vessels</TabsTrigger>
+              <TabsTrigger value="ro-membranes" className="text-sm">RO Membranes</TabsTrigger>
               <TabsTrigger value="accessories" className="text-sm">Accessories</TabsTrigger>
             </TabsList>
 
