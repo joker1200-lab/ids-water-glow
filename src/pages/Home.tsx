@@ -292,6 +292,134 @@ const Home = () => {
         </div>
       </section>
 
+      {/* FROTEC Partnership Section */}
+      <section className="py-20 bg-secondary/30">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="slide-in-left">
+              <div className="inline-flex items-center px-4 py-2 bg-primary/10 rounded-full border border-primary/20 mb-6">
+                <Droplets className="h-4 w-4 mr-2 text-primary" />
+                <span className="text-sm font-medium text-primary">Strategic Partnership</span>
+              </div>
+              
+              <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+                Powered by <span className="text-primary">FROTEC</span>
+              </h2>
+              
+              <p className="text-xl text-muted-foreground mb-8">
+                We partner with FROTEC, a leading water treatment manufacturer from Guangzhou, China, to bring you innovative water filtration solutions that solve water challenges worldwide.
+              </p>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                {["27+ Product Categories", "Global Quality Standards", "Competitive Pricing", "Technical Excellence"].map((feature, index) => (
+                  <div key={index} className="flex items-center space-x-3">
+                    <CheckCircle className="h-5 w-5 text-success flex-shrink-0" />
+                    <span className="text-foreground">{feature}</span>
+                  </div>
+                ))}
+              </div>
+              
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link to="/frotec">
+                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg">
+                    Learn About FROTEC
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </Link>
+                <Link to="/products">
+                  <Button size="lg" variant="outline" className="border-2 border-primary/30 hover:bg-primary hover:text-primary-foreground">
+                    View Products
+                  </Button>
+                </Link>
+              </div>
+            </div>
+            
+            <div className="relative slide-in-right">
+              <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                <img
+                  src={equipment1}
+                  alt="FROTEC water treatment equipment and technology"
+                  className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
+              </div>
+              
+              <div className="absolute -bottom-4 -right-4 bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-xl">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+                    <Award className="h-5 w-5 text-white" />
+                  </div>
+                  <div>
+                    <div className="font-semibold text-primary text-sm">FROTEC Partner</div>
+                    <div className="text-xs text-muted-foreground">Premium Quality</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Product Categories Section */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6 slide-in-up">
+              Our Product <span className="text-primary">Categories</span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto slide-in-up delay-200">
+              Comprehensive water treatment solutions across multiple categories
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {[
+              { name: "Solenoid Valves", count: "8+ Products", icon: Settings, image: equipment1 },
+              { name: "Dosing Pumps", count: "16+ Products", icon: Droplets, image: equipment2 },
+              { name: "Filter Cartridges", count: "12+ Products", icon: TestTube, image: equipment3 },
+              { name: "RO Membranes", count: "11+ Products", icon: Factory, image: ownerEquipment },
+              { name: "Filter Systems", count: "12+ Products", icon: Wrench, image: hotelWaterSystem },
+              { name: "Specialty Cartridges", count: "6+ Products", icon: Shield, image: municipalityWaterPlant },
+              { name: "Membrane Vessels", count: "3+ Products", icon: Award, image: hospitalWaterSystem },
+              { name: "Filter Housing", count: "3+ Products", icon: Users, image: industrialWaterPlant }
+            ].map((category, index) => (
+              <Card key={index} className={`group bg-card shadow-medium hover:shadow-lg transition-all duration-300 hover:-translate-y-2 slide-in-up delay-${(index + 1) * 100}`}>
+                <div className="relative overflow-hidden rounded-t-lg">
+                  <img
+                    src={category.image}
+                    alt={category.name}
+                    className="w-full h-40 object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                  <div className="absolute top-3 left-3 bg-primary rounded-full p-2">
+                    <category.icon className="h-4 w-4 text-primary-foreground" />
+                  </div>
+                </div>
+                <CardContent className="p-5">
+                  <h3 className="text-lg font-semibold text-foreground mb-2">{category.name}</h3>
+                  <p className="text-muted-foreground mb-4 text-sm">{category.count}</p>
+                  <Link to="/products">
+                    <Button size="sm" className="w-full bg-primary hover:bg-primary/90">
+                      View Products
+                      <ArrowRight className="ml-2 h-3 w-3" />
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <Link to="/products">
+              <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg">
+                View All Products
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
       <section className="py-20 bg-secondary/30">
         <div className="container mx-auto px-4 lg:px-8">
