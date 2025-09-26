@@ -182,54 +182,54 @@ const Home = () => {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center w-full">
               
               {/* Left Content - Takes 7 columns */}
-              <div className="lg:col-span-7 text-primary-foreground py-20">
+              <div className="lg:col-span-7 text-primary-foreground py-12 lg:py-20">
                 <div className="max-w-2xl">
                   {/* Badge */}
-                  <div className="inline-flex items-center px-4 py-2 bg-accent/20 backdrop-blur-sm rounded-full border border-accent/30 mb-6 slide-in-up">
-                    <Droplets className="h-4 w-4 mr-2 text-accent" />
-                    <span className="text-sm font-medium text-accent">Leading Water Treatment in Tanzania</span>
+                  <div className="inline-flex items-center px-3 py-2 bg-accent/20 backdrop-blur-sm rounded-full border border-accent/30 mb-4 lg:mb-6 slide-in-up">
+                    <Droplets className="h-3 w-3 lg:h-4 lg:w-4 mr-2 text-accent" />
+                    <span className="text-xs lg:text-sm font-medium text-accent">Leading Water Treatment in Tanzania</span>
                   </div>
                   
                   {/* Main Heading */}
-                  <h1 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight slide-in-up delay-100">
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 lg:mb-6 leading-tight slide-in-up delay-100">
                     Pure Water
                     <span className="block text-accent">Solutions for</span>
                     <span className="block">East Africa</span>
                   </h1>
                   
                   {/* Description */}
-                  <p className="text-xl lg:text-2xl mb-8 text-primary-foreground/90 leading-relaxed slide-in-up delay-200">
+                  <p className="text-lg sm:text-xl lg:text-2xl mb-6 lg:mb-8 text-primary-foreground/90 leading-relaxed slide-in-up delay-200">
                     Advanced water treatment technology meeting international standards for industrial, commercial, and residential applications.
                   </p>
                   
                   {/* CTA Buttons */}
-                  <div className="flex flex-col sm:flex-row gap-4 slide-in-up delay-300">
+                  <div className="flex flex-col sm:flex-row gap-3 lg:gap-4 slide-in-up delay-300">
                     <Link to="/contact">
-                      <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg text-lg px-8 py-4">
+                      <Button size="lg" className="w-full sm:w-auto bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg text-base lg:text-lg px-6 lg:px-8 py-3 lg:py-4">
                         Start Your Project
-                        <ArrowRight className="ml-2 h-5 w-5" />
+                        <ArrowRight className="ml-2 h-4 w-4 lg:h-5 lg:w-5" />
                       </Button>
                     </Link>
                     <Link to="/services">
-                      <Button size="lg" variant="outline" className="border-2 border-primary-foreground/30 text-primary-foreground hover:bg-accent hover:text-accent-foreground hover:border-accent text-lg px-8 py-4">
+                      <Button size="lg" variant="outline" className="w-full sm:w-auto border-2 border-primary-foreground/30 text-primary-foreground hover:bg-accent hover:text-accent-foreground hover:border-accent text-base lg:text-lg px-6 lg:px-8 py-3 lg:py-4">
                         Our Services
                       </Button>
                     </Link>
                   </div>
                   
                   {/* Quick Stats */}
-                  <div className="grid grid-cols-3 gap-6 mt-12 slide-in-up delay-400">
+                  <div className="grid grid-cols-3 gap-4 lg:gap-6 mt-8 lg:mt-12 slide-in-up delay-400">
                     <div className="text-center lg:text-left">
-                      <div className="text-3xl font-bold text-accent">500+</div>
-                      <div className="text-sm text-primary-foreground/70">Projects</div>
+                      <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-accent">500+</div>
+                      <div className="text-xs lg:text-sm text-primary-foreground/70">Projects</div>
                     </div>
                     <div className="text-center lg:text-left">
-                      <div className="text-3xl font-bold text-accent">10+</div>
-                      <div className="text-sm text-primary-foreground/70">Years</div>
+                      <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-accent">10+</div>
+                      <div className="text-xs lg:text-sm text-primary-foreground/70">Years</div>
                     </div>
                     <div className="text-center lg:text-left">
-                      <div className="text-3xl font-bold text-accent">99.9%</div>
-                      <div className="text-sm text-primary-foreground/70">Purity</div>
+                      <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-accent">99.9%</div>
+                      <div className="text-xs lg:text-sm text-primary-foreground/70">Purity</div>
                     </div>
                   </div>
                 </div>
@@ -295,39 +295,39 @@ const Home = () => {
       {/* FROTEC Partnership Section */}
       <section className="py-20 bg-secondary/30">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="slide-in-left">
-              <div className="inline-flex items-center px-4 py-2 bg-primary/10 rounded-full border border-primary/20 mb-6">
-                <Droplets className="h-4 w-4 mr-2 text-primary" />
-                <span className="text-sm font-medium text-primary">Strategic Partnership</span>
+              <div className="inline-flex items-center px-3 lg:px-4 py-2 bg-primary/10 rounded-full border border-primary/20 mb-4 lg:mb-6">
+                <Droplets className="h-3 w-3 lg:h-4 lg:w-4 mr-2 text-primary" />
+                <span className="text-xs lg:text-sm font-medium text-primary">Strategic Partnership</span>
               </div>
               
-              <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 lg:mb-6">
                 Powered by <span className="text-primary">FROTEC</span>
               </h2>
               
-              <p className="text-xl text-muted-foreground mb-8">
+              <p className="text-lg sm:text-xl text-muted-foreground mb-6 lg:mb-8">
                 We partner with FROTEC, a leading water treatment manufacturer from Guangzhou, China, to bring you innovative water filtration solutions that solve water challenges worldwide.
               </p>
               
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-4 mb-6 lg:mb-8">
                 {["27+ Product Categories", "Global Quality Standards", "Competitive Pricing", "Technical Excellence"].map((feature, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="h-5 w-5 text-success flex-shrink-0" />
-                    <span className="text-foreground">{feature}</span>
+                  <div key={index} className="flex items-center space-x-2 lg:space-x-3">
+                    <CheckCircle className="h-4 w-4 lg:h-5 lg:w-5 text-success flex-shrink-0" />
+                    <span className="text-sm lg:text-base text-foreground">{feature}</span>
                   </div>
                 ))}
               </div>
               
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-3 lg:gap-4">
                 <Link to="/frotec">
-                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg">
+                  <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg">
                     Learn About FROTEC
-                    <ArrowRight className="ml-2 h-5 w-5" />
+                    <ArrowRight className="ml-2 h-4 w-4 lg:h-5 lg:w-5" />
                   </Button>
                 </Link>
                 <Link to="/products">
-                  <Button size="lg" variant="outline" className="border-2 border-primary/30 hover:bg-primary hover:text-primary-foreground">
+                  <Button size="lg" variant="outline" className="w-full sm:w-auto border-2 border-primary/30 hover:bg-primary hover:text-primary-foreground">
                     View Products
                   </Button>
                 </Link>

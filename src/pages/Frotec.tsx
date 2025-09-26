@@ -90,25 +90,25 @@ const Frotec = () => {
                 <span className="text-sm font-medium text-accent">Guangzhou FROTEC Water Treatment</span>
               </div>
               
-              <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+              <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-4 lg:mb-6 leading-tight">
                 FROTEC
                 <span className="block text-accent">Water Treatment</span>
                 <span className="block">Solutions</span>
               </h1>
               
-              <p className="text-xl lg:text-2xl mb-8 text-primary-foreground/90 leading-relaxed">
+              <p className="text-lg sm:text-xl lg:text-2xl mb-6 lg:mb-8 text-primary-foreground/90 leading-relaxed">
                 Innovative water filtration solutions that solve water challenges worldwide with premium quality products and superior technical support.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-3 lg:gap-4">
                 <Link to="/contact">
-                  <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg text-lg px-8 py-4">
+                  <Button size="lg" className="w-full sm:w-auto bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg text-base lg:text-lg px-6 lg:px-8 py-3 lg:py-4">
                     Get Quote
-                    <ArrowRight className="ml-2 h-5 w-5" />
+                    <ArrowRight className="ml-2 h-4 w-4 lg:h-5 lg:w-5" />
                   </Button>
                 </Link>
                 <Link to="/products">
-                  <Button size="lg" variant="outline" className="border-2 border-primary-foreground/30 text-primary-foreground hover:bg-accent hover:text-accent-foreground hover:border-accent text-lg px-8 py-4">
+                  <Button size="lg" variant="outline" className="w-full sm:w-auto border-2 border-primary-foreground/30 text-primary-foreground hover:bg-accent hover:text-accent-foreground hover:border-accent text-base lg:text-lg px-6 lg:px-8 py-3 lg:py-4">
                     View Products
                   </Button>
                 </Link>
@@ -180,14 +180,14 @@ const Frotec = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 lg:gap-6">
             {advantages.map((advantage, index) => (
-              <Card key={index} className="text-center p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary rounded-full mb-4">
-                  <advantage.icon className="h-8 w-8 text-primary-foreground" />
+              <Card key={index} className="text-center p-4 lg:p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                <div className="inline-flex items-center justify-center w-12 h-12 lg:w-16 lg:h-16 bg-primary rounded-full mb-3 lg:mb-4">
+                  <advantage.icon className="h-6 w-6 lg:h-8 lg:w-8 text-primary-foreground" />
                 </div>
-                <h3 className="text-lg font-semibold mb-3">{advantage.title}</h3>
-                <p className="text-sm text-muted-foreground">{advantage.description}</p>
+                <h3 className="text-base lg:text-lg font-semibold mb-2 lg:mb-3">{advantage.title}</h3>
+                <p className="text-xs lg:text-sm text-muted-foreground">{advantage.description}</p>
               </Card>
             ))}
           </div>
@@ -206,18 +206,18 @@ const Frotec = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 lg:gap-6">
             {productCategories.map((category, index) => (
-              <Card key={index} className="p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
-                <div className="flex items-start gap-4">
-                  <Badge variant="secondary" className="text-primary font-bold text-sm">
+              <Card key={index} className="p-4 lg:p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group">
+                <div className="flex items-start gap-3 lg:gap-4">
+                  <Badge variant="secondary" className="text-primary font-bold text-xs lg:text-sm">
                     {category.id}
                   </Badge>
                   <div className="flex-1">
-                    <h3 className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors">
+                    <h3 className="text-base lg:text-lg font-semibold mb-1 lg:mb-2 group-hover:text-primary transition-colors">
                       {category.name}
                     </h3>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-xs lg:text-sm text-muted-foreground">
                       {category.description}
                     </p>
                   </div>
