@@ -31,6 +31,12 @@ import filterSystem3 from "@/assets/filter-system-3.jpg";
 import filterSystem4 from "@/assets/filter-system-4.jpg";
 import filterSystem5 from "@/assets/filter-system-5.jpg";
 import filterSystem6 from "@/assets/filter-system-6.jpg";
+import filterSystem7 from "@/assets/filter-system-7.jpg";
+import filterSystem8 from "@/assets/filter-system-8.jpg";
+import filterSystem9 from "@/assets/filter-system-9.jpg";
+import filterSystem10 from "@/assets/filter-system-10.jpg";
+import filterSystem11 from "@/assets/filter-system-11.jpg";
+import filterSystem12 from "@/assets/filter-system-12.jpg";
 
 const Products = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -272,6 +278,60 @@ const Products = () => {
           description: "Pair of heavy-duty blue filter systems for high-demand applications",
           features: ["Heavy-duty construction", "Dual system setup", "High flow capacity", "Industrial grade"],
           specifications: ["2 filter systems", "Heavy-duty design", "High pressure rated", "Industrial applications"]
+        },
+        {
+          id: "fs-professional-bracket",
+          name: "Professional Filter with Bracket",
+          price: "$125.00",
+          image: filterSystem7,
+          description: "Professional blue filter system with advanced mounting bracket design",
+          features: ["Professional grade", "Advanced bracket", "Pressure relief", "Easy access"],
+          specifications: ["Professional mounting", "Pressure gauge port", "Quick release", "20\" filter capacity"]
+        },
+        {
+          id: "fs-compact-separable",
+          name: "Compact Separable Filter",
+          price: "$78.00",
+          image: filterSystem8,
+          description: "Compact blue filter with separable design for easy maintenance",
+          features: ["Separable design", "Compact size", "Easy maintenance", "Space saving"],
+          specifications: ["Separable housing", "10\" standard", "Quick disconnect", "Residential use"]
+        },
+        {
+          id: "fs-multi-variant-collection",
+          name: "Multi-Variant Filter Collection",
+          price: "$425.00",
+          image: filterSystem9,
+          description: "Complete collection of various EROTEC filter variants for different applications",
+          features: ["Multiple variants", "Complete collection", "Various sizes", "Professional set"],
+          specifications: ["6 different variants", "Clear and blue options", "Various capacities", "Complete kit"]
+        },
+        {
+          id: "fs-threaded-blue",
+          name: "Threaded Blue Filter System",
+          price: "$95.00",
+          image: filterSystem10,
+          description: "Blue filter system with threaded design for secure connection",
+          features: ["Threaded connections", "Secure fitting", "Blue housing", "Standard size"],
+          specifications: ["Threaded design", "10\" standard", "NPT connections", "Residential/commercial"]
+        },
+        {
+          id: "fs-dual-clear-blue",
+          name: "Dual Clear & Blue System",
+          price: "$165.00",
+          image: filterSystem11,
+          description: "Dual system with clear and blue filters for specialized filtration needs",
+          features: ["Clear visibility", "Blue durability", "Dual filtration", "Specialized setup"],
+          specifications: ["Clear + blue combo", "10\" capacity each", "Dual mounting", "Visual monitoring"]
+        },
+        {
+          id: "fs-triple-stage-advanced",
+          name: "Triple Stage Advanced System",
+          price: "$385.00",
+          image: filterSystem12,
+          description: "Advanced triple-stage filtration system with clear and blue housings",
+          features: ["3-stage filtration", "Mixed housing types", "Advanced setup", "Professional grade"],
+          specifications: ["3 filter stages", "Clear + blue housings", "Progressive filtration", "Commercial grade"]
         }
       ]
     },
