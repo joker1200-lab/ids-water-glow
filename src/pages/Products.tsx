@@ -71,11 +71,99 @@ import dosingPump13 from "@/assets/dosing-pump-13.jpg";
 import dosingPump14 from "@/assets/dosing-pump-14.jpg";
 import dosingPump15 from "@/assets/dosing-pump-15.jpg";
 import dosingPump16 from "@/assets/dosing-pump-16.jpg";
+import solenoidValve1 from "@/assets/solenoid-valve-1.jpg";
+import solenoidValve2 from "@/assets/solenoid-valve-2.jpg";
+import solenoidValve3 from "@/assets/solenoid-valve-3.jpg";
+import solenoidValve4 from "@/assets/solenoid-valve-4.jpg";
+import solenoidValve5 from "@/assets/solenoid-valve-5.jpg";
+import solenoidValve6 from "@/assets/solenoid-valve-6.jpg";
+import solenoidValve7 from "@/assets/solenoid-valve-7.jpg";
+import solenoidValve8 from "@/assets/solenoid-valve-8.jpg";
 
 const Products = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
 
   const productCategories = [
+    {
+      id: "solenoid-valves",
+      name: "Solenoid Valves",
+      icon: Zap,
+      description: "Professional EROTEC solenoid valves for precise flow control and automation",
+      products: [
+        {
+          id: "sv-brass-actuated",
+          name: "Brass Actuated Solenoid Valve",
+          price: "$125.00",
+          image: solenoidValve1,
+          description: "Heavy-duty brass solenoid valve with red wire actuator for water treatment systems",
+          features: ["Brass construction", "High pressure rating", "Fast response time", "Corrosion resistant"],
+          specifications: ["Material: Brass body", "Voltage: 24V AC/DC", "Pressure: 0-16 bar", "Temperature: -10°C to +80°C"]
+        },
+        {
+          id: "sv-digital-control",
+          name: "Digital Control Solenoid Valve",
+          price: "$185.00",
+          image: solenoidValve2,
+          description: "Advanced digital control solenoid valve with LCD display for precise automation",
+          features: ["Digital LCD display", "Precise control", "Programmable settings", "Energy efficient"],
+          specifications: ["Digital controller", "24V DC power", "Flow rate: 0-50 L/min", "IP65 protection"]
+        },
+        {
+          id: "sv-compact-brass",
+          name: "Compact Brass Valve",
+          price: "$95.00",
+          image: solenoidValve3,
+          description: "Compact brass solenoid valve for space-constrained installations",
+          features: ["Compact design", "Space saving", "Quick installation", "Reliable operation"],
+          specifications: ["Compact size", "1/2\" - 2\" connections", "Manual override", "NSF certified"]
+        },
+        {
+          id: "sv-threaded-brass",
+          name: "Threaded Brass Solenoid Valve",
+          price: "$115.00",
+          image: solenoidValve4,
+          description: "Threaded brass solenoid valve with wire leads for easy electrical connection",
+          features: ["Threaded connections", "Easy wiring", "Brass construction", "Standard voltage"],
+          specifications: ["BSP/NPT threads", "110V/220V options", "Normally closed", "Manual operation available"]
+        },
+        {
+          id: "sv-flanged-brass",
+          name: "Flanged Brass Solenoid Valve",
+          price: "$155.00",
+          image: solenoidValve5,
+          description: "Flanged brass solenoid valve for high-flow industrial applications",
+          features: ["Flanged connections", "High flow rate", "Industrial grade", "Durable construction"],
+          specifications: ["Flanged ends", "DN25-DN100", "PN16 rating", "Industrial applications"]
+        },
+        {
+          id: "sv-2ws1-series",
+          name: "2WS1 Series Solenoid Valve",
+          price: "$135.00",
+          image: solenoidValve6,
+          description: "2WS1 series brass solenoid valve with specification label for water and oil applications",
+          features: ["Series 2WS1 design", "Water/oil compatible", "Specification labeled", "Quality assured"],
+          specifications: ["Type: 2WS1-15", "Orifice: 15mm", "Pressure: 0-1.0MPa", "Medium: Water/Air/Oil"]
+        },
+        {
+          id: "sv-professional-grade",
+          name: "Professional Grade Solenoid Valve",
+          price: "$165.00",
+          image: solenoidValve7,
+          description: "Professional grade brass solenoid valve with enhanced sealing and reliability",
+          features: ["Professional grade", "Enhanced sealing", "Long service life", "Field serviceable"],
+          specifications: ["Professional quality", "Enhanced O-rings", "Field replaceable coil", "5-year warranty"]
+        },
+        {
+          id: "sv-2ws1-20",
+          name: "2WS1-20 Heavy Duty Valve",
+          price: "$175.00",
+          image: solenoidValve8,
+          description: "Heavy-duty 2WS1-20 solenoid valve with 20mm orifice for high-flow applications",
+          features: ["20mm orifice", "Heavy-duty construction", "High flow capacity", "Industrial rated"],
+          specifications: ["Type: 2WS1-20", "Orifice: 20mm", "Pressure: 0-1.0MPa", "Flow rate: Up to 100 L/min"]
+        }
+      ]
+    },
     {
       id: "filter-housings",
       name: "Filter Housings",
@@ -786,8 +874,9 @@ const Products = () => {
       <section className="py-16">
         <div className="container mx-auto px-4 lg:px-8">
           <Tabs value={selectedCategory} onValueChange={setSelectedCategory} className="w-full">
-            <TabsList className="grid w-full grid-cols-9 mb-12">
+            <TabsList className="grid w-full grid-cols-10 mb-12">
               <TabsTrigger value="all" className="text-sm">All Products</TabsTrigger>
+              <TabsTrigger value="solenoid-valves" className="text-sm">Solenoid Valves</TabsTrigger>
               <TabsTrigger value="filter-housings" className="text-sm">Filter Housings</TabsTrigger>
               <TabsTrigger value="membrane-vessels" className="text-sm">RO Vessels</TabsTrigger>
               <TabsTrigger value="ro-membranes" className="text-sm">RO Membranes</TabsTrigger>
