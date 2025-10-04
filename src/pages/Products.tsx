@@ -40,12 +40,10 @@ import filterSystem12 from "@/assets/filter-system-12.jpg";
 import filterCartridge1 from "@/assets/filter-cartridge-1.jpg";
 import filterCartridge2 from "@/assets/filter-cartridge-2.jpg";
 import filterCartridge3 from "@/assets/filter-cartridge-3.jpg";
-import filterCartridge4 from "@/assets/filter-cartridge-4.jpg";
-import filterCartridge5 from "@/assets/filter-cartridge-5.jpg";
+import filterCartridge4 from "@/assets/filter-cartridge-5.jpg";
 import filterCartridge6 from "@/assets/filter-cartridge-6.jpg";
 import filterCartridge7 from "@/assets/filter-cartridge-7.jpg";
 import filterCartridge8 from "@/assets/filter-cartridge-8.jpg";
-import filterCartridge9 from "@/assets/filter-cartridge-9.jpg";
 import filterCartridge10 from "@/assets/filter-cartridge-10.jpg";
 import filterCartridge11 from "@/assets/filter-cartridge-11.jpg";
 import filterCartridge12 from "@/assets/filter-cartridge-12.jpg";
@@ -79,6 +77,14 @@ import solenoidValve5 from "@/assets/solenoid-valve-5.jpg";
 import solenoidValve6 from "@/assets/solenoid-valve-6.jpg";
 import solenoidValve7 from "@/assets/solenoid-valve-7.jpg";
 import solenoidValve8 from "@/assets/solenoid-valve-8.jpg";
+import ppFilterCartridge1 from "@/assets/pp-filter-cartridge-1.jpg";
+import ppFilterCartridge2 from "@/assets/pp-filter-cartridge-2.jpg";
+import ppFilterCartridge3 from "@/assets/pp-filter-cartridge-3.jpg";
+import ppFilterCartridge4 from "@/assets/pp-filter-cartridge-4.jpg";
+import ppFilterCartridge5 from "@/assets/pp-filter-cartridge-5.jpg";
+import ppFilterCartridge6 from "@/assets/pp-filter-cartridge-6.jpg";
+import ppFilterCartridge7 from "@/assets/pp-filter-cartridge-7.jpg";
+import ppFilterCartridge8 from "@/assets/pp-filter-cartridge-8.jpg";
 
 const Products = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -88,12 +94,11 @@ const Products = () => {
       id: "solenoid-valves",
       name: "Solenoid Valves",
       icon: Zap,
-      description: "Professional EROTEC solenoid valves for precise flow control and automation",
+      description: "Professional FROTEC solenoid valves for precise flow control and automation",
       products: [
         {
           id: "sv-brass-actuated",
           name: "Brass Actuated Solenoid Valve",
-          price: "$125.00",
           image: solenoidValve1,
           description: "Heavy-duty brass solenoid valve with red wire actuator for water treatment systems",
           features: ["Brass construction", "High pressure rating", "Fast response time", "Corrosion resistant"],
@@ -102,7 +107,6 @@ const Products = () => {
         {
           id: "sv-digital-control",
           name: "Digital Control Solenoid Valve",
-          price: "$185.00",
           image: solenoidValve2,
           description: "Advanced digital control solenoid valve with LCD display for precise automation",
           features: ["Digital LCD display", "Precise control", "Programmable settings", "Energy efficient"],
@@ -111,7 +115,6 @@ const Products = () => {
         {
           id: "sv-compact-brass",
           name: "Compact Brass Valve",
-          price: "$95.00",
           image: solenoidValve3,
           description: "Compact brass solenoid valve for space-constrained installations",
           features: ["Compact design", "Space saving", "Quick installation", "Reliable operation"],
@@ -120,7 +123,6 @@ const Products = () => {
         {
           id: "sv-threaded-brass",
           name: "Threaded Brass Solenoid Valve",
-          price: "$115.00",
           image: solenoidValve4,
           description: "Threaded brass solenoid valve with wire leads for easy electrical connection",
           features: ["Threaded connections", "Easy wiring", "Brass construction", "Standard voltage"],
@@ -129,7 +131,6 @@ const Products = () => {
         {
           id: "sv-flanged-brass",
           name: "Flanged Brass Solenoid Valve",
-          price: "$155.00",
           image: solenoidValve5,
           description: "Flanged brass solenoid valve for high-flow industrial applications",
           features: ["Flanged connections", "High flow rate", "Industrial grade", "Durable construction"],
@@ -138,7 +139,6 @@ const Products = () => {
         {
           id: "sv-2ws1-series",
           name: "2WS1 Series Solenoid Valve",
-          price: "$135.00",
           image: solenoidValve6,
           description: "2WS1 series brass solenoid valve with specification label for water and oil applications",
           features: ["Series 2WS1 design", "Water/oil compatible", "Specification labeled", "Quality assured"],
@@ -147,7 +147,6 @@ const Products = () => {
         {
           id: "sv-professional-grade",
           name: "Professional Grade Solenoid Valve",
-          price: "$165.00",
           image: solenoidValve7,
           description: "Professional grade brass solenoid valve with enhanced sealing and reliability",
           features: ["Professional grade", "Enhanced sealing", "Long service life", "Field serviceable"],
@@ -156,7 +155,6 @@ const Products = () => {
         {
           id: "sv-2ws1-20",
           name: "2WS1-20 Heavy Duty Valve",
-          price: "$175.00",
           image: solenoidValve8,
           description: "Heavy-duty 2WS1-20 solenoid valve with 20mm orifice for high-flow applications",
           features: ["20mm orifice", "Heavy-duty construction", "High flow capacity", "Industrial rated"],
@@ -173,7 +171,6 @@ const Products = () => {
         {
           id: "fh-404",
           name: "404 Filter Housing",
-          price: "$45.00",
           image: filterHousing1,
           description: "Durable 404 series filter housing with pressure relief valve",
           features: ["Pressure relief valve", "Easy maintenance", "Corrosion resistant", "Multiple inlet/outlet options"],
@@ -182,7 +179,6 @@ const Products = () => {
         {
           id: "fh-4040",
           name: "4040 Filter Housing",
-          price: "$52.00",
           image: filterHousing2,
           description: "Heavy-duty 4040 series filter housing for industrial applications",
           features: ["Heavy-duty construction", "High flow rate", "Easy cartridge replacement", "Leak-proof design"],
@@ -191,7 +187,6 @@ const Products = () => {
         {
           id: "fh-standard",
           name: "Standard Filter Housing",
-          price: "$38.00",
           image: filterHousing3,
           description: "Standard filter housing suitable for residential and light commercial use",
           features: ["Cost-effective", "Easy installation", "Standard fittings", "Reliable performance"],
@@ -206,27 +201,24 @@ const Products = () => {
       description: "Professional-grade reverse osmosis membrane vessels and components",
       products: [
         {
-          id: "mv-erotec-4040",
-          name: "EROTEC 4040 Membrane Vessel",
-          price: "$125.00",
+          id: "mv-frotec-4040",
+          name: "FROTEC 4040 Membrane Vessel",
           image: membraneVessel1,
-          description: "Professional EROTEC 4040 membrane vessel with complete component kit",
+          description: "Professional FROTEC 4040 membrane vessel with complete component kit",
           features: ["Complete component kit", "High-quality seals", "Easy assembly", "Professional grade"],
           specifications: ["Length: 40 inches", "Diameter: 4 inches", "Max Pressure: 300 PSI", "Material: FRP composite"]
         },
         {
-          id: "mv-erotec-standard",
-          name: "EROTEC Standard Vessel",
-          price: "$98.00",
+          id: "mv-frotec-standard",
+          name: "FROTEC Standard Vessel",
           image: membraneVessel2,
-          description: "Standard EROTEC membrane vessel with essential components",
+          description: "Standard FROTEC membrane vessel with essential components",
           features: ["Essential components included", "Durable construction", "Standard fittings", "Proven reliability"],
           specifications: ["Length: 32 inches", "Diameter: 4 inches", "Max Pressure: 250 PSI", "Material: FRP composite"]
         },
         {
           id: "mv-complete-kit",
           name: "Complete Membrane Kit",
-          price: "$155.00",
           image: membraneVessel3,
           description: "Complete membrane vessel kit with all accessories and components",
           features: ["All accessories included", "Installation hardware", "O-rings and seals", "Comprehensive kit"],
@@ -238,84 +230,75 @@ const Products = () => {
       id: "ro-membranes",
       name: "RO Membranes",
       icon: Droplets,
-      description: "High-performance EROTEC reverse osmosis membranes for superior water purification",
+      description: "High-performance FROTEC reverse osmosis membranes for superior water purification",
       products: [
         {
-          id: "ro-erotec-4040",
-          name: "EROTEC 4040 RO Membrane",
-          price: "$185.00",
+          id: "ro-frotec-4040",
+          name: "FROTEC 4040 RO Membrane",
           image: roMembrane1,
-          description: "Premium EROTEC 4040 reverse osmosis membrane with excellent salt rejection",
+          description: "Premium FROTEC 4040 reverse osmosis membrane with excellent salt rejection",
           features: ["99.5% salt rejection", "High flow rate", "Low pressure drop", "Extended lifespan"],
           specifications: ["Size: 40\" x 4\"", "Max Pressure: 600 PSI", "Max Temperature: 113°F", "pH Range: 2-11"]
         },
         {
-          id: "ro-erotec-bundle",
-          name: "EROTEC Membrane Bundle",
-          price: "$750.00",
+          id: "ro-frotec-bundle",
+          name: "FROTEC Membrane Bundle",
           image: roMembrane2,
-          description: "Complete bundle of EROTEC RO membranes for industrial applications",
+          description: "Complete bundle of FROTEC RO membranes for industrial applications",
           features: ["Bulk packaging", "Consistent quality", "Cost-effective", "Industrial grade"],
           specifications: ["Multiple sizes available", "Factory sealed", "2-year shelf life", "NSF certified"]
         },
         {
-          id: "ro-erotec-cross-section",
-          name: "EROTEC Spiral Wound Membrane",
-          price: "$165.00",
+          id: "ro-frotec-cross-section",
+          name: "FROTEC Spiral Wound Membrane",
           image: roMembrane3,
           description: "Advanced spiral wound design for maximum surface area and efficiency",
           features: ["Spiral wound technology", "Maximum surface area", "Superior performance", "Easy installation"],
           specifications: ["Spiral wound design", "Polyamide thin film", "High permeate flow", "Low energy consumption"]
         },
         {
-          id: "ro-erotec-multi-pack",
-          name: "EROTEC Multi-Pack Set",
-          price: "$425.00",
+          id: "ro-frotec-multi-pack",
+          name: "FROTEC Multi-Pack Set",
           image: roMembrane4,
           description: "Professional multi-pack set for commercial water treatment systems",
           features: ["Multiple membranes", "Professional grade", "Optimized spacing", "Complete system"],
           specifications: ["4-membrane configuration", "Uniform flow distribution", "Commercial grade", "Installation guide"]
         },
         {
-          id: "ro-erotec-boxed",
-          name: "EROTEC Boxed Membrane",
-          price: "$195.00",
+          id: "ro-frotec-boxed",
+          name: "FROTEC Boxed Membrane",
           image: roMembrane5,
-          description: "Factory-sealed EROTEC membrane with original packaging and documentation",
+          description: "Factory-sealed FROTEC membrane with original packaging and documentation",
           features: ["Factory sealed", "Original packaging", "Quality certificate", "Warranty included"],
-          specifications: ["Original EROTEC box", "Documentation included", "Serial numbered", "Quality guaranteed"]
+          specifications: ["Original FROTEC box", "Documentation included", "Serial numbered", "Quality guaranteed"]
         },
         {
-          id: "ro-erotec-standard",
-          name: "EROTEC Standard Membrane",
-          price: "$155.00",
+          id: "ro-frotec-standard",
+          name: "FROTEC Standard Membrane",
           image: roMembrane6,
-          description: "Standard EROTEC RO membrane for residential and light commercial use",
+          description: "Standard FROTEC RO membrane for residential and light commercial use",
           features: ["Standard configuration", "Reliable performance", "Cost effective", "Easy replacement"],
           specifications: ["Standard dimensions", "Residential/light commercial", "Easy installation", "1-year warranty"]
         },
         {
-          id: "ro-erotec-bulk-stack",
-          name: "EROTEC Bulk Stack (5-Pack)",
-          price: "$825.00",
+          id: "ro-frotec-bulk-stack",
+          name: "FROTEC Bulk Stack (5-Pack)",
           image: roMembrane7,
-          description: "Bulk stack of 5 EROTEC membranes for high-capacity installations",
+          description: "Bulk stack of 5 FROTEC membranes for high-capacity installations",
           features: ["5-membrane stack", "Bulk pricing", "High capacity", "Industrial applications"],
           specifications: ["5 membranes included", "Consistent performance", "Volume discount", "Commercial grade"]
         },
         {
-          id: "ro-erotec-premium-boxed",
-          name: "EROTEC Premium Boxed Membrane",
-          price: "$225.00",
+          id: "ro-frotec-premium-boxed",
+          name: "FROTEC Premium Boxed Membrane",
           image: roMembrane8,
-          description: "Premium EROTEC membrane with enhanced packaging and certification",
+          description: "Premium FROTEC membrane with enhanced packaging and certification",
           features: ["Premium grade", "Enhanced packaging", "Quality certificate", "Extended warranty"],
           specifications: ["Premium grade material", "Enhanced specifications", "Quality documentation", "2-year warranty"]
         },
         {
           id: "ro-membrane-end-caps",
           name: "RO Membrane End Caps Set",
-          price: "$45.00",
           image: roMembrane9,
           description: "Professional end caps showing membrane internal structure and flow paths",
           features: ["Internal structure visible", "Educational value", "Professional grade", "Quality construction"],
@@ -324,7 +307,6 @@ const Products = () => {
         {
           id: "ro-residential-pack",
           name: "Residential RO Membrane 3-Pack",
-          price: "$285.00",
           image: roMembrane10,
           description: "Three residential RO membranes in protective packaging for home systems",
           features: ["3-pack value", "Residential grade", "Protective packaging", "Home systems"],
@@ -333,7 +315,6 @@ const Products = () => {
         {
           id: "ro-residential-single",
           name: "Residential RO Membrane (Single)",
-          price: "$95.00",
           image: roMembrane11,
           description: "Single residential RO membrane in protective packaging for home use",
           features: ["Single unit", "Residential grade", "Protective packaging", "Home compatible"],
@@ -345,12 +326,11 @@ const Products = () => {
       id: "filter-systems",
       name: "Water Filter Systems",
       icon: Waves,
-      description: "Complete EROTEC water filter systems for residential, commercial, and industrial applications",
+      description: "Complete FROTEC water filter systems for residential, commercial, and industrial applications",
       products: [
         {
           id: "fs-single-stage",
           name: "Single Stage Filter System",
-          price: "$89.00",
           image: filterSystem1,
           description: "Complete single-stage blue water filter system for basic filtration needs",
           features: ["Single stage filtration", "Blue housing design", "Easy installation", "Pressure relief valve"],
@@ -359,7 +339,6 @@ const Products = () => {
         {
           id: "fs-single-bracket",
           name: "Single Stage with Bracket",
-          price: "$95.00",
           image: filterSystem2,
           description: "Single-stage filter system with mounting bracket for secure installation",
           features: ["Mounting bracket included", "Secure installation", "Easy maintenance", "Durable construction"],
@@ -368,16 +347,14 @@ const Products = () => {
         {
           id: "fs-multi-size",
           name: "Multi-Size Filter Collection",
-          price: "$485.00",
           image: filterSystem3,
-          description: "Complete collection of different sized EROTEC filter systems for various applications",
+          description: "Complete collection of different sized FROTEC filter systems for various applications",
           features: ["Multiple sizes included", "Versatile applications", "Professional grade", "Complete kit"],
           specifications: ["6 different sizes", "10\"-20\" capacities", "Various flow rates", "Professional installation"]
         },
         {
           id: "fs-triple-stage",
           name: "Triple Stage Filter System",
-          price: "$285.00",
           image: filterSystem4,
           description: "Advanced triple-stage filtration system for comprehensive water treatment",
           features: ["3-stage filtration", "Progressive filtering", "High capacity", "Professional grade"],
@@ -386,7 +363,6 @@ const Products = () => {
         {
           id: "fs-clear-blue-combo",
           name: "Clear & Blue Filter Combo",
-          price: "$145.00",
           image: filterSystem5,
           description: "Combination of clear and blue filter housings for specialized filtration",
           features: ["Clear housing visibility", "Blue housing durability", "Dual configuration", "Versatile setup"],
@@ -395,7 +371,6 @@ const Products = () => {
         {
           id: "fs-heavy-duty-pair",
           name: "Heavy Duty Filter Pair",
-          price: "$195.00",
           image: filterSystem6,
           description: "Pair of heavy-duty blue filter systems for high-demand applications",
           features: ["Heavy-duty construction", "Dual system setup", "High flow capacity", "Industrial grade"],
@@ -404,7 +379,6 @@ const Products = () => {
         {
           id: "fs-professional-bracket",
           name: "Professional Filter with Bracket",
-          price: "$125.00",
           image: filterSystem7,
           description: "Professional blue filter system with advanced mounting bracket design",
           features: ["Professional grade", "Advanced bracket", "Pressure relief", "Easy access"],
@@ -413,7 +387,6 @@ const Products = () => {
         {
           id: "fs-compact-separable",
           name: "Compact Separable Filter",
-          price: "$78.00",
           image: filterSystem8,
           description: "Compact blue filter with separable design for easy maintenance",
           features: ["Separable design", "Compact size", "Easy maintenance", "Space saving"],
@@ -422,16 +395,14 @@ const Products = () => {
         {
           id: "fs-multi-variant-collection",
           name: "Multi-Variant Filter Collection",
-          price: "$425.00",
           image: filterSystem9,
-          description: "Complete collection of various EROTEC filter variants for different applications",
+          description: "Complete collection of various FROTEC filter variants for different applications",
           features: ["Multiple variants", "Complete collection", "Various sizes", "Professional set"],
           specifications: ["6 different variants", "Clear and blue options", "Various capacities", "Complete kit"]
         },
         {
           id: "fs-threaded-blue",
           name: "Threaded Blue Filter System",
-          price: "$95.00",
           image: filterSystem10,
           description: "Blue filter system with threaded design for secure connection",
           features: ["Threaded connections", "Secure fitting", "Blue housing", "Standard size"],
@@ -440,7 +411,6 @@ const Products = () => {
         {
           id: "fs-dual-clear-blue",
           name: "Dual Clear & Blue System",
-          price: "$165.00",
           image: filterSystem11,
           description: "Dual system with clear and blue filters for specialized filtration needs",
           features: ["Clear visibility", "Blue durability", "Dual filtration", "Specialized setup"],
@@ -449,11 +419,82 @@ const Products = () => {
         {
           id: "fs-triple-stage-advanced",
           name: "Triple Stage Advanced System",
-          price: "$385.00",
           image: filterSystem12,
           description: "Advanced triple-stage filtration system with clear and blue housings",
           features: ["3-stage filtration", "Mixed housing types", "Advanced setup", "Professional grade"],
           specifications: ["3 filter stages", "Clear + blue housings", "Progressive filtration", "Commercial grade"]
+        }
+      ]
+    },
+    {
+      id: "pp-filter-cartridges",
+      name: "PP Filter Cartridges",
+      icon: Cylinder,
+      description: "High-quality polypropylene sediment filter cartridges for water treatment systems",
+      products: [
+        {
+          id: "pp-wound-cartridge-1",
+          name: "PP Wound Filter Cartridge",
+          image: ppFilterCartridge1,
+          description: "Polypropylene wound filter cartridge with black O-rings for sediment filtration",
+          features: ["PP wound construction", "Black O-ring seals", "High dirt holding capacity", "Multiple micron ratings"],
+          specifications: ["Material: Polypropylene", "Length: 10\"-40\" available", "Micron: 1-50 μm", "Temperature: Up to 60°C"]
+        },
+        {
+          id: "pp-mixed-cartridges",
+          name: "PP Mixed Filter Set",
+          image: ppFilterCartridge2,
+          description: "Assorted PP filter cartridges including wound and pleated types",
+          features: ["Multiple filter types", "Wound and pleated options", "Various configurations", "Professional set"],
+          specifications: ["Mixed types", "10\" standard length", "Various micron ratings", "Industrial grade"]
+        },
+        {
+          id: "pp-sediment-filter",
+          name: "PP Sediment Filter 5 Micron",
+          image: ppFilterCartridge3,
+          description: "5 micron PP sediment filter cartridge for removing dirt and rust particles",
+          features: ["5 micron rating", "Sediment removal", "High flow rate", "Long service life"],
+          specifications: ["Filtration: 5 micron", "Material: Polypropylene", "Length: 10\"", "For water use only"]
+        },
+        {
+          id: "pp-spun-cartridge",
+          name: "PP Spun Thin Type Filter",
+          image: ppFilterCartridge4,
+          description: "PP spun thin type filter cartridge for fine sediment filtration",
+          features: ["Spun construction", "Thin design", "High efficiency", "Cost effective"],
+          specifications: ["Spun polypropylene", "Thin type design", "Standard dimensions", "Multiple micron options"]
+        },
+        {
+          id: "pp-multi-cartridge-set",
+          name: "PP Multi-Cartridge Set",
+          image: ppFilterCartridge5,
+          description: "Multiple PP filter cartridges with different end cap configurations",
+          features: ["Multiple cartridges", "Various end caps", "Professional grade", "Complete set"],
+          specifications: ["Set of multiple filters", "Different configurations", "Standard lengths", "Industrial applications"]
+        },
+        {
+          id: "pp-foam-cartridge",
+          name: "PP Foam Filter Cartridge",
+          image: ppFilterCartridge6,
+          description: "PP foam filter cartridge for coarse to fine particle removal",
+          features: ["Foam construction", "High porosity", "Excellent flow rate", "Reusable design"],
+          specifications: ["Foam polypropylene", "10\" length", "Multiple densities", "Washable"]
+        },
+        {
+          id: "pp-standard-cartridge",
+          name: "PP Standard Filter Cartridge",
+          image: ppFilterCartridge7,
+          description: "Standard PP filter cartridge for general water filtration applications",
+          features: ["Standard design", "Reliable performance", "Easy installation", "Wide compatibility"],
+          specifications: ["Standard PP", "10\" x 2.5\"", "Universal fit", "Food grade material"]
+        },
+        {
+          id: "pp-short-cartridge-set",
+          name: "PP Short Filter Cartridge Set",
+          image: ppFilterCartridge8,
+          description: "Short PP filter cartridges for compact filtration systems",
+          features: ["Compact design", "Space saving", "Multiple units", "High efficiency"],
+          specifications: ["Short length design", "Compact systems", "Set of 4", "Various micron ratings"]
         }
       ]
     },
@@ -466,7 +507,6 @@ const Products = () => {
         {
           id: "sc-nylon-specialty",
           name: "Specialty N66 Nylon Cartridges",
-          price: "$158.00",
           image: specialtyCartridge1,
           description: "Specialty N66 nylon membrane cartridges designed for critical applications",
           features: ["Specialty N66 membrane", "Critical applications", "High purity", "Advanced design"],
@@ -475,7 +515,6 @@ const Products = () => {
         {
           id: "sc-flat-mouth-advanced",
           name: "Advanced Flat Mouth Cartridges",
-          price: "$225.00",
           image: specialtyCartridge2,
           description: "Advanced flat mouth pleated cartridges for specialized mounting systems",
           features: ["Advanced flat mouth", "Specialized mounting", "High efficiency", "Custom design"],
@@ -484,7 +523,6 @@ const Products = () => {
         {
           id: "sc-microporous-insert",
           name: "Microporous Insert Cartridges",
-          price: "$285.00",
           image: specialtyCartridge3,
           description: "Microporous pleated cartridges with insert-style design for precise filtration",
           features: ["Microporous membrane", "Insert design", "Precise filtration", "Multiple sizes"],
@@ -493,7 +531,6 @@ const Products = () => {
         {
           id: "sc-microporous-single",
           name: "Single Microporous Cartridge",
-          price: "$75.00",
           image: specialtyCartridge4,
           description: "Individual microporous pleated cartridge for specialized applications",
           features: ["Individual unit", "Microporous design", "Specialized use", "High precision"],
@@ -502,7 +539,6 @@ const Products = () => {
         {
           id: "sc-mce-premium",
           name: "Premium MCE Cartridges",
-          price: "$95.00",
           image: specialtyCartridge5,
           description: "Premium mixed cellulose ester cartridges for high-end applications",
           features: ["Premium MCE", "High-end applications", "Superior performance", "Quality assured"],
@@ -511,7 +547,6 @@ const Products = () => {
         {
           id: "sc-ptfe-advanced",
           name: "Advanced PTFE Filter Set",
-          price: "$295.00",
           image: specialtyCartridge6,
           description: "Advanced PTFE membrane cartridge set for extreme chemical resistance",
           features: ["Advanced PTFE", "Extreme resistance", "Chemical compatibility", "Professional set"],
@@ -528,7 +563,6 @@ const Products = () => {
         {
           id: "dp-basic-green",
           name: "Basic Green Dosing Pump",
-          price: "$285.00",
           image: dosingPump1,
           description: "Reliable basic dosing pump with cable connection for chemical injection",
           features: ["Basic operation", "Cable connection", "Reliable performance", "Chemical resistant"],
@@ -537,7 +571,6 @@ const Products = () => {
         {
           id: "dp-digital-display",
           name: "Digital Display Dosing Pump",
-          price: "$385.00",
           image: dosingPump2,
           description: "Advanced dosing pump with digital display and precise control functions",
           features: ["Digital display", "Precise control", "Multiple functions", "User friendly"],
@@ -546,7 +579,6 @@ const Products = () => {
         {
           id: "dp-pump-head",
           name: "Dosing Pump Head Unit",
-          price: "$195.00",
           image: dosingPump3,
           description: "Replacement pump head unit showing internal mechanism and connections",
           features: ["Pump head unit", "Internal mechanism", "Easy replacement", "Quality construction"],
@@ -555,7 +587,6 @@ const Products = () => {
         {
           id: "dp-compact-digital",
           name: "Compact Digital Pump",
-          price: "$325.00",
           image: dosingPump4,
           description: "Compact dosing pump with digital interface and space-saving design",
           features: ["Compact design", "Digital interface", "Space saving", "Efficient operation"],
@@ -564,7 +595,6 @@ const Products = () => {
         {
           id: "dp-advanced-control",
           name: "Advanced Control Pump",
-          price: "$445.00",
           image: dosingPump5,
           description: "Advanced dosing pump with comprehensive control panel and monitoring",
           features: ["Advanced controls", "Monitoring system", "Professional grade", "Comprehensive interface"],
@@ -573,7 +603,6 @@ const Products = () => {
         {
           id: "dp-accessory-kit",
           name: "Dosing Pump with Accessories",
-          price: "$365.00",
           image: dosingPump6,
           description: "Complete dosing pump kit with accessories and connection fittings",
           features: ["Complete kit", "Accessories included", "Connection fittings", "Ready to install"],
@@ -582,105 +611,94 @@ const Products = () => {
         {
           id: "dp-professional-grade",
           name: "Professional Grade Pump",
-          price: "$485.00",
           image: dosingPump7,
           description: "Professional-grade dosing pump with advanced control and monitoring features",
           features: ["Professional grade", "Advanced monitoring", "High precision", "Industrial use"],
           specifications: ["Professional quality", "High precision", "Advanced features", "Industrial grade"]
         },
         {
-          id: "dp-erotec-blue",
-          name: "EROTEC Blue Dosing Pump",
-          price: "$425.00",
+          id: "dp-frotec-blue",
+          name: "FROTEC Blue Dosing Pump",
           image: dosingPump8,
-          description: "EROTEC branded blue dosing pump with professional control system",
-          features: ["EROTEC brand", "Professional controls", "Blue design", "Quality assurance"],
-          specifications: ["EROTEC quality", "Professional grade", "Advanced controls", "Brand warranty"]
+          description: "FROTEC branded blue dosing pump with professional control system",
+          features: ["FROTEC brand", "Professional controls", "Blue design", "Quality assurance"],
+          specifications: ["FROTEC quality", "Professional grade", "Advanced controls", "Brand warranty"]
         },
         {
-          id: "dp-erotec-compact-blue",
-          name: "EROTEC Compact Blue Pump",
-          price: "$315.00",
+          id: "dp-frotec-compact-blue",
+          name: "FROTEC Compact Blue Pump",
           image: dosingPump9,
-          description: "Compact EROTEC blue dosing pump with white pump head and manual control",
-          features: ["Compact EROTEC design", "White pump head", "Manual control dial", "Reliable operation"],
-          specifications: ["Compact design", "Manual controls", "Chemical resistant head", "EROTEC brand"]
+          description: "Compact FROTEC blue dosing pump with white pump head and manual control",
+          features: ["Compact FROTEC design", "White pump head", "Manual control dial", "Reliable operation"],
+          specifications: ["Compact design", "Manual controls", "Chemical resistant head", "FROTEC brand"]
         },
         {
-          id: "dp-erotec-analog-control",
-          name: "EROTEC Analog Control Pump",
-          price: "$365.00",
+          id: "dp-frotec-analog-control",
+          name: "FROTEC Analog Control Pump",
           image: dosingPump10,
-          description: "EROTEC dosing pump with analog control dial and professional pump head",
-          features: ["Analog control dial", "Professional head", "EROTEC quality", "Precise adjustment"],
-          specifications: ["Analog controls", "Professional grade", "Precise flow control", "EROTEC warranty"]
+          description: "FROTEC dosing pump with analog control dial and professional pump head",
+          features: ["Analog control dial", "Professional head", "FROTEC quality", "Precise adjustment"],
+          specifications: ["Analog controls", "Professional grade", "Precise flow control", "FROTEC warranty"]
         },
         {
-          id: "dp-erotec-protective-cover",
-          name: "EROTEC Pump with Protective Cover",
-          price: "$395.00",
+          id: "dp-frotec-protective-cover",
+          name: "FROTEC Pump with Protective Cover",
           image: dosingPump11,
-          description: "EROTEC dosing pump with transparent protective cover for enhanced safety",
+          description: "FROTEC dosing pump with transparent protective cover for enhanced safety",
           features: ["Protective cover", "Enhanced safety", "Transparent design", "Professional grade"],
           specifications: ["Safety cover", "Transparent protection", "Professional controls", "Enhanced safety"]
         },
         {
-          id: "dp-erotec-side-mount",
-          name: "EROTEC Side Mount Pump",
-          price: "$385.00",
+          id: "dp-frotec-side-mount",
+          name: "FROTEC Side Mount Pump",
           image: dosingPump12,
-          description: "EROTEC dosing pump with side-mounted pump head for versatile installation",
-          features: ["Side mount design", "Versatile installation", "EROTEC quality", "Professional grade"],
-          specifications: ["Side mount head", "Versatile mounting", "Professional controls", "EROTEC brand"]
+          description: "FROTEC dosing pump with side-mounted pump head for versatile installation",
+          features: ["Side mount design", "Versatile installation", "FROTEC quality", "Professional grade"],
+          specifications: ["Side mount head", "Versatile mounting", "Professional controls", "FROTEC brand"]
         },
         {
-          id: "dp-erotec-standard-mount",
-          name: "EROTEC Standard Mount Pump",
-          price: "$405.00",
+          id: "dp-frotec-standard-mount",
+          name: "FROTEC Standard Mount Pump",
           image: dosingPump13,
-          description: "EROTEC standard mount dosing pump with reliable control system",
-          features: ["Standard mounting", "Reliable controls", "EROTEC quality", "Professional design"],
-          specifications: ["Standard mount", "Reliable operation", "Professional controls", "EROTEC warranty"]
+          description: "FROTEC standard mount dosing pump with reliable control system",
+          features: ["Standard mounting", "Reliable controls", "FROTEC quality", "Professional design"],
+          specifications: ["Standard mount", "Reliable operation", "Professional controls", "FROTEC warranty"]
         },
         {
-          id: "dp-erotec-lcd-display",
-          name: "EROTEC LCD Display Pump",
-          price: "$485.00",
+          id: "dp-frotec-lcd-display",
+          name: "FROTEC LCD Display Pump",
           image: dosingPump14,
-          description: "Advanced EROTEC dosing pump with LCD display and digital controls",
-          features: ["LCD display", "Digital controls", "Advanced features", "EROTEC quality"],
-          specifications: ["LCD display", "Digital interface", "Advanced programming", "EROTEC professional"]
+          description: "Advanced FROTEC dosing pump with LCD display and digital controls",
+          features: ["LCD display", "Digital controls", "Advanced features", "FROTEC quality"],
+          specifications: ["LCD display", "Digital interface", "Advanced programming", "FROTEC professional"]
         },
         {
-          id: "dp-erotec-wall-mount",
-          name: "EROTEC Wall Mount Pump",
-          price: "$345.00",
+          id: "dp-frotec-wall-mount",
+          name: "FROTEC Wall Mount Pump",
           image: dosingPump15,
-          description: "EROTEC wall-mounted dosing pump with side pump head configuration",
-          features: ["Wall mount design", "Side pump head", "Space efficient", "EROTEC quality"],
-          specifications: ["Wall mounting", "Side configuration", "Space saving", "EROTEC brand"]
+          description: "FROTEC wall-mounted dosing pump with side pump head configuration",
+          features: ["Wall mount design", "Side pump head", "Space efficient", "FROTEC quality"],
+          specifications: ["Wall mounting", "Side configuration", "Space saving", "FROTEC brand"]
         },
         {
-          id: "dp-erotec-digital-premium",
-          name: "EROTEC Digital Premium Pump",
-          price: "$525.00",
+          id: "dp-frotec-digital-premium",
+          name: "FROTEC Digital Premium Pump",
           image: dosingPump16,
-          description: "Premium EROTEC dosing pump with digital display and advanced control features",
+          description: "Premium FROTEC dosing pump with digital display and advanced control features",
           features: ["Premium digital", "Advanced controls", "LED indicators", "Top-tier quality"],
-          specifications: ["Digital display", "Premium features", "LED indicators", "EROTEC premium"]
+          specifications: ["Digital display", "Premium features", "LED indicators", "FROTEC premium"]
         }
       ]
     },
     {
       id: "filter-cartridges",
-      name: "Filter Cartridges",
+      name: "Membrane Filter Cartridges",
       icon: Cylinder,
       description: "High-performance membrane filter cartridges for precise filtration applications",
       products: [
         {
           id: "fc-mce-pleated",
           name: "MCE Pleated Filter Cartridge",
-          price: "$28.00",
           image: filterCartridge1,
           description: "10-inch mixed cellulose ester (MCE) pleated filter cartridge for fine filtration",
           features: ["MCE membrane", "Pleated design", "High surface area", "Excellent flow rate"],
@@ -689,7 +707,6 @@ const Products = () => {
         {
           id: "fc-ptfe-assorted",
           name: "PTFE Filter Cartridge Set",
-          price: "$185.00",
           image: filterCartridge2,
           description: "Assorted PTFE (polytetrafluoroethylene) filter cartridges for chemical resistance",
           features: ["PTFE membrane", "Chemical resistant", "Multiple sizes", "Professional grade"],
@@ -698,26 +715,15 @@ const Products = () => {
         {
           id: "fc-ptfe-collection",
           name: "PTFE Cartridge Collection",
-          price: "$465.00",
           image: filterCartridge3,
           description: "Complete collection of PTFE filter cartridges in various sizes for industrial use",
           features: ["Complete collection", "Multiple lengths", "PTFE construction", "Industrial applications"],
           specifications: ["10\"-40\" lengths", "PTFE membrane", "Industrial grade", "High capacity"]
         },
         {
-          id: "fc-pes-standard",
-          name: "PES Standard Filter Cartridges",
-          price: "$95.00",
-          image: filterCartridge4,
-          description: "Polyethersulfone (PES) membrane filter cartridges for reliable filtration",
-          features: ["PES membrane", "Standard size", "Reliable performance", "Low protein binding"],
-          specifications: ["Material: Polyethersulfone", "10\" standard", "0.1-0.45μm options", "Autoclavable"]
-        },
-        {
           id: "fc-pes-assorted",
           name: "PES Assorted Filter Set",
-          price: "$285.00",
-          image: filterCartridge5,
+          image: filterCartridge4,
           description: "Assorted PES membrane filter cartridges in various sizes for different applications",
           features: ["Multiple sizes", "PES membrane", "Versatile applications", "Professional set"],
           specifications: ["Various lengths", "PES construction", "Multiple pore sizes", "Pharmaceutical grade"]
@@ -725,7 +731,6 @@ const Products = () => {
         {
           id: "fc-wound-string",
           name: "Wound String Filter Cartridge",
-          price: "$15.00",
           image: filterCartridge6,
           description: "Traditional wound string filter cartridge for sediment and particle removal",
           features: ["Wound string design", "Sediment filtration", "Cost effective", "Easy replacement"],
@@ -734,7 +739,6 @@ const Products = () => {
         {
           id: "fc-nylon-n66",
           name: "N66 Nylon Membrane Cartridges",
-          price: "$125.00",
           image: filterCartridge7,
           description: "High-performance N66 nylon membrane filter cartridges for demanding applications",
           features: ["N66 nylon membrane", "High performance", "Chemical resistance", "Multiple sizes"],
@@ -743,25 +747,14 @@ const Products = () => {
         {
           id: "fc-nylon-compact",
           name: "Compact Nylon Filter Set",
-          price: "$78.00",
           image: filterCartridge8,
           description: "Compact set of nylon membrane filter cartridges for space-efficient installations",
           features: ["Compact design", "Nylon membrane", "Space efficient", "Easy installation"],
           specifications: ["Compact size", "Nylon construction", "Standard connections", "Set of 3"]
         },
         {
-          id: "fc-flat-mouth",
-          name: "Flat Mouth Pleated Cartridges",
-          price: "$185.00",
-          image: filterCartridge9,
-          description: "Flat mouth pleated filter cartridges for specialized mounting applications",
-          features: ["Flat mouth design", "Pleated construction", "Specialized mounting", "High surface area"],
-          specifications: ["Flat mouth fitting", "Pleated membrane", "10\" length", "Specialized applications"]
-        },
-        {
           id: "fc-acf-packaged",
           name: "ACF Packaged Filter Cartridge",
-          price: "$45.00",
           image: filterCartridge10,
           description: "Activated carbon fiber (ACF) filter cartridge in protective packaging",
           features: ["Activated carbon fiber", "Protective packaging", "Odor removal", "Chemical adsorption"],
@@ -770,7 +763,6 @@ const Products = () => {
         {
           id: "fc-acf-multi-set",
           name: "ACF Multi-Size Filter Set",
-          price: "$195.00",
           image: filterCartridge11,
           description: "Multiple activated carbon fiber filter cartridges in various sizes",
           features: ["Multiple sizes", "ACF technology", "Odor control", "Chemical removal"],
@@ -779,7 +771,6 @@ const Products = () => {
         {
           id: "fc-acf-professional",
           name: "Professional ACF Filter",
-          price: "$65.00",
           image: filterCartridge12,
           description: "Professional-grade activated carbon fiber filter in protective packaging",
           features: ["Professional grade", "Factory sealed", "High capacity", "Premium quality"],
@@ -796,7 +787,6 @@ const Products = () => {
         {
           id: "acc-orings",
           name: "O-Ring Set",
-          price: "$12.00",
           image: membraneVessel1,
           description: "Complete set of O-rings for membrane vessels and filter housings",
           features: ["Multiple sizes", "Food grade material", "High durability", "Universal compatibility"],
@@ -805,7 +795,6 @@ const Products = () => {
         {
           id: "acc-endcaps",
           name: "End Cap Assembly",
-          price: "$28.00",
           image: membraneVessel2,
           description: "Precision-engineered end cap assembly for membrane vessels",
           features: ["Precision fit", "Leak-proof design", "Easy installation", "Long-lasting"],
@@ -814,7 +803,6 @@ const Products = () => {
         {
           id: "acc-brackets",
           name: "Mounting Brackets",
-          price: "$18.00",
           image: membraneVessel3,
           description: "Heavy-duty mounting brackets for secure vessel installation",
           features: ["Heavy-duty construction", "Secure mounting", "Adjustable design", "Corrosion resistant"],
@@ -823,11 +811,10 @@ const Products = () => {
         {
           id: "acc-membrane-assembly-kit",
           name: "Complete Membrane Assembly Kit",
-          price: "$125.00",
           image: membraneAccessories1,
-          description: "Complete EROTEC membrane vessel assembly kit with all components",
+          description: "Complete FROTEC membrane vessel assembly kit with all components",
           features: ["Complete assembly kit", "All components included", "Professional installation", "Quality hardware"],
-          specifications: ["EROTEC vessel included", "End caps and seals", "Mounting hardware", "Installation manual"]
+          specifications: ["FROTEC vessel included", "End caps and seals", "Mounting hardware", "Installation manual"]
         }
       ]
     }
@@ -856,7 +843,7 @@ const Products = () => {
           <div className="flex flex-wrap justify-center gap-4">
             <Badge variant="secondary" className="text-sm px-4 py-2">
               <CheckCircle className="h-4 w-4 mr-2" />
-              ISO Certified
+              International Quality Standards
             </Badge>
             <Badge variant="secondary" className="text-sm px-4 py-2">
               <CheckCircle className="h-4 w-4 mr-2" />
@@ -874,14 +861,15 @@ const Products = () => {
       <section className="py-16">
         <div className="container mx-auto px-4 lg:px-8">
           <Tabs value={selectedCategory} onValueChange={setSelectedCategory} className="w-full">
-            <TabsList className="grid w-full grid-cols-10 mb-12">
+            <TabsList className="grid w-full grid-cols-11 mb-12">
               <TabsTrigger value="all" className="text-sm">All Products</TabsTrigger>
               <TabsTrigger value="solenoid-valves" className="text-sm">Solenoid Valves</TabsTrigger>
               <TabsTrigger value="filter-housings" className="text-sm">Filter Housings</TabsTrigger>
               <TabsTrigger value="membrane-vessels" className="text-sm">RO Vessels</TabsTrigger>
               <TabsTrigger value="ro-membranes" className="text-sm">RO Membranes</TabsTrigger>
               <TabsTrigger value="filter-systems" className="text-sm">Filter Systems</TabsTrigger>
-              <TabsTrigger value="filter-cartridges" className="text-sm">Filter Cartridges</TabsTrigger>
+              <TabsTrigger value="pp-filter-cartridges" className="text-sm">PP Cartridges</TabsTrigger>
+              <TabsTrigger value="filter-cartridges" className="text-sm">Membrane Cartridges</TabsTrigger>
               <TabsTrigger value="specialty-cartridges" className="text-sm">Specialty Cartridges</TabsTrigger>
               <TabsTrigger value="dosing-pumps" className="text-sm">Dosing Pumps</TabsTrigger>
               <TabsTrigger value="accessories" className="text-sm">Accessories</TabsTrigger>
@@ -956,7 +944,6 @@ interface ProductCardProps {
   product: {
     id: string;
     name: string;
-    price: string;
     image: string;
     description: string;
     features: string[];
@@ -982,12 +969,9 @@ const ProductCard = ({ product }: ProductCardProps) => {
       </div>
       
       <CardHeader>
-        <div className="flex justify-between items-start">
-          <CardTitle className="text-xl group-hover:text-primary transition-colors">
-            {product.name}
-          </CardTitle>
-          <span className="text-2xl font-bold text-primary">{product.price}</span>
-        </div>
+        <CardTitle className="text-xl group-hover:text-primary transition-colors">
+          {product.name}
+        </CardTitle>
         <CardDescription className="text-sm">
           {product.description}
         </CardDescription>

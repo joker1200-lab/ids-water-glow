@@ -292,7 +292,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* EROTEC Partnership Section */}
+      {/* FROTEC Partnership Section */}
       <section className="py-20 bg-secondary/30">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
@@ -303,11 +303,11 @@ const Home = () => {
               </div>
               
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 lg:mb-6">
-                Powered by <span className="text-primary">EROTEC</span>
+                Powered by <span className="text-primary">FROTEC</span>
               </h2>
               
               <p className="text-lg sm:text-xl text-muted-foreground mb-6 lg:mb-8">
-                We partner with EROTEC, a leading water treatment manufacturer from Guangzhou, China, to bring you innovative water filtration solutions that solve water challenges worldwide.
+                We partner with FROTEC, a leading water treatment manufacturer from Guangzhou, China, to bring you innovative water filtration solutions that solve water challenges worldwide.
               </p>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-4 mb-6 lg:mb-8">
@@ -320,9 +320,9 @@ const Home = () => {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-3 lg:gap-4">
-                <Link to="/erotec">
+                <Link to="/frotec">
                   <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg">
-                    Learn About EROTEC
+                    Learn About FROTEC
                     <ArrowRight className="ml-2 h-4 w-4 lg:h-5 lg:w-5" />
                   </Button>
                 </Link>
@@ -338,7 +338,7 @@ const Home = () => {
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                 <img
                   src={equipment1}
-                  alt="EROTEC water treatment equipment and technology"
+                  alt="FROTEC water treatment equipment and technology"
                   className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
@@ -350,7 +350,7 @@ const Home = () => {
                     <Award className="h-5 w-5 text-white" />
                   </div>
                   <div>
-                    <div className="font-semibold text-primary text-sm">EROTEC Partner</div>
+                    <div className="font-semibold text-primary text-sm">FROTEC Partner</div>
                     <div className="text-xs text-muted-foreground">Premium Quality</div>
                   </div>
                 </div>
