@@ -1,12 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, Droplets, Shield, Wrench, Award, Users, CheckCircle, Settings, TestTube, Factory } from "lucide-react";
+import { ArrowRight, Droplets, Shield, Wrench, Award, Users, CheckCircle, Settings, TestTube, Factory, Package, Filter, Zap, Cylinder } from "lucide-react";
 import { Link } from "react-router-dom";
 import Testimonials from "@/components/Testimonials";
 import ChatPopup from "@/components/ChatPopup";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, User } from "lucide-react";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 // Import images
 import equipment1 from "@/assets/equipment-1.jpg";
@@ -29,7 +30,262 @@ import industrialPumps from "@/assets/industrial-pumps.jpg";
 import waterTreatmentChemicals from "@/assets/water-treatment-chemicals.jpg";
 import laboratoryTesting from "@/assets/laboratory-testing.jpg";
 
+// Import FROTEC catalog images
+import catalogRoMembrane from "@/assets/catalog-ro-membrane.jpg";
+import catalogFrpTank from "@/assets/catalog-frp-tank.jpg";
+import catalogHousingFilter from "@/assets/catalog-housing-filter.jpg";
+import catalogUvSterilizer from "@/assets/catalog-uv-sterilizer.jpg";
+import catalogSelfCleaningFilter from "@/assets/catalog-self-cleaning-filter.jpg";
+import catalogDosingPump from "@/assets/catalog-dosing-pump.jpg";
+import catalogDosingSystem from "@/assets/catalog-dosing-system.jpg";
+import catalogControlHead from "@/assets/catalog-control-head.jpg";
+import catalogTestDevices from "@/assets/catalog-test-devices.jpg";
+import catalogRoSystem from "@/assets/catalog-ro-system.jpg";
+
 const Home = () => {
+  // FROTEC Featured Products for Carousel
+  const featuredProducts = [
+    {
+      name: "RO Membrane",
+      category: "Reverse Osmosis",
+      image: catalogRoMembrane,
+      description: "High-efficiency RO membranes for water purification"
+    },
+    {
+      name: "FRP Tank",
+      category: "Storage Solutions",
+      image: catalogFrpTank,
+      description: "Durable fiber-reinforced plastic water tanks"
+    },
+    {
+      name: "Housing Filter",
+      category: "Filtration",
+      image: catalogHousingFilter,
+      description: "Industrial-grade filter housing systems"
+    },
+    {
+      name: "UV Sterilizer",
+      category: "Disinfection",
+      image: catalogUvSterilizer,
+      description: "UV sterilization systems for water treatment"
+    },
+    {
+      name: "Self-Cleaning Filter",
+      category: "Advanced Filtration",
+      image: catalogSelfCleaningFilter,
+      description: "Automatic self-cleaning filter systems"
+    },
+    {
+      name: "Dosing Pump",
+      category: "Chemical Dosing",
+      image: catalogDosingPump,
+      description: "Precision chemical dosing pumps"
+    },
+    {
+      name: "Dosing System",
+      category: "Automation",
+      image: catalogDosingSystem,
+      description: "Complete dosing system solutions"
+    },
+    {
+      name: "Control Head",
+      category: "Control Systems",
+      image: catalogControlHead,
+      description: "Advanced control heads for automation"
+    },
+    {
+      name: "Test Devices",
+      category: "Quality Control",
+      image: catalogTestDevices,
+      description: "Water quality testing equipment"
+    },
+    {
+      name: "RO System",
+      category: "Complete Systems",
+      image: catalogRoSystem,
+      description: "Home-use reverse osmosis purifiers"
+    }
+  ];
+
+  // FROTEC Complete Product Catalog (27 Categories)
+  const frotecProducts = [
+    {
+      id: 1,
+      name: "RO Membrane",
+      icon: Droplets,
+      image: catalogRoMembrane,
+      description: "High-performance reverse osmosis membranes for superior water purification"
+    },
+    {
+      id: 2,
+      name: "UF Modules and MBR",
+      icon: Filter,
+      image: equipment1,
+      description: "Ultrafiltration modules and membrane bioreactor systems"
+    },
+    {
+      id: 3,
+      name: "CEDI Modules",
+      icon: Factory,
+      image: equipment2,
+      description: "Continuous electrodeionization modules for ultra-pure water"
+    },
+    {
+      id: 4,
+      name: "FRP Tank",
+      icon: Package,
+      image: catalogFrpTank,
+      description: "Fiber-reinforced plastic tanks for water storage"
+    },
+    {
+      id: 5,
+      name: "Membrane Vessel",
+      icon: Cylinder,
+      image: equipment3,
+      description: "Pressure vessels for membrane systems"
+    },
+    {
+      id: 6,
+      name: "Water System",
+      icon: Settings,
+      image: waterPurificationSystem,
+      description: "Complete integrated water treatment systems"
+    },
+    {
+      id: 7,
+      name: "Housing Filter",
+      icon: Shield,
+      image: catalogHousingFilter,
+      description: "Industrial filter housing for various applications"
+    },
+    {
+      id: 8,
+      name: "Strainer",
+      icon: Filter,
+      image: waterFilterSystem,
+      description: "Y-type and basket strainers for water filtration"
+    },
+    {
+      id: 9,
+      name: "UV Sterilizer",
+      icon: Zap,
+      image: catalogUvSterilizer,
+      description: "Ultraviolet water sterilization systems"
+    },
+    {
+      id: 10,
+      name: "Ozone Generator",
+      icon: Factory,
+      image: equipment1,
+      description: "Ozone generation systems for water treatment"
+    },
+    {
+      id: 11,
+      name: "Self-Cleaning Filter",
+      icon: Settings,
+      image: catalogSelfCleaningFilter,
+      description: "Automatic self-cleaning filtration systems"
+    },
+    {
+      id: 12,
+      name: "Dosing Pump",
+      icon: Droplets,
+      image: catalogDosingPump,
+      description: "Precision chemical dosing pumps"
+    },
+    {
+      id: 13,
+      name: "Dosing System",
+      icon: Factory,
+      image: catalogDosingSystem,
+      description: "Complete automated dosing solutions"
+    },
+    {
+      id: 14,
+      name: "Brine Tank",
+      icon: Package,
+      image: waterSoftener,
+      description: "Salt brine tanks for water softening"
+    },
+    {
+      id: 15,
+      name: "Filter Housing",
+      icon: Shield,
+      image: catalogHousingFilter,
+      description: "Stainless steel and FRP filter housings"
+    },
+    {
+      id: 16,
+      name: "Plastic Filter Housing",
+      icon: Shield,
+      image: waterFilterSystem,
+      description: "Durable plastic filter housing units"
+    },
+    {
+      id: 17,
+      name: "Mixer",
+      icon: Settings,
+      image: industrialPumps,
+      description: "Static and dynamic mixing systems"
+    },
+    {
+      id: 18,
+      name: "Cartridge Filter",
+      icon: Filter,
+      image: equipment2,
+      description: "Sediment and activated carbon cartridge filters"
+    },
+    {
+      id: 19,
+      name: "Control Head",
+      icon: Settings,
+      image: catalogControlHead,
+      description: "Automatic control valves and heads"
+    },
+    {
+      id: 20,
+      name: "Test Devices",
+      icon: TestTube,
+      image: catalogTestDevices,
+      description: "TDS meters, conductivity monitors, and testing kits"
+    },
+    {
+      id: 21,
+      name: "Home-Use Purifier",
+      icon: Droplets,
+      image: catalogRoSystem,
+      description: "Residential reverse osmosis water purification systems"
+    },
+    {
+      id: 22,
+      name: "Pump",
+      icon: Wrench,
+      image: industrialPumps,
+      description: "High-pressure pumps for water treatment"
+    },
+    {
+      id: 23,
+      name: "Accessories",
+      icon: Package,
+      image: spareParts,
+      description: "Fittings, connectors, and spare parts"
+    },
+    {
+      id: 24,
+      name: "Ion Exchange Resin",
+      icon: Factory,
+      image: waterTreatmentChemicals,
+      description: "Cation and anion exchange resins"
+    },
+    {
+      id: 25,
+      name: "Valve",
+      icon: Settings,
+      image: equipment3,
+      description: "Solenoid valves, ball valves, and check valves"
+    }
+  ];
+
   const services = [
     {
       icon: Droplets,
@@ -169,7 +425,7 @@ const Home = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
+      {/* Hero Section with Product Carousel */}
       <section className="relative min-h-screen bg-primary overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
@@ -178,41 +434,41 @@ const Home = () => {
         </div>
         
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
-          <div className="min-h-screen flex items-center">
+          <div className="min-h-screen flex items-center py-20">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center w-full">
               
-              {/* Left Content - Takes 7 columns */}
-              <div className="lg:col-span-7 text-primary-foreground py-12 lg:py-20">
+              {/* Left Content - Takes 6 columns */}
+              <div className="lg:col-span-6 text-primary-foreground">
                 <div className="max-w-2xl">
                   {/* Badge */}
                   <div className="inline-flex items-center px-3 py-2 bg-accent/20 backdrop-blur-sm rounded-full border border-accent/30 mb-4 lg:mb-6 slide-in-up">
-                    <Droplets className="h-3 w-3 lg:h-4 lg:w-4 mr-2 text-accent" />
-                    <span className="text-xs lg:text-sm font-medium text-accent">Leading Water Treatment in Tanzania</span>
+                    <Package className="h-3 w-3 lg:h-4 lg:w-4 mr-2 text-accent" />
+                    <span className="text-xs lg:text-sm font-medium text-accent">FROTEC Authorized Distributor</span>
                   </div>
                   
                   {/* Main Heading */}
-                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 lg:mb-6 leading-tight slide-in-up delay-100">
-                    Pure Water
-                    <span className="block text-accent">Solutions for</span>
-                    <span className="block">East Africa</span>
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 lg:mb-6 leading-tight slide-in-up delay-100">
+                    Premium Water
+                    <span className="block text-accent">Treatment Products</span>
+                    <span className="block">From FROTEC</span>
                   </h1>
                   
                   {/* Description */}
-                  <p className="text-lg sm:text-xl lg:text-2xl mb-6 lg:mb-8 text-primary-foreground/90 leading-relaxed slide-in-up delay-200">
-                    Advanced water treatment technology meeting international standards for industrial, commercial, and residential applications.
+                  <p className="text-lg sm:text-xl lg:text-xl mb-6 lg:mb-8 text-primary-foreground/90 leading-relaxed slide-in-up delay-200">
+                    Shop from our extensive catalog of 25+ product categories. Professional water treatment solutions meeting international quality standards.
                   </p>
                   
                   {/* CTA Buttons */}
                   <div className="flex flex-col sm:flex-row gap-3 lg:gap-4 slide-in-up delay-300">
-                    <Link to="/contact">
-                      <Button size="lg" className="w-full sm:w-auto bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg text-base lg:text-lg px-6 lg:px-8 py-3 lg:py-4">
-                        Start Your Project
+                    <Link to="/products">
+                      <Button size="lg" className="w-full sm:w-auto bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg text-base lg:text-lg px-6 lg:px-8">
+                        Browse Products
                         <ArrowRight className="ml-2 h-4 w-4 lg:h-5 lg:w-5" />
                       </Button>
                     </Link>
-                    <Link to="/services">
-                      <Button size="lg" variant="outline" className="w-full sm:w-auto border-2 border-primary-foreground/30 text-primary-foreground hover:bg-accent hover:text-accent-foreground hover:border-accent text-base lg:text-lg px-6 lg:px-8 py-3 lg:py-4">
-                        Our Services
+                    <Link to="/contact">
+                      <Button size="lg" variant="outline" className="w-full sm:w-auto border-2 border-primary-foreground/30 text-primary-foreground hover:bg-accent hover:text-accent-foreground hover:border-accent text-base lg:text-lg px-6 lg:px-8">
+                        Request Quote
                       </Button>
                     </Link>
                   </div>
@@ -220,51 +476,71 @@ const Home = () => {
                   {/* Quick Stats */}
                   <div className="grid grid-cols-3 gap-4 lg:gap-6 mt-8 lg:mt-12 slide-in-up delay-400">
                     <div className="text-center lg:text-left">
+                      <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-accent">25+</div>
+                      <div className="text-xs lg:text-sm text-primary-foreground/70">Categories</div>
+                    </div>
+                    <div className="text-center lg:text-left">
                       <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-accent">500+</div>
-                      <div className="text-xs lg:text-sm text-primary-foreground/70">Projects</div>
+                      <div className="text-xs lg:text-sm text-primary-foreground/70">Products</div>
                     </div>
                     <div className="text-center lg:text-left">
-                      <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-accent">10+</div>
-                      <div className="text-xs lg:text-sm text-primary-foreground/70">Years</div>
-                    </div>
-                    <div className="text-center lg:text-left">
-                      <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-accent">99.9%</div>
-                      <div className="text-xs lg:text-sm text-primary-foreground/70">Purity</div>
+                      <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-accent">Global</div>
+                      <div className="text-xs lg:text-sm text-primary-foreground/70">Standards</div>
                     </div>
                   </div>
                 </div>
               </div>
               
-              {/* Right Image - Takes 5 columns */}
-              <div className="lg:col-span-5 relative slide-in-right delay-500">
-                {/* Image Container with Modern Styling */}
-                <div className="relative">
-                  {/* Decorative Elements */}
-                  <div className="absolute -top-6 -left-6 w-24 h-24 bg-accent/20 rounded-2xl backdrop-blur-sm"></div>
-                  <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-secondary/30 rounded-3xl backdrop-blur-sm"></div>
-                  
-                  {/* Main Image */}
-                  <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-                    <img
-                      src={ownerEquipment}
-                      alt="Professional water treatment equipment"
-                      className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
-                      loading="eager"
-                    />
-                    {/* Image Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
-                  </div>
-                  
-                  {/* Floating Card */}
-                  <div className="absolute -bottom-4 -left-4 bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-xl slide-in-up delay-700">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-accent rounded-full flex items-center justify-center">
-                        <CheckCircle className="h-5 w-5 text-white" />
-                      </div>
-                      <div>
-                        <div className="font-semibold text-primary text-sm">International Quality Standards</div>
-                        <div className="text-xs text-muted-foreground">Quality Guaranteed</div>
-                      </div>
+              {/* Right Carousel - Takes 6 columns */}
+              <div className="lg:col-span-6 relative slide-in-right delay-500">
+                <Carousel className="w-full max-w-xl mx-auto">
+                  <CarouselContent>
+                    {featuredProducts.map((product, index) => (
+                      <CarouselItem key={index}>
+                        <div className="relative">
+                          {/* Product Card */}
+                          <div className="relative overflow-hidden rounded-2xl shadow-2xl bg-card">
+                            <div className="relative h-80 lg:h-96">
+                              <img
+                                src={product.image}
+                                alt={product.name}
+                                className="w-full h-full object-cover"
+                              />
+                              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+                              
+                              {/* Product Info Overlay */}
+                              <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                                <Badge className="bg-accent text-accent-foreground mb-3">
+                                  {product.category}
+                                </Badge>
+                                <h3 className="text-2xl font-bold mb-2">{product.name}</h3>
+                                <p className="text-white/90 text-sm mb-4">{product.description}</p>
+                                <Link to="/products">
+                                  <Button size="sm" className="bg-white text-primary hover:bg-white/90">
+                                    View Details
+                                    <ArrowRight className="ml-2 h-4 w-4" />
+                                  </Button>
+                                </Link>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <CarouselPrevious className="left-2 bg-white/10 hover:bg-white/20 border-white/30 text-white" />
+                  <CarouselNext className="right-2 bg-white/10 hover:bg-white/20 border-white/30 text-white" />
+                </Carousel>
+                
+                {/* Floating Badge */}
+                <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-xl slide-in-up delay-700 z-10">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-accent rounded-full flex items-center justify-center">
+                      <CheckCircle className="h-5 w-5 text-white" />
+                    </div>
+                    <div>
+                      <div className="font-semibold text-primary text-sm">International Quality</div>
+                      <div className="text-xs text-muted-foreground">FROTEC Certified</div>
                     </div>
                   </div>
                 </div>
@@ -360,47 +636,49 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Product Categories Section */}
+      {/* FROTEC Complete Product Catalog */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
+            <div className="inline-flex items-center px-4 py-2 bg-primary/10 rounded-full border border-primary/20 mb-6">
+              <Package className="h-4 w-4 mr-2 text-primary" />
+              <span className="text-sm font-medium text-primary">FROTEC Product Catalog</span>
+            </div>
             <h2 className="text-4xl lg:text-5xl font-bold mb-6 slide-in-up">
-              Our Product <span className="text-primary">Categories</span>
+              Shop Our Complete <span className="text-primary">Product Range</span>
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto slide-in-up delay-200">
-              Comprehensive water treatment solutions across multiple categories
+              Explore 25+ categories of professional water treatment products from FROTEC - your trusted partner in water solutions
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {[
-              { name: "Solenoid Valves", count: "8+ Products", icon: Settings, image: equipment1 },
-              { name: "Dosing Pumps", count: "16+ Products", icon: Droplets, image: equipment2 },
-              { name: "Filter Cartridges", count: "12+ Products", icon: TestTube, image: equipment3 },
-              { name: "RO Membranes", count: "11+ Products", icon: Factory, image: ownerEquipment },
-              { name: "Filter Systems", count: "12+ Products", icon: Wrench, image: hotelWaterSystem },
-              { name: "Specialty Cartridges", count: "6+ Products", icon: Shield, image: municipalityWaterPlant },
-              { name: "Membrane Vessels", count: "3+ Products", icon: Award, image: hospitalWaterSystem },
-              { name: "Filter Housing", count: "3+ Products", icon: Users, image: industrialWaterPlant }
-            ].map((category, index) => (
-              <Card key={index} className={`group bg-card shadow-medium hover:shadow-lg transition-all duration-300 hover:-translate-y-2 slide-in-up delay-${(index + 1) * 100}`}>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {frotecProducts.map((product, index) => (
+              <Card key={product.id} className={`group bg-card shadow-medium hover:shadow-lg transition-all duration-300 hover:-translate-y-2 cursor-pointer slide-in-up delay-${(index + 1) * 50}`}>
                 <div className="relative overflow-hidden rounded-t-lg">
                   <img
-                    src={category.image}
-                    alt={category.name}
-                    className="w-full h-40 object-cover group-hover:scale-110 transition-transform duration-500"
+                    src={product.image}
+                    alt={product.name}
+                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                  <div className="absolute top-3 left-3 bg-primary rounded-full p-2">
-                    <category.icon className="h-4 w-4 text-primary-foreground" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute top-3 left-3 bg-primary rounded-full p-2.5 shadow-lg">
+                    <product.icon className="h-4 w-4 text-primary-foreground" />
                   </div>
+                  <Badge className="absolute top-3 right-3 bg-accent text-accent-foreground">
+                    Available
+                  </Badge>
                 </div>
                 <CardContent className="p-5">
-                  <h3 className="text-lg font-semibold text-foreground mb-2">{category.name}</h3>
-                  <p className="text-muted-foreground mb-4 text-sm">{category.count}</p>
-                  <Link to="/products">
-                    <Button size="sm" className="w-full bg-primary hover:bg-primary/90">
-                      View Products
+                  <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
+                    {product.name}
+                  </h3>
+                  <p className="text-muted-foreground mb-4 text-sm line-clamp-2">
+                    {product.description}
+                  </p>
+                  <Link to="/contact">
+                    <Button size="sm" className="w-full bg-primary hover:bg-primary/90 group-hover:bg-accent group-hover:text-accent-foreground transition-all">
+                      Request Quote
                       <ArrowRight className="ml-2 h-3 w-3" />
                     </Button>
                   </Link>
@@ -412,7 +690,7 @@ const Home = () => {
           <div className="text-center mt-12">
             <Link to="/products">
               <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground shadow-lg">
-                View All Products
+                View Detailed Product Specifications
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
