@@ -1,12 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, Droplets, Shield, Wrench, Award, Users, CheckCircle, Settings, TestTube, Factory, Package, Filter, Zap, Cylinder } from "lucide-react";
+import { ArrowRight, Droplets, Shield, Wrench, Award, Users, CheckCircle, Settings, TestTube, Factory, Package, Calendar, Clock, User, Filter, Zap, Cylinder } from "lucide-react";
 import { Link } from "react-router-dom";
 import Testimonials from "@/components/Testimonials";
 import ChatPopup from "@/components/ChatPopup";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, Clock, User } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 // Import images
