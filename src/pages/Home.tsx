@@ -616,7 +616,6 @@ const Home = () => {
                   alt="FROTEC water treatment equipment and technology"
                   className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
               </div>
               
               <div className="absolute -bottom-4 -right-4 bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-xl">
