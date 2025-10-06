@@ -7,6 +7,7 @@ import ChatPopup from "@/components/ChatPopup";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 // Import images
 import equipment1 from "@/assets/equipment-1.jpg";
@@ -492,14 +493,25 @@ const Home = () => {
               
               {/* Right Carousel - Takes 6 columns */}
               <div className="lg:col-span-6 relative slide-in-right delay-500">
-                <Carousel className="w-full max-w-xl mx-auto">
+                <Carousel 
+                  className="w-full mx-auto"
+                  plugins={[
+                    Autoplay({
+                      delay: 4000,
+                    }),
+                  ]}
+                  opts={{
+                    align: "start",
+                    loop: true,
+                  }}
+                >
                   <CarouselContent>
                     {featuredProducts.map((product, index) => (
                       <CarouselItem key={index}>
                         <div className="relative">
                           {/* Product Card */}
                           <div className="relative overflow-hidden rounded-2xl shadow-2xl bg-card">
-                            <div className="relative h-80 lg:h-96">
+                            <div className="relative h-[500px] lg:h-[600px]">
                               <img
                                 src={product.image}
                                 alt={product.name}
@@ -606,28 +618,6 @@ const Home = () => {
                     View Products
                   </Button>
                 </Link>
-              </div>
-            </div>
-            
-            <div className="relative slide-in-right">
-              <div className="relative overflow-hidden rounded-2xl shadow-2xl">
-                <img
-                  src={equipment1}
-                  alt="FROTEC water treatment equipment and technology"
-                  className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
-                />
-              </div>
-              
-              <div className="absolute -bottom-4 -right-4 bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-xl">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
-                    <Award className="h-5 w-5 text-white" />
-                  </div>
-                  <div>
-                    <div className="font-semibold text-primary text-sm">FROTEC Partner</div>
-                    <div className="text-xs text-muted-foreground">Premium Quality</div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
