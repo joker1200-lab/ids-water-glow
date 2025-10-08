@@ -74,7 +74,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone",
-      details: ["+255 123 456 789", "+255 987 654 321"]
+      details: ["+255 755 65258", "+255 755 65258"]
     },
     {
       icon: Mail,
@@ -88,7 +88,7 @@ const Contact = () => {
     }
   ];
 
-  const whatsappNumber = "+255123456789";
+  const whatsappNumber = "+25575565258";
   const openWhatsApp = () => {
     const message = "Hello! I'm interested in your water treatment services and would like to discuss my requirements.";
     const url = `https://wa.me/${whatsappNumber.replace('+', '')}?text=${encodeURIComponent(message)}`;
@@ -182,7 +182,7 @@ const Contact = () => {
                           value={formData.phone}
                           onChange={handleInputChange}
                           className="mt-2"
-                          placeholder="+255 123 456 789"
+                          placeholder="+255 755 65258"
                         />
                       </div>
                       <div>
@@ -269,7 +269,7 @@ const Contact = () => {
                     </Button>
                     <Button variant="outline" className="w-full hover:bg-primary hover:text-primary-foreground">
                       <Phone className="mr-2 h-5 w-5" />
-                      Call +255 123 456 789
+                      Call +255 755 65258
                     </Button>
                   </div>
                 </CardContent>

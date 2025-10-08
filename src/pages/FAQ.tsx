@@ -109,7 +109,7 @@ const FAQ = () => {
         },
         {
           question: "Do you provide emergency support?",
-          answer: "Yes, we offer 24/7 emergency support including emergency hotline (+255 123 456 789), On-site response within 4 hours in Dar es Salaam (24 hours other regions), Emergency repair services, Temporary backup solutions, Remote troubleshooting support, and Emergency parts availability. Critical systems receive priority response with guaranteed uptime."
+          answer: "Yes, we offer 24/7 emergency support including emergency hotline (+255 755 65258), On-site response within 4 hours in Dar es Salaam (24 hours other regions), Emergency repair services, Temporary backup solutions, Remote troubleshooting support, and Emergency parts availability. Critical systems receive priority response with guaranteed uptime."
         },
         {
           question: "Can you upgrade existing systems?",

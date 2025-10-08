@@ -201,13 +201,6 @@ const Home = () => {
       description: "Complete automated dosing solutions"
     },
     {
-      id: 11,
-      name: "Brine Tank",
-      icon: Package,
-      image: waterSoftener,
-      description: "Salt brine tanks for water softening"
-    },
-    {
       id: 12,
       name: "Filter Housing",
       icon: Shield,
@@ -227,13 +220,6 @@ const Home = () => {
       icon: Settings,
       image: industrialPumps,
       description: "Static and dynamic mixing systems"
-    },
-    {
-      id: 15,
-      name: "Cartridge Filter",
-      icon: Filter,
-      image: equipment2,
-      description: "Sediment and activated carbon cartridge filters"
     },
     {
       id: 16,
@@ -991,7 +977,7 @@ const Home = () => {
               </Button>
             </Link>
             <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-gradient-accent hover:text-white hover:border-transparent">
-              Call +255 123 456 789
+              Call +255 755 65258
             </Button>
           </div>
         </div>
