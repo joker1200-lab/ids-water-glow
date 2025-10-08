@@ -41,10 +41,24 @@ import catalogDosingSystem from "@/assets/catalog-dosing-system.jpg";
 import catalogControlHead from "@/assets/catalog-control-head.jpg";
 import catalogTestDevices from "@/assets/catalog-test-devices.jpg";
 import catalogRoSystem from "@/assets/catalog-ro-system.jpg";
+import industrialPumpsCollection from "@/assets/industrial-pumps-collection.jpg";
+import verticalPumpsSeries from "@/assets/vertical-pumps-series.jpg";
 
 const Home = () => {
   // FROTEC Featured Products for Carousel
   const featuredProducts = [
+    {
+      name: "Industrial Pumps Collection",
+      category: "Pumping Solutions",
+      image: industrialPumpsCollection,
+      description: "Comprehensive range of industrial pumps for water treatment"
+    },
+    {
+      name: "Vertical Multistage Pumps",
+      category: "High Pressure Pumps",
+      image: verticalPumpsSeries,
+      description: "High-efficiency vertical pumps for various applications"
+    },
     {
       name: "RO Membrane",
       category: "Reverse Osmosis",
@@ -139,146 +153,132 @@ const Home = () => {
     },
     {
       id: 5,
-      name: "Membrane Vessel",
-      icon: Cylinder,
-      image: equipment3,
-      description: "Pressure vessels for membrane systems"
-    },
-    {
-      id: 6,
-      name: "Water System",
-      icon: Settings,
-      image: waterPurificationSystem,
-      description: "Complete integrated water treatment systems"
-    },
-    {
-      id: 7,
       name: "Housing Filter",
       icon: Shield,
       image: catalogHousingFilter,
       description: "Industrial filter housing for various applications"
     },
     {
-      id: 8,
+      id: 5,
       name: "Strainer",
       icon: Filter,
       image: waterFilterSystem,
       description: "Y-type and basket strainers for water filtration"
     },
     {
-      id: 9,
+      id: 6,
       name: "UV Sterilizer",
       icon: Zap,
       image: catalogUvSterilizer,
       description: "Ultraviolet water sterilization systems"
     },
     {
-      id: 10,
+      id: 7,
       name: "Ozone Generator",
       icon: Factory,
       image: equipment1,
       description: "Ozone generation systems for water treatment"
     },
     {
-      id: 11,
+      id: 8,
       name: "Self-Cleaning Filter",
       icon: Settings,
       image: catalogSelfCleaningFilter,
       description: "Automatic self-cleaning filtration systems"
     },
     {
-      id: 12,
+      id: 9,
       name: "Dosing Pump",
       icon: Droplets,
       image: catalogDosingPump,
       description: "Precision chemical dosing pumps"
     },
     {
-      id: 13,
+      id: 10,
       name: "Dosing System",
       icon: Factory,
       image: catalogDosingSystem,
       description: "Complete automated dosing solutions"
     },
     {
-      id: 14,
+      id: 11,
       name: "Brine Tank",
       icon: Package,
       image: waterSoftener,
       description: "Salt brine tanks for water softening"
     },
     {
-      id: 15,
+      id: 12,
       name: "Filter Housing",
       icon: Shield,
       image: catalogHousingFilter,
       description: "Stainless steel and FRP filter housings"
     },
     {
-      id: 16,
+      id: 13,
       name: "Plastic Filter Housing",
       icon: Shield,
       image: waterFilterSystem,
       description: "Durable plastic filter housing units"
     },
     {
-      id: 17,
+      id: 14,
       name: "Mixer",
       icon: Settings,
       image: industrialPumps,
       description: "Static and dynamic mixing systems"
     },
     {
-      id: 18,
+      id: 15,
       name: "Cartridge Filter",
       icon: Filter,
       image: equipment2,
       description: "Sediment and activated carbon cartridge filters"
     },
     {
-      id: 19,
+      id: 16,
       name: "Control Head",
       icon: Settings,
       image: catalogControlHead,
       description: "Automatic control valves and heads"
     },
     {
-      id: 20,
+      id: 17,
       name: "Test Devices",
       icon: TestTube,
       image: catalogTestDevices,
       description: "TDS meters, conductivity monitors, and testing kits"
     },
     {
-      id: 21,
+      id: 18,
       name: "Home-Use Purifier",
       icon: Droplets,
       image: catalogRoSystem,
       description: "Residential reverse osmosis water purification systems"
     },
     {
-      id: 22,
+      id: 19,
       name: "Pump",
       icon: Wrench,
       image: industrialPumps,
       description: "High-pressure pumps for water treatment"
     },
     {
-      id: 23,
+      id: 20,
       name: "Accessories",
       icon: Package,
       image: spareParts,
       description: "Fittings, connectors, and spare parts"
     },
     {
-      id: 24,
+      id: 21,
       name: "Ion Exchange Resin",
       icon: Factory,
       image: waterTreatmentChemicals,
       description: "Cation and anion exchange resins"
     },
     {
-      id: 25,
+      id: 22,
       name: "Valve",
       icon: Settings,
       image: equipment3,
@@ -510,7 +510,7 @@ const Home = () => {
                       <CarouselItem key={index}>
                         <div className="relative">
                           {/* Product Card */}
-                          <div className="relative overflow-hidden rounded-2xl shadow-2xl bg-card">
+                          <div className="relative overflow-hidden rounded-2xl bg-card">
                             <div className="relative h-[500px] lg:h-[600px]">
                               <img
                                 src={product.image}
