@@ -159,13 +159,6 @@ const Home = () => {
       description: "Industrial filter housing for various applications"
     },
     {
-      id: 5,
-      name: "Strainer",
-      icon: Filter,
-      image: industrialFiltration,
-      description: "Y-type and basket strainers for water filtration"
-    },
-    {
       id: 6,
       name: "UV Sterilizer",
       icon: Zap,
@@ -202,20 +195,6 @@ const Home = () => {
     },
     {
       id: 12,
-      name: "Filter Housing",
-      icon: Shield,
-      image: catalogHousingFilter,
-      description: "Stainless steel and FRP filter housings"
-    },
-    {
-      id: 13,
-      name: "Plastic Filter Housing",
-      icon: Shield,
-      image: industrialFiltration,
-      description: "Durable plastic filter housing units"
-    },
-    {
-      id: 14,
       name: "Mixer",
       icon: Settings,
       image: industrialPumps,
