@@ -11,10 +11,10 @@ import {
   CheckCircle
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import waterPurificationSystem from "@/assets/water-purification-system.jpg";
+import waterTreatmentPlant from "@/assets/water-treatment-plant.jpg";
 import spareParts from "@/assets/spare-parts.jpg";
-import waterSoftener from "@/assets/water-softener.jpg";
-import waterFilterSystem from "@/assets/water-filter-system.jpg";
+import waterSoftenerSystem from "@/assets/water-softener-system.jpg";
+import industrialFiltration from "@/assets/industrial-filtration.jpg";
 import industrialPumps from "@/assets/industrial-pumps.jpg";
 import ownerEquipment from "@/assets/owner-equipment.jpg";
 import waterTreatmentChemicals from "@/assets/water-treatment-chemicals.jpg";
@@ -27,7 +27,7 @@ const Services = () => {
       icon: Droplets,
       title: "Water Purification Systems",
       description: "Advanced water purification systems for clean, safe drinking water",
-      image: waterPurificationSystem,
+      image: waterTreatmentPlant,
       features: ["Reverse Osmosis Systems", "Multi-Stage Filtration", "UV Sterilization", "Custom Design Solutions"]
     },
     {
@@ -41,14 +41,14 @@ const Services = () => {
       icon: Droplets,
       title: "Water Softener Units",
       description: "High-quality water softening systems for hard water treatment",
-      image: waterSoftener,
+      image: waterSoftenerSystem,
       features: ["Ion Exchange Systems", "Salt-Based Softeners", "Automatic Regeneration", "Commercial & Residential"]
     },
     {
       icon: TestTube,
       title: "Different Type of Filters",
       description: "Wide range of filtration solutions for various water treatment needs",
-      image: waterFilterSystem,
+      image: industrialFiltration,
       features: ["Sediment Filters", "Carbon Filters", "Membrane Filters", "Specialty Filters"]
     },
     {

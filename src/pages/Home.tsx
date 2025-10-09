@@ -22,10 +22,10 @@ import residentialWaterSystem from "@/assets/residential-water-system.jpg";
 import waterVendorFacility from "@/assets/water-vendor-facility.jpg";
 
 // Import service images
-import waterPurificationSystem from "@/assets/water-purification-system.jpg";
+import waterTreatmentPlant from "@/assets/water-treatment-plant.jpg";
 import spareParts from "@/assets/spare-parts.jpg";
-import waterSoftener from "@/assets/water-softener.jpg";
-import waterFilterSystem from "@/assets/water-filter-system.jpg";
+import waterSoftenerSystem from "@/assets/water-softener-system.jpg";
+import industrialFiltration from "@/assets/industrial-filtration.jpg";
 import industrialPumps from "@/assets/industrial-pumps.jpg";
 import waterTreatmentChemicals from "@/assets/water-treatment-chemicals.jpg";
 import laboratoryTesting from "@/assets/laboratory-testing.jpg";
@@ -162,7 +162,7 @@ const Home = () => {
       id: 5,
       name: "Strainer",
       icon: Filter,
-      image: waterFilterSystem,
+      image: industrialFiltration,
       description: "Y-type and basket strainers for water filtration"
     },
     {
@@ -211,7 +211,7 @@ const Home = () => {
       id: 13,
       name: "Plastic Filter Housing",
       icon: Shield,
-      image: waterFilterSystem,
+      image: industrialFiltration,
       description: "Durable plastic filter housing units"
     },
     {
@@ -277,7 +277,7 @@ const Home = () => {
       icon: Droplets,
       title: "Water Purification Systems",
       description: "Advanced water purification systems for clean, safe drinking water",
-      image: waterPurificationSystem
+      image: waterTreatmentPlant
     },
     {
       icon: Settings,
@@ -289,13 +289,13 @@ const Home = () => {
       icon: Droplets,
       title: "Water Softener Units",
       description: "High-quality water softening systems for hard water treatment",
-      image: waterSoftener
+      image: waterSoftenerSystem
     },
     {
       icon: TestTube,
       title: "Different Type of Filters",
       description: "Wide range of filtration solutions for various water treatment needs",
-      image: waterFilterSystem
+      image: industrialFiltration
     },
     {
       icon: Settings,
@@ -413,10 +413,10 @@ const Home = () => {
     <div className="min-h-screen">
       {/* Hero Section with Product Carousel */}
       <section className="relative min-h-screen bg-primary overflow-hidden">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-accent rounded-full blur-3xl"></div>
-          <div className="absolute bottom-1/3 right-1/3 w-96 h-96 bg-secondary rounded-full blur-3xl"></div>
+      {/* Background Pattern */}
+        <div className="absolute inset-0">
+          <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-accent rounded-full blur-3xl opacity-5"></div>
+          <div className="absolute bottom-1/3 right-1/3 w-96 h-96 bg-secondary rounded-full blur-3xl opacity-5"></div>
         </div>
         
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
@@ -565,50 +565,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* FROTEC Partnership Section */}
-      <section className="py-20 bg-secondary/30">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <div className="slide-in-left">
-              <div className="inline-flex items-center px-3 lg:px-4 py-2 bg-primary/10 rounded-full border border-primary/20 mb-4 lg:mb-6">
-                <Droplets className="h-3 w-3 lg:h-4 lg:w-4 mr-2 text-primary" />
-                <span className="text-xs lg:text-sm font-medium text-primary">Strategic Partnership</span>
-              </div>
-              
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 lg:mb-6">
-                Powered by <span className="text-primary">FROTEC</span>
-              </h2>
-              
-              <p className="text-lg sm:text-xl text-muted-foreground mb-6 lg:mb-8">
-                We partner with FROTEC, a leading water treatment manufacturer from Guangzhou, China, to bring you innovative water filtration solutions that solve water challenges worldwide.
-              </p>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-4 mb-6 lg:mb-8">
-                {["27+ Product Categories", "Global Quality Standards", "Competitive Pricing", "Technical Excellence"].map((feature, index) => (
-                  <div key={index} className="flex items-center space-x-2 lg:space-x-3">
-                    <CheckCircle className="h-4 w-4 lg:h-5 lg:w-5 text-success flex-shrink-0" />
-                    <span className="text-sm lg:text-base text-foreground">{feature}</span>
-                  </div>
-                ))}
-              </div>
-              
-              <div className="flex flex-col sm:flex-row gap-3 lg:gap-4">
-                <Link to="/frotec">
-                  <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg">
-                    Learn About FROTEC
-                    <ArrowRight className="ml-2 h-4 w-4 lg:h-5 lg:w-5" />
-                  </Button>
-                </Link>
-                <Link to="/products">
-                  <Button size="lg" variant="outline" className="w-full sm:w-auto border-2 border-primary/30 hover:bg-primary hover:text-primary-foreground">
-                    View Products
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* FROTEC Complete Product Catalog */}
       <section className="py-20 bg-background">
