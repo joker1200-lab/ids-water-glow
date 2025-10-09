@@ -6,7 +6,7 @@ import { MessageCircle, X, Send } from "lucide-react";
 const WhatsAppChat = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const whatsappNumber = "+25575565258";
+  const whatsappNumber = "+255755652588";
 
   const quickMessages = [
     "I need water treatment consultation",

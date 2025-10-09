@@ -229,7 +229,7 @@ const Services = () => {
               </Button>
             </Link>
             <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-              Call +255 755 65258
+              Call +255 755 652588
             </Button>
           </div>
         </div>

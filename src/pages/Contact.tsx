@@ -74,7 +74,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone",
-      details: ["+255 755 65258", "+255 755 65258"]
+      details: ["+255 755 652588", "+255 755 652588"]
     },
     {
       icon: Mail,
@@ -88,7 +88,7 @@ const Contact = () => {
     }
   ];
 
-  const whatsappNumber = "+25575565258";
+  const whatsappNumber = "+255755652588";
   const openWhatsApp = () => {
     const message = "Hello! I'm interested in your water treatment services and would like to discuss my requirements.";
     const url = `https://wa.me/${whatsappNumber.replace('+', '')}?text=${encodeURIComponent(message)}`;
@@ -182,7 +182,7 @@ const Contact = () => {
                           value={formData.phone}
                           onChange={handleInputChange}
                           className="mt-2"
-                          placeholder="+255 755 65258"
+                          placeholder="+255 755 652588"
                         />
                       </div>
                       <div>
@@ -269,7 +269,7 @@ const Contact = () => {
                     </Button>
                     <Button variant="outline" className="w-full hover:bg-primary hover:text-primary-foreground">
                       <Phone className="mr-2 h-5 w-5" />
-                      Call +255 755 65258
+                      Call +255 755 652588
                     </Button>
                   </div>
                 </CardContent>
@@ -316,7 +316,7 @@ const Contact = () => {
               "Certified Installation Team",
               "2-Year Warranty Coverage",
               "Local Tanzania Expertise",
-              "ISO Quality Standards"
+              "Professional Water Treatment"
             ].map((feature, index) => (
               <div key={index} className={`flex items-center space-x-3 slide-in-up delay-${(index % 3 + 1) * 100}`}>
                 <CheckCircle className="h-6 w-6 text-success flex-shrink-0" />

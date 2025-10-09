@@ -326,7 +326,7 @@ const Home = () => {
 
   const features = [
     "Advanced Reverse Osmosis Technology",
-    "ISO Certified Quality Standards", 
+    "Certified Quality Standards", 
     "24/7 Technical Support",
     "Custom Solution Design",
     "Eco-Friendly Processes",
@@ -977,7 +977,7 @@ const Home = () => {
               </Button>
             </Link>
             <Button size="lg" variant="outline" className="border-primary-foreground text-primary-foreground hover:bg-gradient-accent hover:text-white hover:border-transparent">
-              Call +255 755 65258
+              Call +255 755 652588
             </Button>
           </div>
         </div>

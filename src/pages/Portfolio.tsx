@@ -61,19 +61,6 @@ const Portfolio = () => {
       results: ["24/7 monitoring capability", "Reduced maintenance costs", "Proactive system management"]
     },
     {
-      id: 4,
-      title: "Municipal Water Treatment Facility",
-      category: "Municipal",
-      client: "Dodoma Municipality",
-      location: "Dodoma, Tanzania",
-      date: "December 2023",
-      image: portfolio4,
-      capacity: "50,000 L/hr",
-      description: "Large-scale municipal water treatment facility serving 100,000+ residents with advanced filtration and purification systems.",
-      technologies: ["Multi-Media Filtration", "Chlorination", "pH Adjustment"],
-      results: ["100,000+ people served", "WHO standards compliance", "Sustainable water supply"]
-    },
-    {
       id: 5,
       title: "Hospital Water Purification",
       category: "Healthcare",
@@ -140,7 +127,7 @@ const Portfolio = () => {
     }
   ];
 
-  const categories = ["all", "Industrial", "Commercial", "Healthcare", "Municipal", "Technology", "Food Industry", "Education", "Hospitality", "Mining"];
+  const categories = ["all", "Industrial", "Commercial", "Healthcare", "Technology", "Food Industry", "Education", "Hospitality", "Mining"];
 
   const filteredProjects = filter === "all" 
     ? projects 
