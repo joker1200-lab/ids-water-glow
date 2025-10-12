@@ -29,6 +29,7 @@ import industrialFiltration from "@/assets/industrial-filtration.jpg";
 import industrialPumps from "@/assets/industrial-pumps.jpg";
 import waterTreatmentChemicals from "@/assets/water-treatment-chemicals.jpg";
 import laboratoryTesting from "@/assets/laboratory-testing.jpg";
+import ufMbrSystem from "@/assets/uf-mbr-system.jpg";
 
 // Import FROTEC catalog images
 import catalogRoMembrane from "@/assets/catalog-ro-membrane.jpg";
@@ -134,7 +135,7 @@ const Home = () => {
       id: 2,
       name: "UF Modules and MBR",
       icon: Filter,
-      image: equipment1,
+      image: ufMbrSystem,
       description: "Ultrafiltration modules and membrane bioreactor systems"
     },
     {
